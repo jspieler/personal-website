@@ -1,5 +1,6 @@
 import React from 'react';
 import "./footer.css";
+import Impressum from '../impressum/Impressum';
 
 const Footer = () => {
   return (
@@ -34,6 +35,8 @@ const Footer = () => {
             <i className="bx bxl-twitter"></i>
           </a>
         </div>
+
+        <Impressum />
 
         <span className="footer__copy">&#169; Crypticalcoder. All rights reserved.</span>
       </div>
