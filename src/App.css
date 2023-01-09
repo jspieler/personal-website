@@ -50,6 +50,34 @@
   --z-modal: 1000;
 }
 
+/* themes */
+.light-theme {
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --container-color: #fff;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-color-medium: rgba(0, 0, 0, 0.15);
+  --border-color-dark: rgba(0, 0, 0, 0.3);
+  --modal-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme {
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --title-color: hsl(var(--hue), var(--sat), 80%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 100%);
+  --text-color: hsl(var(--hue), var(--sat), 54%);
+  --body-color: hsl(var(--hue), var(--sat), 2%);
+  --container-color: #000;
+  --border-color: rgb(255, 255, 255, 0.9);
+  --border-color-medium: rgba(255, 255, 255, 0.85);
+  --border-color-dark: rgba(255, 255, 255, 0.7);
+  --modal-background-color: rgba(255, 255, 255, 0.5);
+  background-color: #000;
+}
+
 /* Responsive typography */
 @media screen and (max-width: 992px) {
   :root {

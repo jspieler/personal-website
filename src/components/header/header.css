@@ -48,7 +48,7 @@
 }
 
 .scroll-header {
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -1px 4px var(--border-color-medium);
 }
 
 /* For medium devices */
@@ -69,7 +69,7 @@
         width: 100%;
         background-color: var(--body-color);
         padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 -1px 4px var(--border-color-medium);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: 0.3s;
     }
