@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import "./impressum.css";
 import { impressumData } from './Data';
 
-/* add language toggle or alternatively English text*/
 
 const Impressum = () => {
   const [toggleState, setToggleState] = useState(false);
   const [language, setLanguage] = useState({ name: "en" });
   const [impressum, setImpressum] = useState([]);
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1); // corresponds to "en"
 
   useEffect(() => {
     const newImpressum = impressumData.filter((imp) => {
