@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import "./header.css"
+import React, { useState } from 'react';
+import "./header.css";
+import ThemeSwitch from '../../theme/ThemeSwitch';
 
 const Header = () => {
   /*=============== Change Background Header ===============*/
@@ -83,6 +84,8 @@ const Header = () => {
         <div className="nav__toggle" onClick={() => showMenu(!toggle)}>
           <i className="uil uil-apps"></i>
         </div>
+
+        <ThemeSwitch />
       </nav>
     </header>
   )

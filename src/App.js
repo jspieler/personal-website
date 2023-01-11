@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
@@ -11,26 +11,29 @@ import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
+import { ThemeContext } from './theme/Theme';
 
 const App = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <>
-    <Header />
+    <div className={theme}>
+      <Header />
 
-    <main className="main">
-      <Home />
-      <About />
-      <Skills />
-      <Services />
-      <Qualification />
-      <Work />
-      <Testimonials />
-      <Contact />
-    </main>
+      <main className="main">
+        <Home />
+        <About />
+        <Skills />
+        <Services />
+        <Qualification />
+        <Work />
+        <Testimonials />
+        <Contact />
+      </main>
 
-    <Footer />
-    <ScrollUp />
-    </>
+      <Footer />
+      <ScrollUp />
+    </div>
   );
 }
 
