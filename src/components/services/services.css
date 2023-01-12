@@ -38,6 +38,10 @@
     transition: 0.3s;
 }
 
+.services__button:hover {
+    color: var(--title-color-dark);
+}
+
 .services__button:hover .services__button-icon {
     transform: translateX(0.25rem);
 }
