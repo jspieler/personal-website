@@ -58,6 +58,10 @@
     transition: 0.3s;
 }
 
+.work__button:hover {
+    color: var(--title-color-dark);
+}
+
 .work__button:hover .work__button-icon {
     transform: translateX(0.25rem);
 }
