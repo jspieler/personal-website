@@ -2,20 +2,19 @@ import React, { useContext } from "react";
 import { ThemeContext } from "./Theme";
 import { animated, useSpring } from "@react-spring/web";
 
-// svg color in css (not black/white but matching to rest of layout)
 
 const properties = {
   dark: {
-    r: 9,
+    r: 7.2,
     transform: "rotate(45deg)",
-    cx: 12,
-    cy: 4,
+    cx: 9.6,
+    cy: 3.2,
     opacity: 0,
   },
   light: {
-    r: 5,
+    r: 4,
     transform: "rotate(90deg)",
-    cx: 30,
+    cx: 24,
     cy: 0,
     opacity: 1,
   },
@@ -43,11 +42,11 @@ const ThemeSwitch = () => {
   return (
     <animated.svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      width="19.2"
+      height="19.2"
+      viewBox="0 0 19.2 19.2"
       fill="none"
-      strokeWidth="2"
+      strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
       stroke="currentColor"
@@ -60,25 +59,25 @@ const ThemeSwitch = () => {
     >
       <mask id="mask">
         <rect x="0" y="0" width="100%" height="100%" fill="white" />
-        <animated.circle style={maskedCircleProps} r="9" fill="black" />
+        <animated.circle style={maskedCircleProps} r="7.2" fill="black" />
       </mask>
 
       <animated.circle
-        cx="12"
-        cy="12"
+        cx="9.6"
+        cy="9.6"
         style={centerCircleProps}
         fill={theme === "dark-theme" ? "white" : "black"}
         mask="url(#mask)"
       />
       <animated.g stroke="currentColor" style={linesProps}>
-        <line x1="12" y1="1" x2="12" y2="3" />
-        <line x1="12" y1="21" x2="12" y2="23" />
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-        <line x1="1" y1="12" x2="3" y2="12" />
-        <line x1="21" y1="12" x2="23" y2="12" />
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        <line x1="9.6" y1="0.8" x2="9.6" y2="2.4" />
+        <line x1="9.6" y1="16.8" x2="9.6" y2="18.4" />
+        <line x1="3.376" y1="3.376" x2="4.512" y2="4.512" />
+        <line x1="14.688" y1="14.688" x2="15.824" y2="15.824" />
+        <line x1="0.8" y1="9.6" x2="2.4" y2="9.6" />
+        <line x1="16.8" y1="9.6" x2="18.4" y2="9.6" />
+        <line x1="3.376" y1="15.824" x2="4.512" y2="14.688" />
+        <line x1="14.688" y1="4.512" x2="15.824" y2="3.376" />
       </animated.g>
     </animated.svg>
   );
