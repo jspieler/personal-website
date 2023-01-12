@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "./Theme";
 import { animated, useSpring } from "@react-spring/web";
+import "./themeswitch.css";
 
 
 const properties = {
@@ -49,8 +50,7 @@ const ThemeSwitch = () => {
       strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
-      stroke="currentColor"
-      color={theme === "dark-theme" ? "white" : "black"}
+      className={theme === "dark-theme" ? "animated-dark" : "animated-light"}
       onClick={() => toggleTheme()}
       style={{
         cursor: "pointer",
@@ -66,7 +66,7 @@ const ThemeSwitch = () => {
         cx="9.6"
         cy="9.6"
         style={centerCircleProps}
-        fill={theme === "dark-theme" ? "white" : "black"}
+        className={theme === "dark-theme" ? "animated-dark" : "animated-light"}
         mask="url(#mask)"
       />
       <animated.g stroke="currentColor" style={linesProps}>

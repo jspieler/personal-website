@@ -1,0 +1,11 @@
+.animated-dark {
+  --icon-color: hsl(var(--hue), var(--sat), 80%);
+  color: var(--icon-color);
+  fill: var(--icon-color);
+}
+
+.animated-light {
+  --icon-color: hsl(var(--hue), var(--sat), 20%);
+  color: var(--icon-color);
+  fill: var(--icon-color);
+}
