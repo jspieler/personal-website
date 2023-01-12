@@ -60,6 +60,10 @@
     transition: 0.3s;
 }
 
+.contact__button:hover {
+    color: var(--title-color-dark);
+}
+
 .contact__button:hover .contact__button-icon{
     transform: translate(0.25rem);
 }
