@@ -39,6 +39,10 @@
     font-size: var(--tiny-font-size);
 }
 
+.about__data {
+    text-align: center;
+}
+
 .about__description {
     padding: 0.4rem 0 0;
     margin-bottom: var(--mb-2-5);
@@ -57,10 +61,6 @@
 
     .about__box {
         padding: 0.75rem 0.5rem;
-    }
-
-    .about__data {
-        text-align: center;
     }
 
     .about__info {
