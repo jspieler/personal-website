@@ -22,6 +22,10 @@
     transition: 0.3s;
 }
 
+.impressum__button:hover {
+    color: var(--title-color-dark);
+}
+
 .impressum__button:hover .impressum__button-icon {
     transform: translateX(0.25rem);
 }
