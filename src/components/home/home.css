@@ -85,6 +85,10 @@
     }
 }
 
+.home__contact-button {
+    text-align: center;
+}
+
 .home__scroll {
     margin-left: 9.25rem;
 }
@@ -157,6 +161,7 @@
   @media screen and (max-width: 768px) {
     .home__content {
         grid-template-columns: 0.5fr 3fr;
+        justify-items: center;
         padding-top: 3.5rem;
     }
 
