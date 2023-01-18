@@ -121,7 +121,6 @@
 .publication__modal-description {
     font-size: var(--small-font-size);
     padding: 0 3.5rem;
-    margin-bottom: var(--mb-2);
     text-align: justify;
 }
 
@@ -175,7 +174,7 @@
     .publication__modal-content {
         width: 100%;
         height: 75%;
-        padding: 4.5rem 1rem 0;
+        padding: 4.5rem 1rem 1rem;
     }
 }
   
