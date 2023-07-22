@@ -47,7 +47,7 @@ const Publications = () => {
           </span>
 
           <span className="publication__button" onClick={() => toggleTab(1)}>
-            View Abstract
+            Read Abstract
             <i className="uil uil-arrow-right publication__button-icon"></i>
           </span>
 
@@ -132,7 +132,7 @@ const Publications = () => {
           </span>
 
           <span className="publication__button" onClick={() => toggleTab(2)}>
-            View Abstract
+            Read Abstract
             <i className="uil uil-arrow-right publication__button-icon"></i>
           </span>
 

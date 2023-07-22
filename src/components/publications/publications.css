@@ -7,8 +7,9 @@
 .publications__content {
     position: relative;
     border: 1px solid var(--border-color);
+    border-radius: 1rem;
     background-color: var(--container-color);
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 2rem 2rem 2rem;
 }
 
 .publication__external-links {
@@ -143,7 +144,7 @@
     }
 
     .publications__content {
-        padding: 1.5rem 1rem 1.5rem 1rem;
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
     }
 
     .publication__link {
@@ -168,7 +169,7 @@
   
 @media screen and (max-width: 576px) {
     .publications__content {
-        padding: 1rem 0.5rem 1rem 0.5rem;
+        padding: 1rem 1rem 1rem 1rem;
     }
 
     .publication__modal-content {
