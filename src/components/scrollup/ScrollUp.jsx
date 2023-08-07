@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./scrollup.css";
 
 const ScrollUp = () => {
@@ -8,13 +8,13 @@ const ScrollUp = () => {
     if scroll is higher than 560 viewport height */
     if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
     else scrollUp.classList.remove("show-scroll");
-  })
+  });
 
   return (
     <a href="#" className="scrollup">
       <i className="uil uil-arrow-up scrollup__icon"></i>
     </a>
-  )
-}
+  );
+};
 
-export {ScrollUp};
+export { ScrollUp };

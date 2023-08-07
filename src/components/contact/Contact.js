@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./contact.css";
 
 const Contact = () => {
@@ -8,8 +8,13 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-      e.target.reset();
+    emailjs.sendForm(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      form.current,
+      "YOUR_PUBLIC_KEY",
+    );
+    e.target.reset();
   };
 
   return (
@@ -26,7 +31,8 @@ const Contact = () => {
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">user@gmail.com</span>
-              <a href="mailto:user@gmail.com" className="contact__button">Write me 
+              <a href="mailto:user@gmail.com" className="contact__button">
+                Write me
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
@@ -35,8 +41,11 @@ const Contact = () => {
               <i className="bx bxl-whatsapp contact__card-icon"></i>
               <h3 className="contact__card-title">Whatsapp</h3>
               <span className="contact__card-data">123456789</span>
-              <a href="https://api.whatsapp.com/send?phone=123456789&text=Hello, more information!" 
-              className="contact__button">Write me 
+              <a
+                href="https://api.whatsapp.com/send?phone=123456789&text=Hello, more information!"
+                className="contact__button"
+              >
+                Write me
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
@@ -45,7 +54,8 @@ const Contact = () => {
               <i className="bx bxl-messenger contact__card-icon"></i>
               <h3 className="contact__card-title">Messenger</h3>
               <span className="contact__card-data">user.fb123</span>
-              <a href="https://m.me/cc" className="contact__button">Write me 
+              <a href="https://m.me/cc" className="contact__button">
+                Write me
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
@@ -58,36 +68,37 @@ const Contact = () => {
           <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
-              <input 
-                type="text" 
-                name="name" 
-                className="contact__form-input" 
-                placeholder="Insert your name" 
+              <input
+                type="text"
+                name="name"
+                className="contact__form-input"
+                placeholder="Insert your name"
               />
             </div>
 
             <div className="contact__form-div">
               <label className="contact__form-tag">Email</label>
-              <input 
-                type="email" 
-                name="email" 
-                className="contact__form-input" 
-                placeholder="Insert your email" 
+              <input
+                type="email"
+                name="email"
+                className="contact__form-input"
+                placeholder="Insert your email"
               />
             </div>
 
             <div className="contact__form-div contact__form-area">
               <label className="contact__form-tag">Project</label>
-              <textarea 
-                name="project" 
-                cols="30" 
-                rows="10" 
-                className="contact__form-input" 
-                placeholder="Write your message">
-              </textarea>
+              <textarea
+                name="project"
+                cols="30"
+                rows="10"
+                className="contact__form-input"
+                placeholder="Write your message"
+              ></textarea>
             </div>
 
-            <button className="button button--flex">Send message
+            <button className="button button--flex">
+              Send message
               <svg
                 className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +121,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

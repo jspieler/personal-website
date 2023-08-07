@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Info = () => {
   return (
@@ -21,7 +21,7 @@ const Info = () => {
         <span className="about__subtitle">yyy</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export {Info};
+export { Info };

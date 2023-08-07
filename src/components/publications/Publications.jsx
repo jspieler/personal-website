@@ -183,4 +183,4 @@ const Publications = () => {
   );
 };
 
-export {Publications};
+export { Publications };

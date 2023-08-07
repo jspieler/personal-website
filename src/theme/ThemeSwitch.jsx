@@ -3,7 +3,6 @@ import { ThemeContext } from "./Theme";
 import { animated, useSpring } from "@react-spring/web";
 import "./themeswitch.css";
 
-
 const properties = {
   dark: {
     r: 7.2,
@@ -83,4 +82,4 @@ const ThemeSwitch = () => {
   );
 };
 
-export {ThemeSwitch};
+export { ThemeSwitch };

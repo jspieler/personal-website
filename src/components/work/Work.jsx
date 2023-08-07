@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import "./work.css";
-import {Works} from './Works';
+import { Works } from "./Works";
 
 const Work = () => {
   return (
@@ -10,7 +10,7 @@ const Work = () => {
 
       <Works />
     </section>
-  )
-}
+  );
+};
 
-export {Work};
+export { Work };

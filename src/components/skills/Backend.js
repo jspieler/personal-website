@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Backend = () => {
   return (
@@ -59,7 +59,7 @@ const Backend = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Backend
+export default Backend;

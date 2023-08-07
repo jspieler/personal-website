@@ -4,11 +4,14 @@ const ThemeContext = createContext();
 
 const getTheme = () => {
   const theme = localStorage.getItem("theme");
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !theme) {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches &&
+    !theme
+  ) {
     localStorage.setItem("theme", "dark-theme");
     return "dark-theme";
-  }
-  else if (!theme) {
+  } else if (!theme) {
     localStorage.setItem("theme", "light-theme");
     return "light-theme";
   } else {
@@ -16,7 +19,7 @@ const getTheme = () => {
   }
 };
 
-const ThemeProvider = ( { children }) => {
+const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(getTheme);
 
   function toggleTheme() {
@@ -25,7 +28,7 @@ const ThemeProvider = ( { children }) => {
     } else {
       setTheme("dark-theme");
     }
-  };
+  }
 
   useEffect(() => {
     const refreshTheme = () => {
@@ -36,12 +39,10 @@ const ThemeProvider = ( { children }) => {
   }, [theme]);
 
   return (
-    <ThemeContext.Provider
-      value={{theme, setTheme, toggleTheme}}
-    >
+    <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
-  )
+  );
 };
 
 export { ThemeContext, ThemeProvider };

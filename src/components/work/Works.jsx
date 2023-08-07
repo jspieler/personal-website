@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { projectsData } from './Data';
-import { projectsNav } from './Data';
-import {WorkItems} from './WorkItems';
+import React, { useEffect, useState } from "react";
+import { projectsData } from "./Data";
+import { projectsNav } from "./Data";
+import { WorkItems } from "./WorkItems";
 
 const Works = () => {
   const [item, setItem] = useState({ name: "all" });
@@ -11,8 +11,7 @@ const Works = () => {
   useEffect(() => {
     if (item.name === "all") {
       setProjects(projectsData);
-    } 
-    else {
+    } else {
       const filteredProjects = projectsData.filter((project) => {
         return project.category.toLowerCase() === item.name;
       });
@@ -30,10 +29,10 @@ const Works = () => {
       <div className="work__filters">
         {projectsNav.map((item, index) => {
           return (
-            <span 
+            <span
               onClick={(e) => {
                 handleClick(e, index);
-              }} 
+              }}
               className={`${active === index ? "active-work" : ""} work__item`}
               key={index}
             >
@@ -49,7 +48,7 @@ const Works = () => {
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export {Works};
+export { Works };

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Frontend = () => {
   return (
@@ -43,7 +43,7 @@ const Frontend = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export {Frontend}
+export { Frontend };
