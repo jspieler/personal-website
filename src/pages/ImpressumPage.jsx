@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import { Impressum } from "../components/impressum/Impressum";
 
 const ImpressumPage = () => {
   return (
-    <div>Impressum</div>
-  )
-}
+    <main className="main">
+      <Impressum />
+    </main>
+  );
+};
 
-export {ImpressumPage};
+export { ImpressumPage };
