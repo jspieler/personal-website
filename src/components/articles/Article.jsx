@@ -9,6 +9,11 @@ const Article = ({ title, subtitle, children }) => {
   const [sectionLinks, setSectionLinks] = useState([]);
   const { theme, _ } = useContext(ThemeContext);
 
+  const projectRepo = import.meta.env.VITE_GISCUS_PROJECT_REPO;
+  const projectRepoId = import.meta.env.VITE_GISCUS_PROJECT_REPO_ID;
+  const discussionCategoryId = import.meta.env.VITE_GISCUS_DISCUSSION_CATEGORY_ID;
+  const discussionCategoryName = import.meta.env.VITE_GISCUS_DISCUSSION_CATEGORY_NAME;
+
   useEffect(() => {
     // Create section links for all h3 headers within the article content
     const headers = document.querySelectorAll(".article__content h3");
@@ -38,10 +43,10 @@ const Article = ({ title, subtitle, children }) => {
         
         <Giscus
           id="comments"
-          repo="[ENTER REPO HERE]"
-          repoId="[ENTER REPO ID HERE]"
-          category="[ENTER CATEGORY NAME HERE]"
-          categoryId="[ENTER CATEGORY ID HERE]"
+          repo={projectRepo}
+          repoId={projectRepoId}
+          category={discussionCategoryName}
+          categoryId={discussionCategoryId}
           mapping="pathname"
           reactionsEnabled="1"
           emitMetadata="0"
