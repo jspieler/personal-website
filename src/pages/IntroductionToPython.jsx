@@ -60,6 +60,20 @@ const IntroductionToPython = () => {
           ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
           Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
         </p>
+
+        <h3 id="section-2">Variables</h3>
+        <p>
+          <iframe
+            src="https://trinket.io/embed/python/3d8d7ce66b"
+            width="100%"
+            height="356"
+            frameborder="0"
+            marginwidth="0"
+            marginheight="0"
+            allowfullscreen
+            // can we somehow set the color scheme?
+          ></iframe>
+        </p>
       </Article>
     </main>
   );
