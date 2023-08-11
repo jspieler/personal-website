@@ -1,6 +1,6 @@
 .article__container {
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
   column-gap: 4rem;
 }
 
@@ -13,13 +13,51 @@
   font-size: var(--tiny-font-size);
 }
 
-.article__data {
-  text-align: center;
-}
-
-.article__description {
+.article__content {
   padding: 0.4rem 0 0;
   margin-bottom: var(--mb-2-5);
+  text-align: justify;
+}
+
+.article__content p {
+  margin-bottom: 1rem; 
+}
+
+.article__outline {
+  position: sticky;
+  top: 150px; 
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: var(--container-color);
+  border-left: 2px solid var(--border-color-dark);
+  box-shadow: 0 2px 4px var(--border-color);
+}
+
+.article__outline ul {
+  list-style: none;
+  padding: 0;
+}
+
+.article__outline li {
+  margin-bottom: 8px;
+}
+
+.article__outline a {
+  text-decoration: none;
+  color: var(--title-color);
+}
+
+.article__outline a:hover {
+  text-decoration: underline;
+}
+
+.article__content h3::before {
+  content: "";
+  display: block;
+  height: 5rem; /* To ensure that the section title of the article is shown when using the outline */
+  margin-top: -5rem; /* Equal to negative of the height */
+  visibility: hidden;
 }
 
 /* For large devices */
@@ -29,7 +67,7 @@
     row-gap: 2.5rem;
   }
 
-  .article__description {
+  .article__content {
     padding: 0 5rem;
     margin-bottom: 2rem;
   }
@@ -37,7 +75,7 @@
 
 /* For medium devices */
 @media screen and (max-width: 576px) {
-  .article__description {
+  .article__content {
     padding: 0;
   }
 }
