@@ -10,6 +10,7 @@ import { Projects } from "./pages/Projects.jsx";
 import { ImpressumPage } from "./pages/ImpressumPage.jsx";
 
 import { ThemeProvider } from "./theme/Theme";
+import { SafetyForDeepLearning } from "./pages/SafetyForDeepLearning.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/teaching/introduction-to-python",
         element: <IntroductionToPython />,
+      },
+      {
+        path: "/teaching/safety-for-deep-learning",
+        element: <SafetyForDeepLearning />,
       },
     ],
   },
