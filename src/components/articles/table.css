@@ -1,0 +1,15 @@
+.table-container {
+  padding: 20px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--border-color);
+  text-align: left;
+  padding: 8px;
+}
