@@ -1,17 +1,20 @@
 import React from "react";
 
+import { CodeBlock, dracula } from "react-code-blocks";
+
 import { Article } from "../components/articles/Article";
 import { ExternalLink } from "../components/articles/ExternalLink";
+import { InlineCode } from "../components/articles/InlineCode";
 
 const IntroductionToPython = () => {
   return (
     <main className="main">
       <Article
-        title={"Introduction to Python"}
-        subtitle={"Yet another python guide"}
+        title={"Introduction To Python"}
+        subtitle={"Yet Another Python Guide?"}
       >
         <h3 id="what-is-python-and-why-you-should-learn-it">
-          What is Python and why you should learn it
+          What Is Python and Why You Should Learn It
         </h3>
         <p>
           <ExternalLink href="https://www.python.org/">Python</ExternalLink> is
@@ -55,32 +58,92 @@ const IntroductionToPython = () => {
           explore further in upcoming discussions.
         </p>
 
-        <h3 id="setting-up-a-python-environment">
-          Setting up a Python environment
-        </h3>
+        <h3 id="how-to-invoke-python-code">How To Invoke Python Code</h3>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-          amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-          esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
-          at vero eros et accumsan et iusto odio dignissim qui blandit praesent
-          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          To get started with running Python code on your computer, you'll need
+          to install a{" "}
+          <ExternalLink href="https://www.python.org/downloads/">
+            Python interpreter
+          </ExternalLink>{" "}
+          which is available for Windows, Linux and Mac OS. Alternatively, you
+          can also use{" "}
+          <ExternalLink href="https://docs.conda.io/en/latest/">
+            Conda
+          </ExternalLink>{" "}
+          (or one of its variations like MicroConda or Mamba). We'll talk more
+          about these options when we discuss virtual environments in a moment.
+        </p>
+        <p>
+          Once Python is installed on your system, there are two main ways to
+          start using it. The first method is by opening your shell or command
+          prompt and typing "python". This will launch the Python interpreter,
+          and you'll see something like this:
+          <CodeBlock
+            text={`Python 3.11.3 (main, Jun  5 2023, 09:32:32) [GCC 13.1.1 20230429] on linux\nType "help", "copyright", "credits" or "license" for more information.\n>>>`}
+            language={"bash"}
+            showLineNumbers={false}
+            theme={dracula}
+          />
+          The three greater-than signs (">>>") are prompts that indicate you can
+          type your commands below them. When you press "Enter", Python will
+          execute your command. If you type a command like Python's{" "}
+          <InlineCode>print()</InlineCode>, the result will show up on the
+          screen, like this: 
+          <CodeBlock
+            text={`>>> print("Hello World")\nHello World`}
+            language={"bash"}
+            showLineNumbers={false}
+            theme={dracula}
+          />
+          For longer programs, you can use your preferred
+          text editor or Integrated Development Environment (IDE) to write your
+          Python code. The common file extension for Python files is ".py". To
+          run your program, type "python" followed by the name or path of your
+          file. Most modern IDEs also offer a "run" button that you can click.
+        </p>
+        <p>
+          One of the great advantages of Python is its easy-to-use libraries and
+          external packages. Since many people use Python, there's a wide
+          variety of pre-built packages available for many different tasks. The
+          Python Package Index (
+          <ExternalLink href="https://pypi.org/">PyPI</ExternalLink>) is a
+          collection of software for Python that offers numerous packages. You
+          can install Python packages from PyPI using a package management tool
+          called "pip".
+        </p>
+        <p>
+          However, Python is not great at dependency management. This is why
+          nearly every Python user recommends to use virtual environments.
+          Virtual environments are a Python tool for dependency management and
+          project isolation. They provide a simple solution for a lot of
+          potential problems by helping you to:
+          <div>
+            <ul>
+              <li>Resolve dependency issues</li>
+              <li>Create self-contained and reproducible projects</li>
+              <li>Avoid system pollution</li>
+              <li>Install packages without admin rights</li>
+            </ul>
+          </div>
+          There are various approaches to creating a virtual environment. One
+          option is to use{" "}
+          <ExternalLink href="https://docs.python.org/3/library/venv.html">
+            venv
+          </ExternalLink>
+          , a built-in tool in Python. External tools like virtualenv or Conda
+          are also commonly used. Conda provides an alternative package and
+          environment management approach. It not only enables easy creation of
+          virtual environments with different Python versions but also
+          introduces an additional feature set. It's worth noting that Conda is
+          a separate project and is unrelated to pip. It uses an alternative
+          package index maintained by the Anaconda project instead of PyPI.
+          Conda packages can be installed using the command "conda install". As
+          an alternative,{" "}
+          <ExternalLink href="https://www.docker.com/">Docker</ExternalLink> can
+          also be used to create a containerized Python development environment.
+          Docker allows you to package your Python application along with its
+          dependencies and system configurations, ensuring consistency across
+          different environments.
         </p>
 
         <h3 id="variables">Variables</h3>
