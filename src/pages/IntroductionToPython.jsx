@@ -84,7 +84,7 @@ const IntroductionToPython = () => {
             showLineNumbers={false}
             theme={dracula}
           />
-          The three greater-than signs (">>>") are prompts that indicate you can
+          The three greater-than signs (&gt;&gt;&gt;) are prompts that indicate you can
           type your commands below them. When you press "Enter", Python will
           execute your command. If you type a command like Python's{" "}
           <InlineCode>print()</InlineCode>, the result will show up on the
