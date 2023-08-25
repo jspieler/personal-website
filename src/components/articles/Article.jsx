@@ -11,15 +11,17 @@ const Article = ({ title, subtitle, children }) => {
 
   const projectRepo = import.meta.env.VITE_GISCUS_PROJECT_REPO;
   const projectRepoId = import.meta.env.VITE_GISCUS_PROJECT_REPO_ID;
-  const discussionCategoryId = import.meta.env.VITE_GISCUS_DISCUSSION_CATEGORY_ID;
-  const discussionCategoryName = import.meta.env.VITE_GISCUS_DISCUSSION_CATEGORY_NAME;
+  const discussionCategoryId = import.meta.env
+    .VITE_GISCUS_DISCUSSION_CATEGORY_ID;
+  const discussionCategoryName = import.meta.env
+    .VITE_GISCUS_DISCUSSION_CATEGORY_NAME;
 
   useEffect(() => {
     // Create section links for all h3 headers within the article content
     const headers = document.querySelectorAll(".article__content h3");
     const links = Array.from(headers).map((header, index) => ({
       title: header.textContent,
-      id: `section-${index}`,
+      id: header.textContent.replace(/\s+/g, "-").toLowerCase(),
     }));
     setSectionLinks(links);
   }, []);
@@ -35,12 +37,16 @@ const Article = ({ title, subtitle, children }) => {
           <ul>
             {sectionLinks.map((section) => (
               <li key={section.id}>
-                <a href={`#${section.id}`}>{section.title}</a>
+                <a
+                  href={`#${section.title.replace(/\s+/g, "-").toLowerCase()}`}
+                >
+                  {section.title}
+                </a>
               </li>
             ))}
           </ul>
         </div>
-        
+
         <Giscus
           id="comments"
           repo={projectRepo}

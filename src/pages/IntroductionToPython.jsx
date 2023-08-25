@@ -9,7 +9,9 @@ const IntroductionToPython = () => {
         title={"Introduction to Python"}
         subtitle={"Yet another python guide"}
       >
-        <h3 id="section-0">What is Python and why you should learn it</h3>
+        <h3 id="what-is-python-and-why-you-should-learn-it">
+          What is Python and why you should learn it
+        </h3>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -35,7 +37,7 @@ const IntroductionToPython = () => {
           Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
         </p>
 
-        <h3 id="section-1">Setting up a Python environment</h3>
+        <h3 id="setting-up-a-python-environment">Setting up a Python environment</h3>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -61,7 +63,7 @@ const IntroductionToPython = () => {
           Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
         </p>
 
-        <h3 id="section-2">Variables</h3>
+        <h3 id="variables">Variables</h3>
         <p>
           <iframe
             src="https://trinket.io/embed/python/3d8d7ce66b"
