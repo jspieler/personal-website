@@ -17,7 +17,9 @@ const Article = ({ title, subtitle, children }) => {
     .VITE_GISCUS_DISCUSSION_CATEGORY_NAME;
 
   useEffect(() => {
-    // Create section links for all h3 headers within the article content
+    // set initial position to top of page
+    window.scrollTo(0, 0);
+    // create section links for all h3 headers within the article content
     const headers = document.querySelectorAll(".article__content h3");
     const links = Array.from(headers).map((header, index) => ({
       title: header.textContent,

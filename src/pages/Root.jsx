@@ -13,7 +13,7 @@ const Root = () => {
 
   return (
     <div className={theme}>
-      <Header /> // needs to be adapted
+      <Header />
 
       <Outlet />
 
