@@ -13,6 +13,22 @@ const IntroductionToPython = () => {
         title={'Introduction To Python'}
         subtitle={'Yet Another Python Guide?'}
       >
+        <p>
+          The following introduction to Python serves as additional,
+          supplementary material to the lecture of the same name.
+          Since it is a comprehensive, stand-alone introduction, it
+          can also be used to learn the basics of Python on your own.
+          The concept of this introduction is inspired by the
+          JavaScript reference in the{' '}
+          <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">
+            MDN Web Docs
+          </ExternalLink>{' '}
+          which I really like because it provides good explanations
+          along with code sandboxes that allow you to play directly
+          with the code while learning. I would encourage you to do
+          exactly that.
+        </p>
+        <p>The lecture slides are also available here.</p>
         <h3 id="what-is-python-and-why-you-should-learn-it">
           What Is Python and Why You Should Learn It
         </h3>
