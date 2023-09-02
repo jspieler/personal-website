@@ -427,6 +427,64 @@ const IntroductionToPython = () => {
         </p>
         <h5>Functions and Methods for Dictionaries</h5>
         <p>TODO</p>
+
+        <h4>Sets</h4>
+        <p>
+          Python's built-in set type is similar to dictionaries. Sets
+          are unordered and its elements are unique. A set itself can
+          be modified, but the elements in the set must be immutable.
+          There are two ways to create a set in Python: first, you can
+          create a set using the built-in{' '}
+          <InlineCode>set()</InlineCode> function or alternately, a
+          set can be defined using curly braces. To define an empty
+          set, the <InlineCode>set()</InlineCode> function needs to be
+          used. Recall that Python interprets empty curly braces as an
+          empty dictionary. The elements in a set can be objects of
+          different types. However, keep in mind that set elements
+          must be immutable. Thus, a tuple may be included in a set,
+          but lists and dictionaries are mutable, so they can't be set
+          elements.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/3f3742ad5d" />
+        <h5>Functions and Methods for Sets</h5>
+        <p>
+          As for lists, the <InlineCode>len()</InlineCode> function
+          can be used to get the number of elements in a set and the{' '}
+          <InlineCode>in</InlineCode> and{' '}
+          <InlineCode>not in</InlineCode> operators can be used to
+          test for membership. However, many of the operations that
+          can be used for Python's other data types, don't make sense
+          for sets. For example, sets can't be indexed or sliced.
+          Nevertheless, Python provides a bunch of operation on set
+          objects which are similar to the operations defined for
+          mathematical sets. Set union of two or more sets can be
+          performed with the "|" operator or with the{' '}
+          <InlineCode>union()</InlineCode> method. The resulting set
+          contains all elements that are present in any of the
+          specified sets. To compute the intersection of two or more
+          sets , i.e. return a set containing only elements that are
+          present in all of the specified sets, the "&" operator or{' '}
+          <InlineCode>intersection()</InlineCode> method can be used.
+          The difference between two or more sets can be computed
+          using the "-" operator or the{' '}
+          <InlineCode>difference()</InlineCode> method. For two sets,
+          this will return a set containing all elements that are in
+          the first set, but not in the second set. When multiple sets
+          are specified, the operation is performed from left to
+          right. There are many more operations available such as{' '}
+          <InlineCode>update()</InlineCode> for updating a set,{' '}
+          <InlineCode>add()</InlineCode> to add an element to a set,{' '}
+          <InlineCode>remove()</InlineCode> to remove an element from
+          a set and <InlineCode>clear()</InlineCode> to remove all
+          elements from a set. For more details, refer to the{' '}
+          <ExternalLink href="https://docs.python.org/3.11/library/stdtypes.html#set">
+            Python documentation
+          </ExternalLink>{' '}
+          .There's also another built-in type in Python called{' '}
+          <InlineCode>frozenset</InlineCode> which is exactly the same
+          as set, but is immutable.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/ab8ea2aa12" />
       </Article>
     </main>
   );
