@@ -188,18 +188,7 @@ const IntroductionToPython = () => {
 
         <h3 id="variables">Variables</h3>
         <p>
-          <LazyIframe
-            src="https://trinket.io/embed/python/3d8d7ce66b"
-            // loading='lazy'
-            // width="100%"
-            // height="356"
-            // frameBorder="0"
-            // marginWidth="0"
-            // marginHeight="0"
-            // style={{display: 'none'}}
-            // allowFullScreen
-            // can we somehow set the color scheme?
-          />
+          <LazyIframe src="https://trinket.io/embed/python/3d8d7ce66b" />
         </p>
 
         <h3 id="data-types">Data Types</h3>
@@ -364,6 +353,80 @@ const IntroductionToPython = () => {
           value.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/697878d467" />
+
+        <h4>Tuples</h4>
+        <p>
+          Tuples, like lists, are a fundamental data structure in
+          Python, used to store collections of items. They can contain
+          elements of various data types, including numbers, strings,
+          and even other tuples. Tuples are similar to lists but there
+          is one important difference, namely that tuples are not
+          mutable. This means that once a tuple is created, its
+          elements can't be modified in place. The immutability of
+          tuples makes them valuable in scenarios where you want to
+          ensure that the data remains constant throughout the
+          program's execution. Tuples are constructed by enclosing
+          their values within parentheses. When a tuple is not
+          embedded within an expression, the parentheses may be
+          omitted. To create an empty tuple, simply utilize a pair of
+          empty parentheses. However, due to the use of parentheses
+          for grouping in arithmetic expressions, it is essential to
+          include a comma after the sole element to explicitly denote
+          a tuple with only one element in an assignment statement.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/9e85dc5f9b" />
+        <h5>Operators and Indexing for Tuples</h5>
+        <p>
+          The same operators as mentioned in the previous section for
+          lists apply to tuples. Keep in mind that tuples are
+          immutable. Thus, slicing operations for tuples are more
+          similar to strings than lists. Slicing can be used to
+          extract parts of a tuple, but not to change it.
+        </p>
+        <h5>Functions and Methods for Tuples</h5>
+        <p>
+          There are no methods for tuples. However, tuples and list
+          can be easily converted to each other using the built-in
+          function <InlineCode>list</InlineCode> and{' '}
+          <InlineCode>tuple</InlineCode>.
+        </p>
+
+        <h4>Dictionaries</h4>
+        <p>
+          Dictionaries in Python share similarities with lists, as
+          they can store arbitrary objects and be nested to any
+          desired depth. However, unlike lists, dictionaries are
+          indexed by keys, which can be any immutable object, such as
+          strings or tuples. Let's delve into this concept with a
+          straightforward example: imagine a scenario where we want to
+          store student matriculation numbers as tuples inside a list,
+          where the first tuple element represents the student's name,
+          and the second element is their matriculation number.
+          However, if we wish to retrieve the matriculation number of
+          a specific student, we'd need to search through each element
+          in the list to find the tuple with the student's name as the
+          first element before we can access the desired number. With
+          a dictionary, we can use the student's name as the index,
+          often referred to as a key. This significantly simplifies
+          the process of retrieving the information we need:
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/2f654ae385" />
+        <p>
+          As the example above illustrates, a dictionary can be
+          initialized using a comma-separated list of key/value pairs
+          enclosed in curly braces. An empty dictionary can be created
+          with a pair of empty curly braces. It's important to note
+          that dictionary keys are not limited to strings, and they
+          don't need to be of the same data type. However, it's
+          crucial to remember that mutable objects, such as lists,
+          cannot be used as dictionary keys. You can add key/value
+          pairs to a dictionary using assignment statements, and if
+          you need to remove a specific key/value pair from a
+          dictionary, you can use the <InlineCode>del</InlineCode>{' '}
+          statement for this purpose.
+        </p>
+        <h5>Functions and Methods for Dictionaries</h5>
+        <p>TODO</p>
       </Article>
     </main>
   );
