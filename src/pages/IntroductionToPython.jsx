@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { CodeBlock, dracula } from 'react-code-blocks';
 
 import { Article } from '../components/articles/Article';
 import { ExternalLink } from '../components/articles/ExternalLink';
 import { InlineCode } from '../components/articles/InlineCode';
+import { LazyIframe } from '../components/articles/LazyIframe';
 
 const IntroductionToPython = () => {
   return (
@@ -145,7 +146,7 @@ const IntroductionToPython = () => {
           packages. You can install Python packages from PyPI using a
           package management tool called "pip".
         </p>
-        <p>
+        <div>
           However, Python is not great at dependency management. This
           is why nearly every Python user recommends to use virtual
           environments. Virtual environments are a Python tool for
@@ -183,20 +184,22 @@ const IntroductionToPython = () => {
           Python application along with its dependencies and system
           configurations, ensuring consistency across different
           environments.
-        </p>
+        </div>
 
         <h3 id="variables">Variables</h3>
         <p>
-          <iframe
+          <LazyIframe
             src="https://trinket.io/embed/python/3d8d7ce66b"
-            width="100%"
-            height="356"
-            frameborder="0"
-            marginwidth="0"
-            marginheight="0"
-            allowfullscreen
+            // loading='lazy'
+            // width="100%"
+            // height="356"
+            // frameBorder="0"
+            // marginWidth="0"
+            // marginHeight="0"
+            // style={{display: 'none'}}
+            // allowFullScreen
             // can we somehow set the color scheme?
-          ></iframe>
+          />
         </p>
 
         <h3 id="data-types">Data Types</h3>
@@ -230,15 +233,7 @@ const IntroductionToPython = () => {
           individual elements. To get the number of elements within a
           list, Python offers the built-in{' '}
           <InlineCode>len()</InlineCode> function.
-          <iframe
-            src="https://trinket.io/embed/python/179b14e949"
-            width="100%"
-            height="356"
-            frameborder="0"
-            marginwidth="0"
-            marginheight="0"
-            allowfullscreen
-          ></iframe>
+          <LazyIframe src="https://trinket.io/embed/python/179b14e949" />
         </p>
         <h5>List Indexing and Slicing</h5>
         <p>
@@ -266,15 +261,7 @@ const IntroductionToPython = () => {
           In this case, a slice is created without a starting and
           ending index.
         </p>
-        <iframe
-          src="https://trinket.io/embed/python/1c6c2fe35d"
-          width="100%"
-          height="356"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-          allowfullscreen
-        ></iframe>
+        <LazyIframe src="https://trinket.io/embed/python/1c6c2fe35d" />
         <h5>List Operators</h5>
         <h6>Concatenation</h6>
         <p>
@@ -288,15 +275,7 @@ const IntroductionToPython = () => {
           square brackets or use the <InlineCode>append()</InlineCode>{' '}
           method.
         </p>
-        <iframe
-          src="https://trinket.io/embed/python/ef8c8f064f"
-          width="100%"
-          height="356"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-          allowfullscreen
-        ></iframe>
+        <LazyIframe src="https://trinket.io/embed/python/ef8c8f064f" />
         <h6>Repetition</h6>
         <p>
           As for strings, the asterisk is overloaded for lists to
@@ -306,15 +285,7 @@ const IntroductionToPython = () => {
           consisting other lists can be created by surrounding a list
           to be repeated with an extra set of square brackets.
         </p>
-        <iframe
-          src="https://trinket.io/embed/python/74423edc47"
-          width="100%"
-          height="356"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-          allowfullscreen
-        ></iframe>
+        <LazyIframe src="https://trinket.io/embed/python/74423edc47" />
         <h6>
           The <InlineCode>in</InlineCode> Operator
         </h6>
@@ -334,15 +305,7 @@ const IntroductionToPython = () => {
           <InlineCode>in</InlineCode> operator works seamlessly with
           expressions that evaluate to elements within a list.
         </p>
-        <iframe
-          src="https://trinket.io/embed/python/be273e1259"
-          width="100%"
-          height="356"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-          allowfullscreen
-        ></iframe>
+        <LazyIframe src="https://trinket.io/embed/python/be273e1259" />
         <h6>List Comprehension</h6>
         <p>
           List comprehensions are a concise and elegant way to create
@@ -354,15 +317,7 @@ const IntroductionToPython = () => {
           readability by encapsulating complex operations in a
           comprehensible format.
         </p>
-        <iframe
-          src="https://trinket.io/embed/python/684e868e0f"
-          width="100%"
-          height="356"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-          allowfullscreen
-        ></iframe>
+        <LazyIframe src="https://trinket.io/embed/python/684e868e0f" />
         <h6>Functions and Methods for Lists</h6>
         <p>
           We already learnt that the <InlineCode>len()</InlineCode>{' '}
@@ -408,15 +363,7 @@ const IntroductionToPython = () => {
           index (subscript) of the first occurrence of a specified
           value.
         </p>
-        <iframe
-          src="https://trinket.io/embed/python/697878d467"
-          width="100%"
-          height="356"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-          allowfullscreen
-        ></iframe>
+        <LazyIframe src="https://trinket.io/embed/python/697878d467" />
       </Article>
     </main>
   );
