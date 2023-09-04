@@ -195,7 +195,95 @@ const IntroductionToPython = () => {
         <p>...</p>
 
         <h3 id="control-structures">Control Structures</h3>
-        <p>...</p>
+        <h4>Conditions</h4>
+        <p>
+          In Python, control structures like the{' '}
+          <InlineCode>if</InlineCode> statement, along with optional{' '}
+          <InlineCode>elif</InlineCode> and{' '}
+          <InlineCode>else</InlineCode> statements, are the foundation
+          for executing conditional logic in your programs. The{' '}
+          <InlineCode>if</InlineCode>
+          statement evaluates the expression following it. If the
+          expression is true, Python executes the statement(s) that
+          follow. If the expression is false, Python continues with
+          the <InlineCode>elif</InlineCode> statement (if there is
+          one), and tests that expression. It proceeds to test the
+          expressions associated with any{' '}
+          <InlineCode>elif</InlineCode> statements in order, executing
+          the first set of statements for which the expression is
+          true. If none of the <InlineCode>elif</InlineCode>{' '}
+          expressions are true, and there is an{' '}
+          <InlineCode>else</InlineCode> statement, Python executes the
+          statement(s) associated with the{' '}
+          <InlineCode>else</InlineCode>. If there's no{' '}
+          <InlineCode>else</InlineCode> statement, Python simply moves
+          on to the statements following the{' '}
+          <InlineCode>if</InlineCode> block. It's important to note
+          that once Python encounters a true expression associated
+          with an <InlineCode>if</InlineCode> or{' '}
+          <InlineCode>elif</InlineCode> statement, it executes the
+          corresponding statement(s) and doesn't evaluate any other
+          expressions that follow.
+        </p>
+        <h4>Loops</h4>
+        <p>
+          Python provides two primary types of loops: the{' '}
+          <InlineCode>for</InlineCode> loop and the{' '}
+          <InlineCode>while</InlineCode> loop.
+        </p>
+        <p>
+          Python, like other programming languages, provides a{' '}
+          <InlineCode>for</InlineCode> loop which allows you to
+          iterate. Although, the <InlineCode>for</InlineCode> loop is
+          very useful, there is a more "pythonic" and powerful way for
+          iteration in Python. The <InlineCode>for in</InlineCode>{' '}
+          loop allows you to iterate over all the values in a sequence
+          (e.g. string, list or tuple), performing the same task in
+          each element. If the elements of the sequence being iterated
+          over contain tuples or lists, a comma separated list can be
+          used to unpack each individual element of the sequence. If
+          you need an index, you can use{' '}
+          <InlineCode>enumerate</InlineCode>.
+        </p>
+        <p>
+          The <InlineCode>for</InlineCode> loop provides a great way
+          to process the elements of a sequence. However, sometimes it
+          is necessary to do some repetitive computation which is not
+          based on an array. In those cases, the{' '}
+          <InlineCode>while</InlineCode> loop can be used. When Python
+          encounters a <InlineCode>while</InlineCode> loop, it firsts
+          tests the expression provided. If the expression is false
+          and there's an <InlineCode>else</InlineCode> clause, Python
+          executes the statements following the{' '}
+          <InlineCode>else</InlineCode>. Without an{' '}
+          <InlineCode>else</InlineCode> clause, if the expression is
+          false, control moves to the first statement after the{' '}
+          <InlineCode>while</InlineCode> loop. If the expression is
+          true, Python executes the statements following the{' '}
+          <InlineCode>while</InlineCode> statement. Once those
+          statements are completed, the expression is tested again,
+          and the process repeats. As long as the expression remains
+          true, Python continues executing the statements after the
+          <InlineCode>while</InlineCode>. When the expression becomes
+          false, the statements after the{' '}
+          <InlineCode>else</InlineCode> (if present) are executed.
+        </p>
+        <p>
+          It's worth mentioning that Python programmers often use{' '}
+          <InlineCode>while</InlineCode> loops in a somewhat
+          unconventional way. They may create "infinite" loops and
+          control when to exit the loop with statements inside the
+          loop. To exit a loop (<InlineCode>for</InlineCode> or{' '}
+          <InlineCode>while</InlineCode>) prematurely, you can use the{' '}
+          <InlineCode>break</InlineCode> statement. The{' '}
+          <InlineCode>continue</InlineCode> statement, on the other
+          hand, is used to skip the remaining part of the current
+          iteration and move on to the next one. In a{' '}
+          <InlineCode>for</InlineCode> loop, the loop variable's value
+          is automatically incremented after a{' '}
+          <InlineCode>continue</InlineCode> statement, so the next
+          iteration proceeds as usual.
+        </p>
 
         <h3 id="data-structures">Data Structures</h3>
         <p>...</p>
