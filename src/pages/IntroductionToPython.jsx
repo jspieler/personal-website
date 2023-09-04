@@ -194,7 +194,7 @@ const IntroductionToPython = () => {
         <h3 id="data-types">Data Types</h3>
         <p>...</p>
 
-        <h3 id="control-structure">Control Structures</h3>
+        <h3 id="control-structures">Control Structures</h3>
         <p>...</p>
 
         <h3 id="data-structures">Data Structures</h3>
@@ -485,6 +485,170 @@ const IntroductionToPython = () => {
           as set, but is immutable.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/ab8ea2aa12" />
+
+        <h3 id="functions-and-modules">Functions and Modules</h3>
+
+        <h4>Functions</h4>
+        {/* TODO: Sandbox examples */}
+        <p>
+          Functions are a fundamental component of any programming
+          language for two primary reasons. First, they enable code
+          reusability, eliminating the need to duplicate and modify
+          code each time it's used. Second, functions allow you to
+          logically isolate various sub-tasks that inevitably arise
+          when working on a program. This programming approach is
+          known as modular programming and is generally considered a
+          best practice for writing readable and maintainable code.
+        </p>
+        <p>
+          In Python, functions are treated as objects. As a result,
+          they can be assigned to variables, stored in lists or
+          tuples, passed as arguments to other functions, and more.
+          However, functions possess a unique property that
+          distinguishes them from other Python objects: they can
+          accept a list of arguments enclosed in parentheses and
+          optionally return a value. You may already be familiar with
+          some of Python's built-in functions, such as{' '}
+          <InlineCode>len()</InlineCode>, and you've encountered
+          methods, which are similar to functions and defined in a
+          similar manner. In this section, we will delve into various
+          aspects of functions, including how to create and import
+          them into your programs.
+        </p>
+        <h5>Variable Scoping</h5>
+        <p>
+          In Python, you can typically reference variables anywhere in
+          your program. However, when you define a function, Python
+          creates a distinct namespace within that function. A
+          namespace serves as a mapping between object names in your
+          program and their corresponding memory locations where
+          Python stores their values. Consequently, when a variable is
+          created inside a function, Python recognizes it as a local
+          variable within that function's namespace, distinct from
+          variables with the same name defined elsewhere in the
+          program. You can also reference a variable inside a function
+          that already exists in your program at the time the function
+          is called. Additionally, you can declare global variables
+          using the <InlineCode>global</InlineCode> statement, though
+          this should be only used for situations where no other
+          reasonable solution is available. Consequently, we won't
+          delve into global variables in detail here. When Python
+          attempts to resolve the reference of a name in your program,
+          names within a function's local namespace take precedence,
+          followed by names of global objects or objects imported into
+          the global namespace from a module. Finally, built-in object
+          names are searched as a last resort. Due to this search
+          order, Python's scoping is sometimes referred to as
+          following the LGB rule.
+        </p>
+        <h5>Function Basics</h5>
+        <p>
+          In Python, functions are defined using the{' '}
+          <InlineCode>def</InlineCode> statement. The function's name
+          follows the <InlineCode>def</InlineCode> keyword, followed
+          by a parenthesized list of arguments to be passed to the
+          function. If a function does not require any arguments, an
+          empty set of parentheses is used. A colon (:) comes after
+          the parenthesized list. On the next line, an indented
+          triple-quoted string, known as a docstring, provides
+          documentation about the function. While not strictly
+          necessary, docstrings are good practice. The function body
+          follows the <InlineCode>def</InlineCode> line and the
+          optional docstring. The function returns control to the
+          calling environment when it encounters a{' '}
+          <InlineCode>return</InlineCode> statement or when it reaches
+          the end of the function body. If the function lacks a{' '}
+          <InlineCode>return</InlineCode> statement, calling it will
+          return the value <InlineCode>None</InlineCode>. To call a
+          function, you refer to its name followed by a parenthesized
+          list of arguments. For functions with no arguments, you
+          simply use empty parentheses.
+        </p>
+        <h5>Name Arguments and Default Values</h5>
+        <p>
+          When passing arguments to a function without specifying
+          their names, Python assumes that you've arranged the
+          arguments in the order they were defined in the function. To
+          mitigate the need to remember argument order, Python allows
+          you to use named arguments. When calling a function, you can
+          precede some or all of the arguments with a name and an
+          equal sign, making it clear which argument corresponds to
+          which parameter in the function. For added flexibility, when
+          defining a function, Python allows you to specify default
+          values for some or all of the arguments, making it optional
+          for users to provide these arguments. To set a default value
+          when defining a function, use a syntax similar to naming
+          arguments when calling a function, appending an equal sign
+          followed by the desired default value. When combining named
+          and unnamed arguments in a function call, unnamed arguments
+          must precede named ones in the argument list. Thus, place
+          required arguments before optional ones in the function's
+          argument list.
+        </p>
+        <h5>Variable Number of Arguments</h5>
+        <p>
+          In some cases, it's impossible to predict in advance how
+          many arguments a function will receive. By designating a
+          function argument with a name beginning with an asterisk,
+          Python will collect all unnamed arguments passed to the
+          function into a tuple, which can be accessed using that
+          argument's name. A similar technique can be employed to
+          create functions that can handle an unlimited number of
+          keyword-argument pairs. If an argument in a function is
+          prefixed with two asterisks, Python will collect all
+          keyword-argument pairs that were not explicitly declared as
+          arguments into a dictionary. This argument must be the last
+          one in the function definition. This approach enables you to
+          write a function that accepts any named parameter, even if
+          you don't know the parameter name when writing the function.
+        </p>
+        <h5>Functional Programming and Anonymous Functions</h5>
+        <p>
+          When you need to perform the same operation on a list of
+          objects, an alternative to using a{' '}
+          <InlineCode>for</InlineCode> loop is the{' '}
+          <InlineCode>map</InlineCode> function. This function accepts
+          another function as its first argument and one or more lists
+          as additional arguments. The number of provided lists must
+          match the number of arguments expected by the mapped
+          function. Python offers the <InlineCode>lambda</InlineCode>{' '}
+          operator for creating anonymous functions when you only need
+          a function once. Anonymous functions are limited to a single
+          statement, which becomes the value returned by the{' '}
+          <InlineCode>lambda</InlineCode> operator. Instead of
+          enclosing the arguments in parentheses, you list them after
+          the <InlineCode>lambda</InlineCode> keyword, separated by
+          commas.
+        </p>
+        <p>
+          Another functional programming tool in Python is the{' '}
+          <InlineCode>filter</InlineCode> function. Like{' '}
+          <InlineCode>map</InlineCode>, it takes a function as its
+          first argument and a list as its second argument. However,{' '}
+          <InlineCode>filter</InlineCode> returns a new list
+          containing only those elements for which the function
+          returns <InlineCode>True</InlineCode>. You might also recall
+          list comprehensions as an alternative way to apply an
+          expression to all elements of a list. In fact, a list
+          comprehension with a single <InlineCode>for</InlineCode>{' '}
+          clause is similar to a call to <InlineCode>map</InlineCode>.
+          By adding an <InlineCode>if</InlineCode> clause to the
+          comprehension, it becomes similar to embedding a call to{' '}
+          <InlineCode>filter</InlineCode> within a{' '}
+          <InlineCode>map</InlineCode>.
+        </p>
+        <p>
+          Finally, the <InlineCode>reduce</InlineCode> function takes
+          a function with exactly two arguments as its first argument
+          and a list as its second argument. It successively applies
+          the function to the list's elements, using the current
+          result as the first argument and an element from the list as
+          the second argument. <InlineCode>reduce</InlineCode> returns
+          a scalar value. Optionally, you can provide a third argument
+          as a starting value, which defaults to 0.
+        </p>
+
+        <h4>Modules</h4>
       </Article>
     </main>
   );
