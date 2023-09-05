@@ -809,6 +809,34 @@ const IntroductionToPython = () => {
           this order can help you manage your module imports
           effectively.
         </p>
+        <p>
+          When the Python interpreter reads a source file, it executes
+          all the code found in that file. Consequently, when you
+          <InlineCode>import</InlineCode> a module into a Python
+          program, the contents of the module are executed. This
+          behavior can lead to unintended consequences when users
+          accidentally invoke scripts they didn't intend to. To
+          address this issue, Python provides a built-in variable
+          called <InlineCode>__name__</InlineCode>. This variable has
+          a special role in module execution. When a module is
+          imported, the <InlineCode>__name__</InlineCode> variable is
+          set to the name of that module. However, when a program is
+          executed directly (as opposed to being imported as a
+          module), the <InlineCode>__name__</InlineCode> variable is
+          set to the value
+          <InlineCode>"__main__"</InlineCode>. This concept forms the
+          basis for the commonly seen{' '}
+          <InlineCode>if __name__ == "__main__":</InlineCode>{' '}
+          statement in Python code. It allows you to differentiate
+          between code that should run only when the script is
+          executed directly and code that should be available for
+          import as a module. By using the{' '}
+          <InlineCode>if __name__ == "__main__":</InlineCode>{' '}
+          construct, you can conditionally execute specific code
+          blocks only when the script is run directly. This is
+          particularly useful for creating reusable modules that can
+          be both imported and executed independently.
+        </p>
       </Article>
     </main>
   );
