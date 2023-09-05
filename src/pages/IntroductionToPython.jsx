@@ -737,6 +737,78 @@ const IntroductionToPython = () => {
         </p>
 
         <h4>Modules</h4>
+        <p>
+          Python's core design philosophy emphasizes simplicity and
+          efficiency, keeping the language small and easy to learn.
+          However, many programming tasks require additional
+          capabilities, which are provided through the use of modules.
+          In Python, a module is a collection of code that groups
+          together functions, classes, and variables according to
+          functionality. Modules serve as a way to organize your code
+          into reusable and logically grouped components. They are
+          essential for managing complexity in larger programs and
+          promoting code reuse across projects. Python comes with an
+          extensive standard library of modules that provide pre-built
+          functionality for various tasks. We will explore some of the
+          most commonly used standard modules distributed with Python
+          later on. In addition to the standard modules, there are
+          many additional packages available for installation, such as
+          those from PyPi or Conda. However, exercise caution when
+          installing third-party packages to ensure their
+          trustworthiness and compatibility with your project.
+        </p>
+        <p>
+          To create a module, you simply save your Python code in a
+          separate <InlineCode>.py</InlineCode> file with a
+          descriptive name, such as{' '}
+          <InlineCode>my_module.py</InlineCode>. This file should
+          contain functions, classes, or variables that you want to
+          reuse in other parts of your program or in other programs.
+          As discussed earlier in the context of variable scoping,
+          Python identifies which variable or function you are
+          referring to by resolving its name in a namespace. To use
+          functions, classes, or variables from a module in your
+          Python program, you need to import the module. Python
+          provides three ways to do this. The simplest way to access a
+          module is to provide the module's name to the{' '}
+          <InlineCode>import</InlineCode> statement. For example, to
+          import a module named <InlineCode>my_module</InlineCode>,
+          you'd use <InlineCode>import my_module</InlineCode>. It
+          makes all the functions, classes, and variables in the
+          module available under the{' '}
+          <InlineCode>my_module</InlineCode> namespace. If you only
+          need specific items from a module, you can import them
+          directly. This way, you can use{' '}
+          <InlineCode>function_name</InlineCode> without needing to
+          prefix it with <InlineCode>module_name</InlineCode>. For
+          instance,{' '}
+          <InlineCode>from my_module import my_function</InlineCode>.
+          While this approach is slightly more efficient than
+          importing an entire module, it eliminates the explicit
+          connection between the imported function and the module it
+          was imported from. You also need to list every function you
+          want to use in the import statement. You can also import all
+          of the objects from a module into the local namespace by
+          using an asterisk after the <InlineCode>import</InlineCode>{' '}
+          statement, e.g.{' '}
+          <InlineCode>from my_module import *</InlineCode>. Since this
+          may override existing objects and even built-in objects,
+          imports of whole modules should be used carefully. To give a
+          module a shorter name, you can use the{' '}
+          <InlineCode>as</InlineCode> keyword to create an alias. This
+          is useful when working with modules with long names or to
+          avoid naming conflicts. For example,{' '}
+          <InlineCode>import my_long_module_name as mlm</InlineCode>.
+        </p>
+        <p>
+          When you import a module, Python searches for it in a
+          specific order. First, it checks the current directory where
+          your script is located. Then, it looks in the built-in
+          modules. Finally, it searches in directories listed in the
+          <InlineCode>sys.path</InlineCode> variable. Understanding
+          this order can help you manage your module imports
+          effectively.
+        </p>
       </Article>
     </main>
   );
