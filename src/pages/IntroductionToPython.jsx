@@ -186,6 +186,36 @@ const IntroductionToPython = () => {
           environments.
         </div>
 
+        <h3 id="variables">Variables</h3>
+        <p>
+          In Python, variables are used for storing and managing data.
+          Think of variables as containers that can hold values of
+          various data types, such as numbers, strings, or complex
+          objects. You can assign values to variables using the
+          assignment operator =. There are a few variable naming rules
+          and conventions in Python. Variable names can contain
+          letters, numbers, and underscores. But they must start with
+          a letter or an underscore. Variable names are
+          case-sensitive. And you should avoid using built-in Python
+          keywords as variable names.
+        </p>
+        <p>
+          Python uses dynamic typing, which means that you can change
+          the type of data stored in a variable during the program's
+          execution. You can reassign a variable to hold a different
+          data type without explicitly declaring its type. Dynamic
+          typing provides flexibility but also requires careful
+          handling of variable types to avoid unexpected behavior.
+        </p>
+        <p>
+          Variables have different scopes, which define where in the
+          code they can be accessed. In Python, there are primarily
+          three levels of variable scope: global scope, local scope
+          and enclosing scope. We will discuss the details when
+          talking about functions.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/cf66687956" />
+
         <h3 id="data-types">Data Types</h3>
         <p>
           In Python, understanding data types is fundamental to
@@ -446,8 +476,176 @@ const IntroductionToPython = () => {
           others can understand and use your code effectively.
         </p>
 
-        <h3 id="variables">Variables</h3>
-        <p></p>
+        <h3 id="operators">Operators</h3>
+        <p>
+          In Python, operators are fundamental elements used to
+          perform various operations on values and variables. In this
+          section, we will explore different types of operators in
+          Python.
+        </p>
+        <h4>Assigment Operators</h4>
+        <p>
+          One of the fundamental operations in any programming
+          language is the assignment statement. It allows us to
+          associate a variable name with a value, enabling us to
+          manipulate our data effectively. In Python, like many other
+          programming languages, the equal sign (=) is used for
+          assignment. Assignment statements can be chained together to
+          set multiple variables to the same value. Multiple
+          assignments are also possible by using a comma-separated
+          list of variables and expressions.
+        </p>
+        <p>
+          Without diving too deep into the internal details of Python,
+          there is one crucial aspect of the assignment statement
+          which needs to be understood to program effectively in
+          Python. When assigning values to variables, whether they are
+          numbers, strings, or expressions involving such types,
+          Python stores these values in memory and associates them
+          with their assigned variable names. However, when making
+          assignments of one variable to another, Python actually
+          stores a reference to the variable. Instead of creating a
+          new copy of the contents of the original variable, it stores
+          information about where the original variable is stored in
+          memory. When the new variable is later referenced, it refers
+          back to this location to find the value of the variable. For
+          scalar variables (e.g., numbers and strings), this behavior
+          generally doesn't produce unexpected results since Python
+          automatically updates the values of any variables referring
+          to another value once it's changed. However, with mutable
+          objects such as lists, changes within the list do not
+          trigger this updating mechanism, which can lead to
+          surprising results. If you genuinely want to make a copy of
+          a list instead of merely storing a reference, you can use
+          Python's <InlineCode>copy</InlineCode>module. We will
+          discuss this in more detail when talking about data
+          structures.
+        </p>
+        <p>
+          In addition to the basic assignment operator (=), Python
+          also provides several other assignment operators, as shown
+          in the following table:
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/b38470ba30" />
+
+        <h4>Arithmetic Operators</h4>
+        <p>
+          Arithmetic operators are used to perform basic mathematical
+          operations in Python, including addition, subtraction,
+          multiplication, and division. Python supports all the binary
+          arithmetic operators shown in the following table. A binary
+          operator operates on exactly two elements, one on each side
+          of the operator's symbol. When performing operations on
+          integers, Python performs integer arithmetic unless one of
+          the operands is a floating-point number. Python also
+          provides unary operators for plus and minus. Any expression
+          returning a single numeric value can be preceded either by a
+          minus or plus sign.
+        </p>
+        <p>
+          The precedence of Arithmetic Operators in Python is as
+          follows:
+          <ol>
+            <li>P - Parentheses</li>
+            <li>E - Exponentiation</li>
+            <li>
+              M - Multiplication (Multiplication and division have the
+              same precedence)
+            </li>
+            <li>D - Division</li>
+            <li>
+              A - Addition (Addition and subtraction have the same
+              precedence)
+            </li>
+            <li>S - Subtraction</li>
+          </ol>
+        </p>
+
+        <h4>Comparison Operators</h4>
+        <p>
+          Comparison operators, also known as relational operators,
+          are used in Python to compare values. They evaluate to
+          either <InlineCode>True</InlineCode> or{' '}
+          <InlineCode>False</InlineCode> based on the specified
+          condition. The comparison operators in Python are shown in
+          the following table. In Python, comparison operators have
+          lower precedence than arithmetic operators. All comparison
+          operators have the same precedence order.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/9b800fb6e4" />
+
+        <h4>Logical Operators</h4>
+        <p>
+          Logical operators are used to perform logical operations
+          such as "AND," "OR," and "NOT" in Python. They are typically
+          used to combine conditional statements and create more
+          complex conditions. The precedence of Logical Operators in
+          Python is as follows:
+          <ol>
+            <li>Logical NOT</li>
+            <li>Logical AND</li>
+            <li>Logical OR</li>
+          </ol>
+          The following example illustrates how to use logical
+          operators in Python.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/129d457075" />
+
+        <h4>Bitwise Operators</h4>
+        <p>
+          Bitwise operators are used to operate on binary numbers and
+          perform bit-by-bit operations. An overview over the bitwise
+          operators in Python is shown in the following table.
+        </p>
+        <p>
+          The precedence of Bitwise Operators in python is as follows:
+          <ol>
+            <li>Bitwise NOT</li>
+            <li>Bitwise Shift</li>
+            <li>Bitwise AND</li>
+            <li>Bitwise XOR</li>
+            <li>Bitwise OR</li>
+          </ol>
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/63e371be96" />
+
+        <h4>Identity and Membership Operators</h4>
+        <p>
+          In Python, identity and membership operators are essential
+          for comparing and checking the relationships between values,
+          variables, and sequences. The <InlineCode>is</InlineCode>{' '}
+          operator is used to check if two values or variables refer
+          to the same object in memory. It returns{' '}
+          <InlineCode>True</InlineCode> if they do and
+          <InlineCode>False</InlineCode> otherwise. It is not used to
+          compare the values themselves, but rather their identity.
+          The <InlineCode>is not</InlineCode> operator is the negation
+          of is. It returns <InlineCode>True</InlineCode> if two
+          values or variables do not refer to the same object and
+          <InlineCode>False</InlineCode> if they do.
+        </p>
+        <p>
+          The <InlineCode>in</InlineCode> operator is used to check if
+          a value or variable is present in a sequence (e.g., a list,
+          tuple, string, or set). It returns{' '}
+          <InlineCode>True</InlineCode> if the value is found in the
+          sequence and <InlineCode>False</InlineCode> otherwise. The
+          <InlineCode>not in</InlineCode> operator is the negation of{' '}
+          <InlineCode>in</InlineCode>.
+        </p>
+        <p>
+          Python provides a concise way to evaluate an expression
+          based on a condition using ternary operators. The basic
+          syntax is{' '}
+          <InlineCode>
+            [on_true] if [expression] else [on_false]
+          </InlineCode>
+          . This allows you to write compact code instead of needing a
+          multi-line if-else statement. Ternary operators are
+          especially useful when you need to assign a value to a
+          variable based on a condition in a single line.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/0ca3472fc8" />
 
         <h3 id="control-structures">Control Structures</h3>
         <h4>Conditions</h4>
