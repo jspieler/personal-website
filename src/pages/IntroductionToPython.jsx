@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { CodeBlock, dracula } from 'react-code-blocks';
 
@@ -186,13 +186,236 @@ const IntroductionToPython = () => {
           environments.
         </div>
 
-        <h3 id="variables">Variables</h3>
+        <h3 id="data-types">Data Types</h3>
         <p>
-          <LazyIframe src="https://trinket.io/embed/python/3d8d7ce66b" />
+          In Python, understanding data types is fundamental to
+          writing effective code. Let's explore the most common data
+          types and get familiar with them. They will be discussed in
+          more detail in the following sections.
         </p>
 
-        <h3 id="data-types">Data Types</h3>
-        <p>...</p>
+        <h4>Numeric Data Types</h4>
+        <p>
+          Python supports four different types of numeric data, namely
+          integers, long integers, floating point numbers and complex
+          numbers. Floating point numbers can be specified either by
+          using a decimal point or using exponential notation, e.g.
+          1e-3 or 1E-3. In Python, long integers are actually what are
+          sometimes called "arbitrary precision" integers which means
+          that they can have as many digits as you have typed into the
+          computer. In Python 3, the "L" suffix is not required
+          anymore. They also have the further advantage that all
+          arithmetic performed with long integers does not have
+          limited precision like floating point numbers. However,
+          while regular integer arithmetic is supported by most
+          operating systems, Python has to perform all its own long
+          integer arithmetic. This, using (many) long integers, will
+          slow your programs down. Complex numbers can be entered into
+          Python using either the `complex`function or by denoting the
+          complex number as the real portion followed by a plus sign
+          and the imaginary part with a trailing uppercase or
+          lowercase "J". There must be no spaces between the imaginary
+          part and the "J". Both components are stored as floating
+          point numbers.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/0a86a4a000" />
+
+        <h4>Strings</h4>
+        <p>
+          Strings are collections of characters that represent
+          arbitrary text in Python code. They can be created by
+          enclosing text in single quotes, double quotes, or triple
+          quotes (which allow spanning multiple lines). Inside
+          strings, special character sequences starting with a
+          backslash are interpreted uniquely. Single backslashes can
+          also act as continuation characters, similar to using triple
+          quotes. To include an actual backslash in a string, you can
+          either use two backslashes or employ raw strings by
+          prefixing the opening quotation mark with "r".
+        </p>
+        <p>
+          Unicode strings, which use 16 bits to store characters
+          instead of 8 bits used by normal strings, can be created by
+          prefixing the opening quote character with "u". Arbitrary
+          Unicode characters can be specified using "\u" inside a
+          string. Combining a Unicode string with a regular string
+          results in a Unicode string.
+        </p>
+        <h5>String Operations</h5>
+        <p>
+          The following sections describe some of the most important
+          operations available for working with strings.
+        </p>
+        <h6>Concatenation</h6>
+        <p>
+          Strings can be concatenated using the + operator, creating a
+          new string that combines the originals. Strings can be also
+          concatenated with variables.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/1d49685948" />
+        <h6>Repetition</h6>
+        <p>
+          When using an asterisk (*) between a string and an integer a
+          new string is created which contains the old string repeated
+          by the integer value. The order of the arguments does not
+          matter.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/c4ad4cc54f" />
+        <h6>Indexing and Slicing</h6>
+        <p>
+          Strings in Python support indexing and slicing. A single
+          character can be extracted from a string by appending the
+          index of the desired character surrounded by square
+          brackets. Keep in mind that the index starts at zero in
+          Python. If the value inside the brackets is less than zero,
+          Python counts from the end of the string. The last character
+          in a string can be for example accessed using a subscript of
+          -1.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/0d52f421fd" />
+        <p>
+          A contiguous part of a string (called a slice) can be
+          extracted by using a subscript consisting of a starting
+          index followed by a colon and a ending index after it.
+          Notice that the slicing stop position is exclusive, i.e. the
+          slicing stops one position before the second value. If a
+          slice starts at the beginning of a string or continues until
+          the end, the first or second index can be omitted,
+          respectively. It is also possible to use variables and
+          integer constants for indexing and slicing:
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/81099f478b" />
+        <h6>Functions and Methods</h6>
+        <p>
+          Python provides some useful functions and methods for
+          working with strings. The <InlineCode>len()</InlineCode>{' '}
+          function returns the number of characters which a string
+          contains. Strings in Python are immutable objects, i.e. the
+          value of a string can't be changed in place. To change the
+          value of a string, a method needs to be invoked on the
+          variable containing the string and the value of this
+          operation needs to be reassigned to the desired variable.
+          There are a bunch of string methods provided by Python. The
+          <InlineCode>split()</InlineCode> and{' '}
+          <InlineCode>join()</InlineCode> methods are among the most
+          useful. The <InlineCode>split()</InlineCode> method returns
+          a list whose elements are a character or string in the
+          original string splitted at the optionally specified
+          separator. If no argument is specified, one or more
+          whitespace characters are used as the default separator
+          character. The following table shows an overview over some
+          useful string methods:
+          <table>
+            <tr>
+              <th>Method</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>str.upper()</td>
+              <td>
+                Converts all characters in the string to uppercase.
+              </td>
+            </tr>
+            <tr>
+              <td>str.lower()</td>
+              <td>
+                Converts all characters in the string to lowercase.
+              </td>
+            </tr>
+            <tr>
+              <td>str.strip()</td>
+              <td>
+                Removes leading and trailing whitespace from the
+                string.
+              </td>
+            </tr>
+            <tr>
+              <td>str.split()</td>
+              <td>
+                Splits the string into a list of substrings based on a
+                delimiter.
+              </td>
+            </tr>
+            <tr>
+              <td>str.join()</td>
+              <td>
+                Joins a list of strings into a single string using the
+                provided delimiter.
+              </td>
+            </tr>
+            <tr>
+              <td>str.replace()</td>
+              <td>
+                Replaces occurrences of a substring with another
+                substring.
+              </td>
+            </tr>
+            <tr>
+              <td>str.find()</td>
+              <td>
+                Returns the index of the first occurrence of a
+                substring (or -1 if not found).
+              </td>
+            </tr>
+            <tr>
+              <td>str.startswith()</td>
+              <td>
+                Checks if the string starts with a specified
+                substring.
+              </td>
+            </tr>
+            <tr>
+              <td>str.endswith()</td>
+              <td>
+                Checks if the string ends with a specified substring.
+              </td>
+            </tr>
+            <tr>
+              <td>str.isalpha()</td>
+              <td>
+                Checks if all characters in the string are alphabetic.
+              </td>
+            </tr>
+          </table>
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/c7fb7570ab" />
+
+        <h4>Booleans</h4>
+        <p>
+          Booleans represent either <InlineCode>True</InlineCode> or{' '}
+          <InlineCode>False</InlineCode> values and are often used in
+          conditional statements and logic.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/5ad99d13cc" />
+
+        <h4>None</h4>
+        <p>
+          In Python, None is a special value used to indicate the
+          absence of a value or to initialize variables when you don't
+          have a specific value to assign. It's often employed as a
+          placeholder in situations where a variable or result is
+          expected but hasn't been determined yet.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/a1b65a8f51" />
+
+        <h4>Data Structures</h4>
+        <p>
+          Python provides various data structures to efficiently
+          organize and manipulate data. These structures help manage
+          collections of data items, making it easier to work with
+          different types of information. A Python list is an ordered
+          collection which allows to store objects of different data
+          types. A Python dictionary is an unordered collection of
+          data consisting of key/value pairs. A tuple is an ordered
+          collection of different data types like a list, but tuples
+          are immutable, i.e. they can not be modified once they are
+          created. A set is a collection of data types that is similar
+          to list and tuple, but a set is not an ordered collection of
+          items and can only store unique items. These data structures
+          serve various purposes, and their choice depends on the
+          specific requirements of your program. We will delve deeper
+          into Python data structures later on.
+        </p>
 
         <h3 id="control-structures">Control Structures</h3>
         <h4>Conditions</h4>
