@@ -1290,6 +1290,159 @@ const IntroductionToPython = () => {
           particularly useful for creating reusable modules that can
           be both imported and executed independently.
         </p>
+
+        <h3 id="object-oriented-programming">
+          Object-Oriented Programming
+        </h3>
+        <p>
+          Object-Oriented Programming (OOP) is a programming paradigm
+          that uses objects and classes to structure code. In Python,
+          everything is an object, and classes are the blueprints for
+          creating objects. A class defines the attributes (data) and
+          methods (functions) that objects of that class will have.
+          OOP promotes the organization of code into reusable,
+          self-contained units, making it easier to manage and
+          maintain complex systems.
+        </p>
+        <p>
+          In Python, you define a class using the{' '}
+          <InlineCode>class</InlineCode> keyword followed by the class
+          name. The class definition typically contains attributes and
+          methods. Attributes are variables that store data, while
+          methods are functions that define the behaviors of the
+          objects created from the class. To use a class, you create
+          objects or instances of that class. This process is known as
+          instantiation. Each object is a unique instance of the
+          class, with its own set of attributes and the ability to
+          call methods defined in the class.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/428a5eedae" />
+        <p>
+          In Python, the <InlineCode>self</InlineCode> parameter is a
+          reference to the instance of the class. It is the first
+          parameter in all instance methods and allows you to access
+          and modify attributes and call other methods within the
+          class. While you can name this parameter differently, it's a
+          convention to use <InlineCode>self</InlineCode>.
+        </p>
+        <h4>Operator Overloading</h4>
+        <p>
+          Besides creating methods on our own, we can change the way
+          many familiar operators work by a technique known as
+          operator overloading. Special methods, whose names begin and
+          end with double underscores, can be defined to “intercept”
+          many common operators, allowing you to redefine what such
+          operators as <InlineCode>print</InlineCode>,{' '}
+          <InlineCode>+</InlineCode>, and <InlineCode>*</InlineCode>,
+          or functions like <InlineCode>len</InlineCode>, will do when
+          they're applied to the objects you create. One of the most
+          important operator overloading methods is the{' '}
+          <InlineCode>__init__</InlineCode> method.
+        </p>
+        <p>
+          The <InlineCode>__init__</InlineCode> method is a special
+          method in Python classes, also known as the constructor. It
+          gets called when you create a new instance of the class and
+          allows you to initialize attributes.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/645f08ebd4" />
+        <p>
+          The <InlineCode>__str__</InlineCode> method is called
+          through the print statement. The{' '}
+          <InlineCode>__repr__</InlineCode> method is called when an
+          object's name is typed in the interpreter. The following
+          table lists some of the more commonly used methods for
+          overloading.
+        </p>
+        <p>
+          In addition, you can define what happens when your object is
+          iterated over by means of the for statement by defining an
+          <InlineCode>__iter__</InlineCode> method that simply returns
+          the object itself and providing a{' '}
+          <InlineCode>next</InlineCode> method which will be called
+          for each iteration. Inside the <InlineCode>next</InlineCode>{' '}
+          method, you need to raise a{' '}
+          <InlineCode>StopIteration</InlineCode> exception when no
+          more items are available.
+        </p>
+
+        <h4>Private Attributes</h4>
+        <p>
+          In many object-oriented languages, certain attributes can be
+          declared as private, making it impossible for users of a
+          class to directly view or modify their values. The designer
+          of the class then provides methods to control the ways in
+          which these attributes can be manipulated. While Python
+          classes don't have true private attributes, if an attribute
+          name begins with two underscores, the Python interpreter
+          internally modifies the attribute's name, so that references
+          to the attribute will not be resolved. The attribute name is
+          still accessible, but this convention indicates that an
+          attribute should not directly be manipulated and gives you
+          more control over the way users of your class will
+          manipulate those attributes.
+        </p>
+
+        <h4>Class and Instance Variables</h4>
+        <p>
+          Class variables are shared by all instances of a class and
+          are defined within the class but outside any method.
+          Instance variables are specific to each instance of a class
+          and are typically defined within the{' '}
+          <InlineCode>__init__</InlineCode> method.
+        </p>
+
+        <h4>Class Methods and Static Methods</h4>
+        <p>
+          Class methods are methods that are bound to the class and
+          not the instance. They can access and modify class-level
+          attributes. Static methods are similar but don't have access
+          to instance-specific or class-specific attributes.
+        </p>
+
+        <h4>Inheritance</h4>
+        <p>
+          Inheritance is a fundamental concept in OOP that allows you
+          to create new classes based on existing ones. The new class
+          (subclass or derived class) inherits attributes and methods
+          from the parent class (base class or superclass). You can
+          also override or extend inherited methods and attributes in
+          the subclass.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/4bc092e290" />
+
+        <h4>Encapsulation</h4>
+        <p>
+          Encapsulation is the practice of bundling data (attributes)
+          and the methods (functions) that operate on that data into a
+          single unit (a class). It helps hide the internal details of
+          how an object works, providing an interface for interacting
+          with the object while protecting its integrity.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/f6c4270aab" />
+
+        <h4>Polymorphism</h4>
+        <p>
+          Polymorphism is the ability of different objects to respond
+          to the same method or attribute in a way that is appropriate
+          for their individual types. Python supports polymorphism
+          through method overriding and method overloading. The
+          example provided for inheritance also demonstrates
+          polymorphism since the subclasses "Cat" and "Dog" override
+          the <InlineCode>speak</InlineCode> method of the "Animal"
+          base class.
+        </p>
+
+        <h3 id="debugging-error-handling-and-unit-testing">
+          Debugging, Error Handling and Unit Testing
+        </h3>
+        <p></p>
+
+        <h3>Standard Library</h3>
+        <p>Follows soon...</p>
+
+        <h3>Misc</h3>
+        <p>Follows soon...stay tuned!</p>
       </Article>
     </main>
   );
