@@ -417,6 +417,38 @@ const IntroductionToPython = () => {
           into Python data structures later on.
         </p>
 
+        <h3 id="comments">Comments</h3>
+        <p>
+          Comments are a crucial aspect of Python programming. They
+          serve the purpose of documenting your code and providing
+          context to both others who may read your code and your
+          future self. Comments are lines of text that are not
+          executed by the Python interpreter and are preceded by the{' '}
+          <InlineCode>#</InlineCode> symbol.
+        </p>
+        <p>
+          Single-line comments are used for brief explanations within
+          your code. While Python doesn't have a specific syntax for
+          multi-line comments, you can use triple-quotes (
+          <InlineCode>'''</InlineCode> or <InlineCode>"""</InlineCode>
+          ) to create multi-line comment blocks, although they are
+          typically used for so-called docstrings (see section about
+          functions).
+        </p>
+        <p>
+          There are different opinions on how and when to comment code
+          among programmers, but using meaningful variable and
+          function names is considered best practive. Clear, concise
+          single-line comments can be used if needed, but are often a
+          sign of code smell. However, when documenting functions or
+          modules for wider use or sharing, adhering to the docstring
+          conventions and practices is recommended to ensure that
+          others can understand and use your code effectively.
+        </p>
+
+        <h3 id="variables">Variables</h3>
+        <p></p>
+
         <h3 id="control-structures">Control Structures</h3>
         <h4>Conditions</h4>
         <p>
