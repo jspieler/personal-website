@@ -1436,7 +1436,252 @@ const IntroductionToPython = () => {
         <h3 id="debugging-error-handling-and-unit-testing">
           Debugging, Error Handling and Unit Testing
         </h3>
-        <p></p>
+        <h4>Debugging</h4>
+        <p>
+          Debugging is the process of identifying and fixing errors or
+          bugs in your code. Python provides several tools and
+          techniques to help you diagnose and resolve issues in your
+          programs. Effective debugging is an essential skill for
+          every programmer, as it can save time and frustration during
+          the development process.
+        </p>
+        <h5>Errors and Exceptions</h5>
+        <p>
+          A Python program terminates as soon as it encounters an
+          error. In Python, an error can be a syntax error or an
+          exception. While for simple programs it might be sufficient
+          to just fail, we often need proper error handling to prevent
+          that an error crashes whole programs or applications.
+        </p>
+        <p>
+          A syntax error occurs when the parser detects an incorrect
+          statement. Let's take a look at the following example:
+          <LazyIframe src="https://trinket.io/embed/python/c8a28eb04e" />
+          In this example, there was one bracket too many. Remove it
+          and run the code again. This time, there is an exception.
+          This type of error occurs when syntactically correct Python
+          code results in an error. Python provides details about the
+          type of exception encountered. In this case, it was a
+          <InlineCode>ZeroDivisionError</InlineCode>. Python provides
+          various built-in exceptions and also offers the possibility
+          to create self-defined exceptions. To throw an exception,
+          you can use the <InlineCode>raise</InlineCode> statement.
+        </p>
+        <p>
+          While exceptions are great, we still need to handle them
+          because just throwing exceptions still results in programs
+          terminating. To catch and handle exceptions,{' '}
+          <InlineCode>try</InlineCode> and
+          <InlineCode>except</InlineCode> are used in Python. The
+          statement inside the <InlineCode>try</InlineCode> block is
+          executed and if an exception occurs, the code inside the{' '}
+          <InlineCode>except</InlineCode> statement is executed.
+          Catching <InlineCode>Exception</InlineCode> hides all
+          errors, even those which are completely unexpected. This is
+          why you should avoid bare <InlineCode>except</InlineCode>{' '}
+          clauses in your Python programs. Instead, you'll want to
+          refer to specific exception classes you want to catch and
+          handle. In Python, using the <InlineCode>else</InlineCode>{' '}
+          statement, you can instruct a program to execute a certain
+          block of code only in the absence of exceptions. Everything
+          in the <InlineCode>finally</InlineCode>
+          clause will be executed regardless if you encounter an
+          exception somewhere in the <InlineCode>
+            try
+          </InlineCode> or <InlineCode>else</InlineCode> clauses.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/8df821aa1e" />
+        <p>
+          Instead of waiting until a program crashes, you can also use
+          assertions to prevent errors early on. Assertions are a
+          technique of defensive programming. By asserting that a
+          certain condition is met, the program is only continued if
+          the condition turns out to be <InlineCode>True</InlineCode>.
+          Otherwise, we can have the program throw an{' '}
+          <InlineCode>AssertionError</InlineCode> exception.
+        </p>
+        <p>
+          There is a third type of errors, namely logical errors
+          (bugs). Logical errors occur when your code does not produce
+          the expected output or behaves incorrectly. These errors can
+          be challenging to identify because Python does not raise an
+          error. Instead, the program executes, but the results are
+          incorrect.
+        </p>
+        <p>
+          Python offers several debugging tools and techniques to help
+          you identify and fix errors. The simplest debugging
+          technique is to add <InlineCode>print</InlineCode>{' '}
+          statements in your code to display the values of variables
+          and the flow of execution. This can help you understand what
+          your code is doing and identify where issues may arise.
+          Alternately, you can use logging which is also a great
+          solution to collection information of your program you can
+          use if an error occurs. Logging will be discussed when
+          talking about the Python standard library. Python also
+          includes an interactive debugger called{' '}
+          <InlineCode>pdb</InlineCode> (Python Debugger). You can
+          insert breakpoints in your code using{' '}
+          <InlineCode>pdb.set_trace()</InlineCode> and then run your
+          script with the <InlineCode>-m pdb</InlineCode> option. This
+          launches an interactive debugging session where you can
+          inspect variables, step through code, and evaluate
+          expressions. Many Python IDEs, such as PyCharm or Visual
+          Studio Code, provide built-in debugging features. These
+          tools offer a user-friendly interface for setting
+          breakpoints, inspecting variables, and navigating through
+          your code during debugging.
+        </p>
+
+        <h5>Common Debugging Practices</h5>
+        <p>
+          When debugging in Python, consider the following best
+          practices:
+          <ol>
+            <li>
+              Begin by isolating the portion of code where the error
+              occurs. Comment out unrelated code to narrow down the
+              issue.
+            </li>
+            <li>
+              Ensure you can reproduce the error consistently.
+              Understanding the conditions that trigger the error is
+              crucial for debugging.
+            </li>
+            <li>
+              Insert <InlineCode>print</InlineCode> or logging
+              statements strategically to print the values of
+              variables and intermediate results. This helps you track
+              the flow of execution and identify unexpected values.
+            </li>
+            <li>
+              Verify that the data types of variables match your
+              expectations. Python is dynamically typed, so data type
+              errors can occur if you assume the wrong type.
+            </li>
+            <li>
+              Check the official Python documentation and the
+              documentations of any libraries you are using to ensure
+              you are using functions and methods correctly.
+            </li>
+            <li>
+              Pay attention to error messages and traceback
+              information. Python's error messages often provide clues
+              about the cause of the problem and the location in your
+              code where it occurred.
+            </li>
+          </ol>
+        </p>
+
+        <h5>Fixing Bugs</h5>
+        <p>
+          Once you identify a bug, you may follow these steps to fix
+          it:
+          <ol>
+            <li>
+              Understand the root cause of the problem by reviewing
+              the code and considering the inputs and logic.
+            </li>
+            <li>
+              Modify the code to correct the issue. Be cautious not to
+              introduce new errors while fixing the current one.
+            </li>
+            <li>
+              Test your code to ensure that the bug is resolved and
+              that the fix does not cause side effects in other parts
+              of the program. It is considered a best practice when
+              you are debugging your code to first write a new test
+              pinpointing the bug.
+            </li>
+            <li>
+              If you're working in a team or on a larger project,
+              document your changes to help others understand the
+              modifications and the reasons behind them.
+            </li>
+          </ol>
+        </p>
+
+        <h4>Unit Testing</h4>
+        <p>
+          Testing your code is very important. It does not only allow
+          you to ensure that your program still works correctly after
+          you made changes to your code but also helps to isolate
+          errors. Unit testing is a method for testing software that
+          looks at the smallest testable pieces of code, called units,
+          which are tested for correct operation. By doing unit
+          testing, we can verify that each part of the code, including
+          helper functions that may not be exposed to the user, works
+          correctly and as intended.
+        </p>
+        <p>
+          In Python, there are two popular unit testing frameworks:
+          the built-in <InlineCode>unittest</InlineCode> module (often
+          referred to as the PyUnit framework) and the PyTest
+          framework.
+        </p>
+        <p>
+          The <InlineCode>unittest</InlineCode> module is included in
+          the Python standard library. Creating test cases is
+          accomplished by subclassing
+          <InlineCode>unittest.TestCase</InlineCode>. Here's a simple
+          example:
+          <LazyIframe src="https://trinket.io/embed/python/48f3220624" />
+          In larger projects, you may have multiple test classes, each
+          containing several test methods. To organize and run these
+          tests efficiently, you can create test cases and test
+          suites. A test case is a collection of related test methods
+          within a test class. It represents a specific aspect of
+          functionality or behavior to be tested. A test suite is a
+          collection of test cases. It allows you to group related
+          tests together. Python's <InlineCode>unittest</InlineCode>{' '}
+          framework provides the <InlineCode>TestLoader</InlineCode>{' '}
+          and <InlineCode>TestSuite</InlineCode> classes to help
+          create and organize test suites. Test fixtures are
+          preconditions and postconditions that are established before
+          and after running a test. In Python, you can use{' '}
+          <InlineCode>setUp</InlineCode> and{' '}
+          <InlineCode>tearDown</InlineCode> methods within your test
+          class to set up and clean up resources required for testing.
+          These methods run before and after each test method,
+          ensuring a consistent test environment. In some cases, you
+          may want to isolate the code under test by replacing
+          external dependencies, such as databases or APIs, with mock
+          objects or test doubles. Python's{' '}
+          <InlineCode>unittest.mock</InlineCode> module provides tools
+          for creating and using mock objects in your tests. The
+          unittest framework also supports test discovery, which
+          allows you to automatically discover and run tests within
+          your project.
+        </p>
+        <p>
+          PyTest is an alternative to Python's standard unittest
+          module, which can be installed using{' '}
+          <InlineCode>pip</InlineCode>. Despite being a fully-featured
+          and extensible test tool, it boasts a simple syntax.
+          Creating a test suite is as easy as writing a module with a
+          couple of functions. PyTest offers a wide range of features
+          for test discovery, fixtures, parameterized testing, and
+          plugins. It's known for its simplicity and concise test
+          syntax.
+        </p>
+        <p>
+          In real-world software development, unit tests are often
+          integrated into a continuous integration (CI) pipeline. CI
+          systems automatically run unit tests whenever code changes
+          are pushed to version control repositories. This practice
+          helps identify and address issues early in the development
+          process. Tools like <InlineCode>coverage.py</InlineCode> can
+          help you determine which parts of your code are covered by
+          your unit tests. Achieving high test coverage is a common
+          goal in software testing to ensure that all critical paths
+          are tested.
+        </p>
+        <p>
+          In summary, debugging, error handling, and unit testing are
+          crucial aspects of writing robust and reliable Python code.
+          By mastering these practices, you can create software that
+          is more stable, maintainable, and resistant to bugs.
+        </p>
 
         <h3>Standard Library</h3>
         <p>Follows soon...</p>
