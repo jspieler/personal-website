@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from 'react';
 
-import Giscus from "@giscus/react";
+import Giscus from '@giscus/react';
 
-import { ThemeContext } from "../../theme/Theme";
-import "./article.css";
+import { ThemeContext } from '../../theme/Theme';
+import './article.css';
 
 const Article = ({ title, subtitle, children }) => {
   const [sectionLinks, setSectionLinks] = useState([]);
@@ -20,10 +20,13 @@ const Article = ({ title, subtitle, children }) => {
     // set initial position to top of page
     window.scrollTo(0, 0);
     // create section links for all h3 headers within the article content
-    const headers = document.querySelectorAll(".article__content h3");
+    const headers = document.querySelectorAll('.article__content h3');
     const links = Array.from(headers).map((header, index) => ({
       title: header.textContent,
-      id: header.textContent.replace(/\s+/g, "-").toLowerCase(),
+      id: header.textContent
+        .replace(/\s+/g, '-')
+        .replace(/,/g, '')
+        .toLowerCase(),
     }));
     setSectionLinks(links);
   }, []);
@@ -40,7 +43,10 @@ const Article = ({ title, subtitle, children }) => {
             {sectionLinks.map((section) => (
               <li key={section.id}>
                 <a
-                  href={`#${section.title.replace(/\s+/g, "-").toLowerCase()}`}
+                  href={`#${section.title
+                    .replace(/\s+/g, '-')
+                    .replace(/,/g, '')
+                    .toLowerCase()}`}
                 >
                   {section.title}
                 </a>
@@ -59,7 +65,7 @@ const Article = ({ title, subtitle, children }) => {
           reactionsEnabled="1"
           emitMetadata="0"
           inputPosition="top"
-          theme={theme === "dark-theme" ? "dark" : "light"}
+          theme={theme === 'dark-theme' ? 'dark' : 'light'}
           lang="en"
           loading="lazy"
         />
