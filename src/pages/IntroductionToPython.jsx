@@ -1683,8 +1683,359 @@ const IntroductionToPython = () => {
           is more stable, maintainable, and resistant to bugs.
         </p>
 
-        <h3>Standard Library</h3>
-        <p>Follows soon...</p>
+        <h3 id="standard-library">Standard Library</h3>
+        <p>
+          Python's standard library is exceptionally comprehensive,
+          offering a wide array of tools and functionalities. It
+          consists of built-in modules, some of which are implemented
+          in C, granting Python programmers access to system-level
+          operations like file input/output, which would otherwise be
+          beyond their reach. Additionally, Python-written modules in
+          the standard library provide standardized solutions to a
+          multitude of common programming challenges. Many of these
+          modules are intentionally designed to foster and improve the
+          portability of Python programs, abstracting away
+          platform-specific details and offering platform-neutral
+          APIs.
+        </p>
+        <p>
+          In addition to the standard library, there exists an active
+          collection of hundreds of thousands of software components.
+          These range from individual programs and modules to
+          fully-fledged packages and comprehensive application
+          development frameworks. This extensive repository of
+          third-party packages can be found on the{' '}
+          <ExternalLink href="https://pypi.org/">
+            Python Package Index (PyPi)
+          </ExternalLink>
+          .
+        </p>
+        <p>
+          In the following sections, we will take a look at some of
+          the most commonly used modules from Python's standard
+          library, equipping you with essential tools and knowledge
+          for your further journey in Python programming.
+        </p>
+
+        <h4>Argparse</h4>
+        <p>
+          <InlineCode>argparse</InlineCode> is a Python module for
+          parsing command-line arguments and options in a structured
+          and user-friendly manner. It simplifies the process of
+          taking input from the command line and is particularly
+          useful when creating Python scripts or programs that require
+          configuration or customization via the command line.
+          <CodeBlock
+            text={`import argparse
+
+
+if __name__ == "__main__":
+    # create an ArgumentParser object
+    parser = argparse.ArgumentParser(description="A simple script with command-line arguments")
+
+    # define command-line arguments and options
+    parser.add_argument("input_file", type=str, help="Input file path")
+    parser.add_argument("-o", "--output", type=str, default="output.txt", help="Output file path")
+
+    # parse the command-line arguments
+    args = parser.parse_args()
+
+    # access the parsed values
+    input_file = args.input_file
+    output_file = args.output
+
+    # use the parsed values in your script
+    print("Input file: {}".format(input_file))
+    print("Output file: {}".format(output_file))
+            `}
+            language={'python'}
+            showLineNumbers={false}
+            theme={dracula}
+          />
+          When running this script from the command line, you can
+          specify the <InlineCode>input_file</InlineCode> and
+          optionally the <InlineCode>--output</InlineCode> file as
+          follows:
+          <CodeBlock
+            text={'python script.py input.txt --output output.txt'}
+            language="bash"
+            showLineNumbers={false}
+            theme={dracula}
+          />
+        </p>
+
+        <h4>File I/O</h4>
+        <p>
+          Python's standard library includes modules for performing
+          file input and output operations.The primary module for this
+          purpose is <InlineCode>open()</InlineCode>, which allows you
+          to open files for reading, writing, or both. You can also
+          use the <InlineCode>with</InlineCode> statement to ensure
+          that files are properly closed after usage.
+        </p>
+        <h5>Opening a File</h5>
+        <p>
+          The <InlineCode>open()</InlineCode> function takes two
+          arguments: the file name (including the path) and the mode
+          in which you want to open the file. Common modes include "r"
+          for read mode (default), "w" for write mode and "a" for
+          append mode.
+        </p>
+        <h5>Closing a File</h5>
+        <p>
+          It's important to close a file after you're done with it to
+          release system resources and ensure that changes are saved.
+          You can use the <InlineCode>close()</InlineCode> method or
+          work with files using the <InlineCode>with</InlineCode>{' '}
+          statement, which automatically closes the file when you exit
+          the block.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/1d7641dcc5" />
+        <h5>Reading from a File</h5>
+        <p>
+          Once you've opened a file for reading, you can use various
+          methods to read its content.
+          <LazyIframe src="https://trinket.io/embed/python/fab1ffc087" />
+        </p>
+        <h5>Writing to a File</h5>
+        <p>
+          When a file is opened in write or append mode, you can use
+          methods like <InlineCode>write()</InlineCode> to add content
+          to the file.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/ff6855175a" />
+        <h5>Exception Handling</h5>
+        <p>
+          When working with files, it's a good practice to handle
+          exceptions, especially when opening, reading, or writing
+          files, as various errors can occur (e.g., the file might not
+          exist, you may not have permission to read or write it).
+        </p>
+
+        <h4>Logging</h4>
+        <p>
+          Logging is an essential part of software development that
+          allows you to record messages, warnings, errors, and other
+          information about the execution of your Python programs. The
+          Python standard library provides a built-in module called
+          <InlineCode>logging</InlineCode> for handling logging
+          operations.
+        </p>
+        <p>
+          To use the <InlineCode>logging</InlineCode> module, you need
+          to import it at the beginning of your script. Before you
+          start logging messages, you can configure the logging system
+          according to your needs. This includes specifying the
+          logging level, setting a format for log messages, and
+          defining where the log messages should be directed. Once
+          you've configured logging, you can start logging messages
+          using various log levels. By default, log messages of
+          "WARNING" level and above are displayed on the console. You
+          can control the behavior of log messages, such as where they
+          are displayed and at what level, by configuring loggers,
+          handlers, and formatters. For example, you can send log
+          messages to multiple destinations, filter them, or format
+          them differently.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/28ffc1acb7" />
+
+        <h4>Math</h4>
+        <p>
+          Python's <InlineCode>math</InlineCode> library is a built-in
+          module that provides a wide range of mathematical functions
+          and constants for performing various mathematical
+          operations. You can use the <InlineCode>math</InlineCode>{' '}
+          module to work with mathematical calculations and functions
+          in your Python programs. Let's take a look at some examples.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/b8be33ca00" />
+
+        <h4>OS</h4>
+        <p>
+          The <InlineCode>os</InlineCode> module in Python is a
+          built-in library that provides functions for interacting
+          with the operating system, allowing you to perform various
+          tasks related to file and directory manipulation, working
+          with file paths in a platform-independent way, environment
+          variables, process management, and more.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/fc608d4da4" />
+        <p>
+          When working with the <InlineCode>os</InlineCode> module,
+          it's essential to handle exceptions, especially when
+          performing file and directory operations. Various errors can
+          occur, such as files not existing, insufficient permissions,
+          or incorrect paths.
+        </p>
+
+        <h4>Pathlib</h4>
+        <p>
+          The <InlineCode>pathlib</InlineCode> module in Python is a
+          powerful and object-oriented library for working with file
+          system paths and files. Introduced in Python 3.4,{' '}
+          <InlineCode>pathlib</InlineCode>
+          offers a more intuitive and platform-independent way to
+          manipulate paths and perform file and directory operations.
+          The central concept of <InlineCode>pathlib</InlineCode> is
+          the <InlineCode>Path</InlineCode> object. You create a{' '}
+          <InlineCode>Path</InlineCode> object by passing a path
+          string to its constructor.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/2a1147eeae" />
+
+        <h4>Regex</h4>
+        <p>
+          The <InlineCode>re</InlineCode> module in Python, also known
+          as the "regex" module, allows you to work with regular
+          expressions. Regular expressions are powerful patterns that
+          help you search for and manipulate text data based on
+          specific patterns.
+        </p>
+        <p>
+          Regular expressions consist of patterns that describe
+          specific sequences of characters. Some common elements used
+          in regular expressions are:
+          <ul>
+            <li>
+              Literal Characters: Characters like letters and digits
+              match themselves. For example, the pattern "abc" matches
+              the string "abc" exactly.
+            </li>
+            <li>
+              Dot: The dot "." matches any single character except a
+              newline. For example, the pattern "a.c" matches "abc",
+              "adc", and so on.
+            </li>
+            <li>
+              Character Classes: Square brackets{' '}
+              <InlineCode>[...]</InlineCode> define a character class,
+              and the pattern matches any single character that is in
+              the class. For example, <InlineCode>[aeiou]</InlineCode>{' '}
+              matches any vowel, and <InlineCode>[0-9]</InlineCode>{' '}
+              matches any digit.
+            </li>
+            <li>
+              Caret and Dollar: The caret <InlineCode>^</InlineCode>{' '}
+              matches the start of a line or string, and the dollar{' '}
+              <InlineCode>$</InlineCode> matches the end of a line or
+              string. For example, <InlineCode>^abc</InlineCode>{' '}
+              matches if "abc" is at the start of a line.
+            </li>
+            <li>
+              Quantifiers: Quantifiers modify the number of times a
+              pattern is matched.
+              <ul>
+                <li>*: Matches zero or more occurrences.</li>
+                <li>+: Matches one or more occurrences.</li>
+                <li>?: Matches zero or one occurrence.</li>
+                <li>&#123;n&#125;: Matches exactly n occurrences.</li>
+                <li>
+                  &#123;n, m&#125;: Matches between "n" and "m"
+                  occurrences.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+        <p>
+          The <InlineCode>re.search(pattern, string)</InlineCode>{' '}
+          function is used to search for the first occurrence of a
+          pattern in a string. It returns a match object if a match is
+          found or <InlineCode>None</InlineCode> if no match is found.
+          You can use the <InlineCode>.group()</InlineCode> method of
+          the match object to extract the matched text.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/bfb522c312" />
+        <p>
+          The <InlineCode>re.findall(pattern, string)</InlineCode>{' '}
+          function returns a list of all non-overlapping matches of a
+          pattern in a string. It returns an empty list if no matches
+          are found.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/f401bbca91" />
+        <p>
+          The{' '}
+          <InlineCode>
+            re.sub(pattern, replacement, string)
+          </InlineCode>{' '}
+          function replaces all occurrences of a pattern in a string
+          with the specified replacement.
+        </p>
+        <p>
+          You can also compile regular expressions using
+          <InlineCode>re.compile(pattern)</InlineCode> to improve
+          performance if you plan to use the same pattern multiple
+          times.
+        </p>
+
+        <h4>Sys</h4>
+        <p>
+          The <InlineCode>sys</InlineCode> module in Python is a
+          built-in module that provides access to system-specific
+          parameters and functions. It is often used to interact with
+          the Python runtime environment and system-related
+          functionality.
+        </p>
+        <p>
+          The <InlineCode>sys.exit()</InlineCode> function is used to
+          exit a Python script with an optional exit status code. It
+          allows you to terminate the script programmatically, and you
+          can specify an exit status to indicate the success or
+          failure of the script (0 for success, non-zero for failure):
+        </p>
+        <p>
+          The <InlineCode>sys</InlineCode> module also provides access
+          to the standard input, standard output, and standard error
+          streams:
+          <ul>
+            <li>
+              <InlineCode>sys.stdin</InlineCode>: Represents the
+              standard input stream. You can use it to read input from
+              the user or a file.
+            </li>
+            <li>
+              <InlineCode>sys.stdout</InlineCode>: Represents the
+              standard output stream. You can use it to print output
+              to the console or redirect it to a file.
+            </li>
+            <li>
+              <InlineCode>sys.stderr</InlineCode>: Represents the
+              standard error stream. You can use it to print error
+              messages to the console or redirect them to a file.
+            </li>
+          </ul>
+        </p>
+        <p>
+          The <InlineCode>sys</InlineCode> module provides information
+          about the Python runtime environment and the underlying
+          operating system through various attributes:
+          <ul>
+            <li>
+              <InlineCode>sys.version</InlineCode>: Returns the Python
+              version string.
+            </li>
+            <li>
+              <InlineCode>sys.version_info</InlineCode>: Returns a
+              tuple containing the major, minor, micro, release level,
+              and serial version components.
+            </li>
+            <li>
+              <InlineCode>sys.platform</InlineCode>: Returns a string
+              indicating the platform where Python is running (e.g.,
+              "win32" for Windows, "linux" for Linux).
+            </li>
+          </ul>
+        </p>
+        <p>
+          The <InlineCode>sys.path</InlineCode> contains a list of
+          directories that Python searches when importing modules. You
+          can modify this list to add custom directories to the module
+          search path:{' '}
+          <InlineCode>
+            sys.path.append("/path/to/my_module_directory")
+          </InlineCode>
+          .
+        </p>
 
         <h3>Misc</h3>
         <p>Follows soon...stay tuned!</p>
