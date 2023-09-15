@@ -1191,7 +1191,7 @@ const IntroductionToPython = () => {
           but lists and dictionaries are mutable, so they can't be set
           elements.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/3f3742ad5d" />
+        <LazyIframe src="https://trinket.io/embed/python/4cc37ba9e0" />
         <h5>Functions and Methods for Sets</h5>
         <p>
           As for lists, the <InlineCode>len()</InlineCode> function
@@ -1235,12 +1235,11 @@ const IntroductionToPython = () => {
         <h3 id="functions-and-modules">Functions and Modules</h3>
 
         <h4>Functions</h4>
-        {/* TODO: Sandbox examples */}
         <p>
           Functions are a fundamental component of any programming
           language for two primary reasons. First, they enable code
           reusability, eliminating the need to duplicate and modify
-          code each time it's used. Second, functions allow you to
+          code each time it is used. Second, functions allow you to
           logically isolate various sub-tasks that inevitably arise
           when working on a program. This programming approach is
           known as modular programming and is generally considered a
@@ -1278,14 +1277,15 @@ const IntroductionToPython = () => {
           using the <InlineCode>global</InlineCode> statement, though
           this should be only used for situations where no other
           reasonable solution is available. Consequently, we won't
-          delve into global variables in detail here. When Python
-          attempts to resolve the reference of a name in your program,
-          names within a function's local namespace take precedence,
-          followed by names of global objects or objects imported into
-          the global namespace from a module. Finally, built-in object
-          names are searched as a last resort. Due to this search
-          order, Python's scoping is sometimes referred to as
-          following the LGB rule.
+          delve into global variables in detail here.
+          <LazyIframe src="https://trinket.io/embed/python/af84c02554" />
+          When Python attempts to resolve the reference of a name in
+          your program, names within a function's local namespace take
+          precedence, followed by names of global objects or objects
+          imported into the global namespace from a module. Finally,
+          built-in object names are searched as a last resort. Due to
+          this search order, Python's scoping is sometimes referred to
+          as following the LGB rule.
         </p>
         <h5>Function Basics</h5>
         <p>
@@ -1298,7 +1298,16 @@ const IntroductionToPython = () => {
           the parenthesized list. On the next line, an indented
           triple-quoted string, known as a docstring, provides
           documentation about the function. While not strictly
-          necessary, docstrings are good practice. The function body
+          necessary, docstrings are good practice. Python docstrings
+          can be written in several formats. The{' '}
+          <ExternalLink href="https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">
+            Google
+          </ExternalLink>{' '}
+          and{' '}
+          <ExternalLink href="https://numpydoc.readthedocs.io/en/latest/format.html">
+            Numpy
+          </ExternalLink>{' '}
+          formats are probably the most common ones. The function body
           follows the <InlineCode>def</InlineCode> line and the
           optional docstring. The function returns control to the
           calling environment when it encounters a{' '}
@@ -1310,7 +1319,8 @@ const IntroductionToPython = () => {
           list of arguments. For functions with no arguments, you
           simply use empty parentheses.
         </p>
-        <h5>Name Arguments and Default Values</h5>
+        <LazyIframe src="https://trinket.io/embed/python/b84ae49f6c" />
+        <h5>Named Arguments and Default Values</h5>
         <p>
           When passing arguments to a function without specifying
           their names, Python assumes that you've arranged the
@@ -1331,6 +1341,7 @@ const IntroductionToPython = () => {
           required arguments before optional ones in the function's
           argument list.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/0b222675df" />
         <h5>Variable Number of Arguments</h5>
         <p>
           In some cases, it's impossible to predict in advance how
@@ -1348,6 +1359,7 @@ const IntroductionToPython = () => {
           write a function that accepts any named parameter, even if
           you don't know the parameter name when writing the function.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/cabd905e6a" />
         <h5>Functional Programming and Anonymous Functions</h5>
         <p>
           When you need to perform the same operation on a list of
@@ -1393,6 +1405,7 @@ const IntroductionToPython = () => {
           a scalar value. Optionally, you can provide a third argument
           as a starting value, which defaults to 0.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/13e309e1cf" />
 
         <h4>Modules</h4>
         <p>
@@ -1458,18 +1471,19 @@ const IntroductionToPython = () => {
           avoid naming conflicts. For example,{' '}
           <InlineCode>import my_long_module_name as mlm</InlineCode>.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/d10dacf79a" />
         <p>
           When you import a module, Python searches for it in a
           specific order. First, it checks the current directory where
           your script is located. Then, it looks in the built-in
-          modules. Finally, it searches in directories listed in the
+          modules. Finally, it searches in directories listed in the{' '}
           <InlineCode>sys.path</InlineCode> variable. Understanding
           this order can help you manage your module imports
           effectively.
         </p>
         <p>
           When the Python interpreter reads a source file, it executes
-          all the code found in that file. Consequently, when you
+          all the code found in that file. Consequently, when you{' '}
           <InlineCode>import</InlineCode> a module into a Python
           program, the contents of the module are executed. This
           behavior can lead to unintended consequences when users
@@ -1495,6 +1509,7 @@ const IntroductionToPython = () => {
           particularly useful for creating reusable modules that can
           be both imported and executed independently.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/8f73e996b1" />
 
         <h3 id="object-oriented-programming">
           Object-Oriented Programming
@@ -1521,7 +1536,7 @@ const IntroductionToPython = () => {
           class, with its own set of attributes and the ability to
           call methods defined in the class.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/428a5eedae" />
+        <LazyIframe src="https://trinket.io/embed/python/7e517d2f0f" />
         <p>
           In Python, the <InlineCode>self</InlineCode> parameter is a
           reference to the instance of the class. It is the first
@@ -1558,6 +1573,68 @@ const IntroductionToPython = () => {
           object's name is typed in the interpreter. The following
           table lists some of the more commonly used methods for
           overloading.
+          <Table
+            columns={['Method', 'Description']}
+            data={[
+              [
+                '__str__',
+                'Converts an object to a string for printing.',
+              ],
+              [
+                '__repr__',
+                'Returns a string representation of the object for debugging.',
+              ],
+              ['__len__', 'Returns the length of an object.'],
+              [
+                '__add__',
+                'Defines behavior for the addition operation.',
+              ],
+              [
+                '__sub__',
+                'Defines behavior for the subtraction operation.',
+              ],
+              [
+                '__mul__',
+                'Defines behavior for the multiplication operation.',
+              ],
+              [
+                '__truediv__',
+                'Defines behavior for the true division operation.',
+              ],
+              [
+                '__floordiv__',
+                'Defines behavior for the floor division operation.',
+              ],
+              [
+                '__mod__',
+                'Defines behavior for the modulus operation.',
+              ],
+              [
+                '__eq__',
+                'Defines behavior for the equality comparison.',
+              ],
+              [
+                '__ne__',
+                'Defines behavior for the inequality comparison.',
+              ],
+              [
+                '__lt__',
+                'Defines behavior for the less-than comparison.',
+              ],
+              [
+                '__le__',
+                'Defines behavior for the less-than-or-equal comparison.',
+              ],
+              [
+                '__gt__',
+                'Defines behavior for the greater-than comparison.',
+              ],
+              [
+                '__ge__',
+                'Defines behavior for the greater-than-or-equal comparison.',
+              ],
+            ]}
+          />
         </p>
         <p>
           In addition, you can define what happens when your object is
@@ -1570,6 +1647,7 @@ const IntroductionToPython = () => {
           <InlineCode>StopIteration</InlineCode> exception when no
           more items are available.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/d5e28c7b94" />
 
         <h4>Private Attributes</h4>
         <p>
@@ -1587,6 +1665,29 @@ const IntroductionToPython = () => {
           more control over the way users of your class will
           manipulate those attributes.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/9c5ba9d345" />
+        <p>
+          In Python, there is the concept of "protected" attributes,
+          which is not enforced by the language itself but is a strong
+          convention and best practice within the Python community.
+          While an attribute with a single leading underscore, like{' '}
+          <InlineCode>_protected_var</InlineCode>, doesn't have any
+          special meaning to the Python interpreter, it carries a
+          significant message to developers. It signals that this
+          attribute is intended for internal use within a class and
+          should not be accessed or modified directly from outside the
+          class. Think of "protected" attributes as a way to
+          communicate within the Python code itself. It indicates
+          that, while technically accessible, this attribute is part
+          of the class's internal workings and not meant to be part of
+          the class's public interface. This convention helps improve
+          code organization, maintainability, and readability. By
+          encouraging developers to use getter and setter methods to
+          interact with "protected" attributes, it promotes the
+          principles of encapsulation and information hiding. It
+          separates the internal details of a class from the outside
+          world, making it easier to understand and maintain the code.
+        </p>
 
         <h4>Class and Instance Variables</h4>
         <p>
@@ -1596,6 +1697,7 @@ const IntroductionToPython = () => {
           and are typically defined within the{' '}
           <InlineCode>__init__</InlineCode> method.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/cfe4be0a90" />
 
         <h4>Class Methods and Static Methods</h4>
         <p>
@@ -1604,6 +1706,7 @@ const IntroductionToPython = () => {
           attributes. Static methods are similar but don't have access
           to instance-specific or class-specific attributes.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/8782124be5" />
 
         <h4>Inheritance</h4>
         <p>
@@ -1633,9 +1736,11 @@ const IntroductionToPython = () => {
           for their individual types. Python supports polymorphism
           through method overriding and method overloading. The
           example provided for inheritance also demonstrates
-          polymorphism since the subclasses "Cat" and "Dog" override
-          the <InlineCode>speak</InlineCode> method of the "Animal"
-          base class.
+          polymorphism since the subclasses{' '}
+          <InlineCode>Cat</InlineCode> and{' '}
+          <InlineCode>Dog</InlineCode> override the{' '}
+          <InlineCode>speak</InlineCode> method of the{' '}
+          <InlineCode>Animal</InlineCode> base class.
         </p>
 
         <h3 id="debugging-error-handling-and-unit-testing">
@@ -1661,12 +1766,14 @@ const IntroductionToPython = () => {
         <p>
           A syntax error occurs when the parser detects an incorrect
           statement. Let's take a look at the following example:
-          <LazyIframe src="https://trinket.io/embed/python/c8a28eb04e" />
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/c8a28eb04e" />
+        <p>
           In this example, there was one bracket too many. Remove it
           and run the code again. This time, there is an exception.
           This type of error occurs when syntactically correct Python
           code results in an error. Python provides details about the
-          type of exception encountered. In this case, it was a
+          type of exception encountered. In this case, it was a{' '}
           <InlineCode>ZeroDivisionError</InlineCode>. Python provides
           various built-in exceptions and also offers the possibility
           to create self-defined exceptions. To throw an exception,
@@ -1676,7 +1783,7 @@ const IntroductionToPython = () => {
           While exceptions are great, we still need to handle them
           because just throwing exceptions still results in programs
           terminating. To catch and handle exceptions,{' '}
-          <InlineCode>try</InlineCode> and
+          <InlineCode>try</InlineCode> and{' '}
           <InlineCode>except</InlineCode> are used in Python. The
           statement inside the <InlineCode>try</InlineCode> block is
           executed and if an exception occurs, the code inside the{' '}
@@ -1689,11 +1796,10 @@ const IntroductionToPython = () => {
           handle. In Python, using the <InlineCode>else</InlineCode>{' '}
           statement, you can instruct a program to execute a certain
           block of code only in the absence of exceptions. Everything
-          in the <InlineCode>finally</InlineCode>
-          clause will be executed regardless if you encounter an
-          exception somewhere in the <InlineCode>
-            try
-          </InlineCode> or <InlineCode>else</InlineCode> clauses.
+          in the <InlineCode>finally</InlineCode> clause will be
+          executed regardless if you encounter an exception somewhere
+          in the <InlineCode>try</InlineCode> or{' '}
+          <InlineCode>else</InlineCode> clauses.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/8df821aa1e" />
         <p>
@@ -1706,12 +1812,12 @@ const IntroductionToPython = () => {
           <InlineCode>AssertionError</InlineCode> exception.
         </p>
         <p>
-          There is a third type of errors, namely logical errors
-          (bugs). Logical errors occur when your code does not produce
-          the expected output or behaves incorrectly. These errors can
-          be challenging to identify because Python does not raise an
-          error. Instead, the program executes, but the results are
-          incorrect.
+          There is a third type of errors, namely logical errors, also
+          known as bugs. Logical errors occur when your code does not
+          produce the expected output or behaves incorrectly. These
+          errors can be challenging to identify because Python does
+          not raise an error. Instead, the program executes, but the
+          results are incorrect.
         </p>
         <p>
           Python offers several debugging tools and techniques to help
@@ -1720,16 +1826,15 @@ const IntroductionToPython = () => {
           statements in your code to display the values of variables
           and the flow of execution. This can help you understand what
           your code is doing and identify where issues may arise.
-          Alternately, you can use logging which is also a great
-          solution to collection information of your program you can
-          use if an error occurs. Logging will be discussed when
-          talking about the Python standard library. Python also
-          includes an interactive debugger called{' '}
-          <InlineCode>pdb</InlineCode> (Python Debugger). You can
-          insert breakpoints in your code using{' '}
-          <InlineCode>pdb.set_trace()</InlineCode> and then run your
-          script with the <InlineCode>-m pdb</InlineCode> option. This
-          launches an interactive debugging session where you can
+          Alternatively, you can utilize logging as an effective
+          method to gather program information, not only in the event
+          of an error. Logging will be discussed when talking about
+          the Python standard library. Python also includes an
+          interactive debugger called <InlineCode>pdb</InlineCode>{' '}
+          (Python Debugger). You can insert breakpoints in your code
+          using <InlineCode>pdb.set_trace()</InlineCode> and then run
+          your script with the <InlineCode>-m pdb</InlineCode> option.
+          This launches an interactive debugging session where you can
           inspect variables, step through code, and evaluate
           expressions. Many Python IDEs, such as PyCharm or Visual
           Studio Code, provide built-in debugging features. These
@@ -1821,16 +1926,21 @@ const IntroductionToPython = () => {
         <p>
           In Python, there are two popular unit testing frameworks:
           the built-in <InlineCode>unittest</InlineCode> module (often
-          referred to as the PyUnit framework) and the PyTest
+          referred to as the PyUnit framework) and the{' '}
+          <ExternalLink href="https://pytest.org">
+            pytest
+          </ExternalLink>{' '}
           framework.
         </p>
         <p>
           The <InlineCode>unittest</InlineCode> module is included in
           the Python standard library. Creating test cases is
-          accomplished by subclassing
+          accomplished by subclassing{' '}
           <InlineCode>unittest.TestCase</InlineCode>. Here's a simple
           example:
-          <LazyIframe src="https://trinket.io/embed/python/48f3220624" />
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/48f3220624" />
+        <p>
           In larger projects, you may have multiple test classes, each
           containing several test methods. To organize and run these
           tests efficiently, you can create test cases and test
@@ -1841,10 +1951,12 @@ const IntroductionToPython = () => {
           tests together. Python's <InlineCode>unittest</InlineCode>{' '}
           framework provides the <InlineCode>TestLoader</InlineCode>{' '}
           and <InlineCode>TestSuite</InlineCode> classes to help
-          create and organize test suites. Test fixtures are
-          preconditions and postconditions that are established before
-          and after running a test. In Python, you can use{' '}
-          <InlineCode>setUp</InlineCode> and{' '}
+          create and organize test suites.
+        </p>
+        <p>
+          Test fixtures are preconditions and postconditions that are
+          established before and after running a test. In Python, you
+          can use <InlineCode>setUp</InlineCode> and{' '}
           <InlineCode>tearDown</InlineCode> methods within your test
           class to set up and clean up resources required for testing.
           These methods run before and after each test method,
@@ -1859,19 +1971,18 @@ const IntroductionToPython = () => {
           your project.
         </p>
         <p>
-          PyTest is an alternative to Python's standard unittest
+          Pytest is an alternative to Python's standard unittest
           module, which can be installed using{' '}
           <InlineCode>pip</InlineCode>. Despite being a fully-featured
           and extensible test tool, it boasts a simple syntax.
           Creating a test suite is as easy as writing a module with a
-          couple of functions. PyTest offers a wide range of features
+          couple of functions. Pytest offers a wide range of features
           for test discovery, fixtures, parameterized testing, and
-          plugins. It's known for its simplicity and concise test
-          syntax.
+          plugins.
         </p>
         <p>
           In real-world software development, unit tests are often
-          integrated into a continuous integration (CI) pipeline. CI
+          integrated into a Continuous Integration (CI) pipeline. CI
           systems automatically run unit tests whenever code changes
           are pushed to version control repositories. This practice
           helps identify and address issues early in the development
@@ -1909,7 +2020,7 @@ const IntroductionToPython = () => {
           These range from individual programs and modules to
           fully-fledged packages and comprehensive application
           development frameworks. This extensive repository of
-          third-party packages can be found on the{' '}
+          third-party packages can be found for example on the{' '}
           <ExternalLink href="https://pypi.org/">
             Python Package Index (PyPi)
           </ExternalLink>
@@ -1930,39 +2041,13 @@ const IntroductionToPython = () => {
           taking input from the command line and is particularly
           useful when creating Python scripts or programs that require
           configuration or customization via the command line.
-          <CodeBlock
-            text={`import argparse
-
-
-if __name__ == "__main__":
-    # create an ArgumentParser object
-    parser = argparse.ArgumentParser(description="A simple script with command-line arguments")
-
-    # define command-line arguments and options
-    parser.add_argument("input_file", type=str, help="Input file path")
-    parser.add_argument("-o", "--output", type=str, default="output.txt", help="Output file path")
-
-    # parse the command-line arguments
-    args = parser.parse_args()
-
-    # access the parsed values
-    input_file = args.input_file
-    output_file = args.output
-
-    # use the parsed values in your script
-    print("Input file: {}".format(input_file))
-    print("Output file: {}".format(output_file))
-            `}
-            language={'python'}
-            showLineNumbers={false}
-            theme={dracula}
-          />
+          <LazyIframe src="https://trinket.io/embed/python/b26f37c61d" />
           When running this script from the command line, you can
           specify the <InlineCode>input_file</InlineCode> and
           optionally the <InlineCode>--output</InlineCode> file as
           follows:
           <CodeBlock
-            text={'python script.py input.txt --output output.txt'}
+            text={'python main.py input.txt --output output.txt'}
             language="bash"
             showLineNumbers={false}
             theme={dracula}
@@ -1972,11 +2057,11 @@ if __name__ == "__main__":
         <h4>File I/O</h4>
         <p>
           Python's standard library includes modules for performing
-          file input and output operations.The primary module for this
-          purpose is <InlineCode>open()</InlineCode>, which allows you
-          to open files for reading, writing, or both. You can also
-          use the <InlineCode>with</InlineCode> statement to ensure
-          that files are properly closed after usage.
+          file input and output operations. The primary module for
+          this purpose is <InlineCode>open()</InlineCode>, which
+          allows you to open files for reading, writing, or both. You
+          can also use the <InlineCode>with</InlineCode> statement to
+          ensure that files are properly closed after usage.
         </p>
         <h5>Opening a File</h5>
         <p>
@@ -2022,7 +2107,7 @@ if __name__ == "__main__":
           Logging is an essential part of software development that
           allows you to record messages, warnings, errors, and other
           information about the execution of your Python programs. The
-          Python standard library provides a built-in module called
+          Python standard library provides a built-in module called{' '}
           <InlineCode>logging</InlineCode> for handling logging
           operations.
         </p>
@@ -2042,7 +2127,7 @@ if __name__ == "__main__":
           messages to multiple destinations, filter them, or format
           them differently.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/28ffc1acb7" />
+        <LazyIframe src="https://trinket.io/embed/python/463b519c80" />
 
         <h4>Math</h4>
         <p>
@@ -2078,11 +2163,11 @@ if __name__ == "__main__":
           The <InlineCode>pathlib</InlineCode> module in Python is a
           powerful and object-oriented library for working with file
           system paths and files. Introduced in Python 3.4,{' '}
-          <InlineCode>pathlib</InlineCode>
-          offers a more intuitive and platform-independent way to
-          manipulate paths and perform file and directory operations.
-          The central concept of <InlineCode>pathlib</InlineCode> is
-          the <InlineCode>Path</InlineCode> object. You create a{' '}
+          <InlineCode>pathlib</InlineCode> offers a more intuitive and
+          platform-independent way to manipulate paths and perform
+          file and directory operations. The central concept of{' '}
+          <InlineCode>pathlib</InlineCode> is the{' '}
+          <InlineCode>Path</InlineCode> object. You create a{' '}
           <InlineCode>Path</InlineCode> object by passing a path
           string to its constructor.
         </p>
@@ -2096,6 +2181,11 @@ if __name__ == "__main__":
           help you search for and manipulate text data based on
           specific patterns.
         </p>
+        <p>
+          Let's look at an example to understand why this is useful.
+          Assume, we might want to validate an email address.{' '}
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/82d8a6c4f9" />
         <p>
           Regular expressions consist of patterns that describe
           specific sequences of characters. Some common elements used
@@ -2167,11 +2257,25 @@ if __name__ == "__main__":
           with the specified replacement.
         </p>
         <p>
-          You can also compile regular expressions using
+          You can also compile regular expressions using{' '}
           <InlineCode>re.compile(pattern)</InlineCode> to improve
           performance if you plan to use the same pattern multiple
           times.
         </p>
+        <p>
+          Let's go back to our previous email example. Thankfully,
+          common patterns have been built into regular expressions by
+          hard-working programmers. Notice that{' '}
+          <InlineCode>\w</InlineCode> is the same as{' '}
+          <InlineCode>[a-zA-Z0-9_]</InlineCode>. You may want to test
+          different emails for validity and figure out how and why it
+          works. There are also great (visual) regex testers like{' '}
+          <ExternalLink href="https://www.debuggex.com/">
+            Debuggex
+          </ExternalLink>{' '}
+          which can help you.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/71bdfcacce" />
 
         <h4>Sys</h4>
         <p>
@@ -2243,7 +2347,9 @@ if __name__ == "__main__":
         </p>
 
         <h3>Misc</h3>
-        <p>Follows soon...stay tuned!</p>
+        <p>
+          Follows soon...stay tuned! Suggestions are always welcome.
+        </p>
       </Article>
     </main>
   );
