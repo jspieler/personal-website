@@ -6,6 +6,7 @@ import { Article } from '../components/articles/Article';
 import { ExternalLink } from '../components/articles/ExternalLink';
 import { InlineCode } from '../components/articles/InlineCode';
 import { LazyIframe } from '../components/articles/LazyIframe';
+import { Table } from '../components/articles/Table';
 
 const IntroductionToPython = () => {
   return (
@@ -29,6 +30,18 @@ const IntroductionToPython = () => {
           with the code while learning. I would encourage you to do
           exactly that.
         </p>
+        <p>
+          Please be aware that certain code examples have been
+          adjusted due to limitations in{' '}
+          <ExternalLink href="https://trinket.io/">
+            Trinket.io
+          </ExternalLink>
+          . Some functionalities, such as f-strings, may not be
+          available or fully supported. Additionally, there may be
+          missing examples for certain standard library modules that
+          cannot be utilized within the Trinket environment at this
+          time.
+        </p>
         <p>The lecture slides are also available here.</p>
         <h3 id="what-is-python-and-why-you-should-learn-it">
           What Is Python and Why You Should Learn It
@@ -48,9 +61,9 @@ const IntroductionToPython = () => {
           the following explanations. Python is designed to be a
           beginner-friendly yet powerful programming language. In
           recent years, Python has gained increasing popularity,
-          especially due to well-known and robust frameworks designed
-          for scientific computing, artificial intelligence, and data
-          science. Examples of such frameworks include{' '}
+          especially due to well-known and powerful frameworks
+          designed for scientific computing, artificial intelligence,
+          and data science. Examples of such frameworks include{' '}
           <ExternalLink href="https://numpy.org/">Numpy</ExternalLink>
           ,{' '}
           <ExternalLink href="https://pandas.pydata.org/">
@@ -87,6 +100,24 @@ const IntroductionToPython = () => {
           , it is recommended to use 4 spaces for indentation, a
           practice we'll explore further in upcoming discussions.
         </p>
+        <p>
+          Now, you might be wondering, what are PEPs?{' '}
+          <ExternalLink href="https://peps.python.org/)">
+            PEP
+          </ExternalLink>{' '}
+          stands for Python Enhancement Proposal. These are documents
+          that outline design decisions, standards, and guidelines for
+          the Python programming language. While compliance with most
+          PEPs is voluntary, they are considered best practice in the
+          Python community. For example, PEP 257 provides guidelines
+          for docstring conventions, which are essential for
+          documenting Python code effectively. However, there are some
+          PEPs that are mandatory and must be followed. One such
+          example is PEP 8, which is the Python Enhancement Proposal
+          for the style guide of Python code. It provides
+          recommendations on how to format your code for clarity and
+          consistency.
+        </p>
 
         <h3 id="how-to-invoke-python-code">
           How To Invoke Python Code
@@ -102,8 +133,8 @@ const IntroductionToPython = () => {
           <ExternalLink href="https://docs.conda.io/en/latest/">
             Conda
           </ExternalLink>{' '}
-          (or one of its variations like MicroConda or Mamba). We'll
-          talk more about these options when we discuss virtual
+          (or one of its variants like MiniConda or Mamba). We'll talk
+          more about these options when we discuss virtual
           environments in a moment.
         </p>
         <p>
@@ -119,7 +150,7 @@ const IntroductionToPython = () => {
             theme={dracula}
           />
           The three greater-than signs (&gt;&gt;&gt;) are prompts that
-          indicate you can type your commands below them. When you
+          indicate you can type your commands after them. When you
           press "Enter", Python will execute your command. If you type
           a command like Python's <InlineCode>print()</InlineCode>,
           the result will show up on the screen, like this:
@@ -146,27 +177,28 @@ const IntroductionToPython = () => {
           packages. You can install Python packages from PyPI using a
           package management tool called "pip".
         </p>
-        <div>
+        <p>
           However, Python is not great at dependency management. This
           is why nearly every Python user recommends to use virtual
           environments. Virtual environments are a Python tool for
           dependency management and project isolation. They provide a
           simple solution for a lot of potential problems by helping
           you to:
-          <div>
-            <ul>
-              <li>Resolve dependency issues</li>
-              <li>Create self-contained and reproducible projects</li>
-              <li>Avoid system pollution</li>
-              <li>Install packages without admin rights</li>
-            </ul>
-          </div>
+          <ul>
+            <li>Resolve dependency issues</li>
+            <li>Create self-contained and reproducible projects</li>
+            <li>Avoid system pollution</li>
+            <li>Install packages without admin rights</li>
+          </ul>
           There are various approaches to creating a virtual
           environment. One option is to use{' '}
           <ExternalLink href="https://docs.python.org/3/library/venv.html">
             venv
           </ExternalLink>
-          , a built-in tool in Python. External tools like virtualenv
+          , a built-in tool in Python. External tools like{' '}
+          <ExternalLink href="https://virtualenv.pypa.io/en/latest/">
+            virtualenv
+          </ExternalLink>{' '}
           or Conda are also commonly used. Conda provides an
           alternative package and environment management approach. It
           not only enables easy creation of virtual environments with
@@ -184,7 +216,15 @@ const IntroductionToPython = () => {
           Python application along with its dependencies and system
           configurations, ensuring consistency across different
           environments.
-        </div>
+        </p>
+        <p>
+          Alright, now that we've laid the groundwork with our
+          introduction to Python, it's time to dive headfirst into the
+          fundamental building blocks of this powerful programming
+          language. Our next destination: the world of variables and
+          the core concepts that form the foundation of Python's
+          functionality.
+        </p>
 
         <h3 id="variables">Variables</h3>
         <p>
@@ -192,12 +232,20 @@ const IntroductionToPython = () => {
           Think of variables as containers that can hold values of
           various data types, such as numbers, strings, or complex
           objects. You can assign values to variables using the
-          assignment operator =. There are a few variable naming rules
-          and conventions in Python. Variable names can contain
-          letters, numbers, and underscores. But they must start with
-          a letter or an underscore. Variable names are
-          case-sensitive. And you should avoid using built-in Python
-          keywords as variable names.
+          assignment operator =. In Python, there are specific rules
+          and conventions for naming variables. Variable names can
+          consist of letters, numbers, and underscores, but they must
+          begin with a letter or an underscore. It's crucial to note
+          that variable names are case-sensitive. Additionally, while
+          Python doesn't strictly enforce it, it's highly advisable to
+          avoid using built-in Python keywords as variable names to
+          prevent potential conflicts. To maintain consistency and
+          readability in your code, it's recommended to adhere to the
+          naming conventions outlined in{' '}
+          <ExternalLink href="https://peps.python.org/pep-0008/#naming-conventions">
+            PEP 8
+          </ExternalLink>
+          .
         </p>
         <p>
           Python uses dynamic typing, which means that you can change
@@ -214,7 +262,7 @@ const IntroductionToPython = () => {
           and enclosing scope. We will discuss the details when
           talking about functions.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/cf66687956" />
+        <LazyIframe src="https://trinket.io/embed/python/e1f2230491" />
 
         <h3 id="data-types">Data Types</h3>
         <p>
@@ -239,16 +287,16 @@ const IntroductionToPython = () => {
           limited precision like floating point numbers. However,
           while regular integer arithmetic is supported by most
           operating systems, Python has to perform all its own long
-          integer arithmetic. This, using (many) long integers, will
+          integer arithmetic. Thus, using (many) long integers, will
           slow your programs down. Complex numbers can be entered into
-          Python using either the `complex`function or by denoting the
-          complex number as the real portion followed by a plus sign
-          and the imaginary part with a trailing uppercase or
-          lowercase "J". There must be no spaces between the imaginary
-          part and the "J". Both components are stored as floating
-          point numbers.
+          Python using either the <InlineCode>complex</InlineCode>{' '}
+          function or by denoting the complex number as the real
+          portion followed by a plus sign and the imaginary part with
+          a trailing uppercase or lowercase "J". There must be no
+          spaces between the imaginary part and the "J". Both
+          components are stored as floating point numbers.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/0a86a4a000" />
+        <LazyIframe src="https://trinket.io/embed/python/cd0dea3904" />
 
         <h4>Strings</h4>
         <p>
@@ -271,6 +319,7 @@ const IntroductionToPython = () => {
           string. Combining a Unicode string with a regular string
           results in a Unicode string.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/c2c2a8cc11" />
         <h5>String Operations</h5>
         <p>
           The following sections describe some of the most important
@@ -283,6 +332,20 @@ const IntroductionToPython = () => {
           concatenated with variables.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/1d49685948" />
+        <h6>String Formatting</h6>
+        <p>
+          In addition to creating and manipulating strings, it's
+          essential to know how to format them effectively. String
+          formatting allows you to combine variables, constants, and
+          text in a way that makes your code more readable and
+          user-friendly. There are various string formatting
+          techniques, including concatenation, "%" formatting, and the
+          modern approach using f-strings (for Python version 3.6 and
+          above). You can also use the{' '}
+          <InlineCode>str.format()</InlineCode> method, which provides
+          another flexible way to format strings.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/60cf41bfe5" />
         <h6>Repetition</h6>
         <p>
           When using an asterisk (*) between a string and an integer a
@@ -325,7 +388,7 @@ const IntroductionToPython = () => {
           value of a string, a method needs to be invoked on the
           variable containing the string and the value of this
           operation needs to be reassigned to the desired variable.
-          There are a bunch of string methods provided by Python. The
+          Python offers a wide variety of string methods. The{' '}
           <InlineCode>split()</InlineCode> and{' '}
           <InlineCode>join()</InlineCode> methods are among the most
           useful. The <InlineCode>split()</InlineCode> method returns
@@ -335,78 +398,51 @@ const IntroductionToPython = () => {
           whitespace characters are used as the default separator
           character. The following table shows an overview over some
           useful string methods:
-          <table>
-            <tr>
-              <th>Method</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td>str.upper()</td>
-              <td>
-                Converts all characters in the string to uppercase.
-              </td>
-            </tr>
-            <tr>
-              <td>str.lower()</td>
-              <td>
-                Converts all characters in the string to lowercase.
-              </td>
-            </tr>
-            <tr>
-              <td>str.strip()</td>
-              <td>
-                Removes leading and trailing whitespace from the
-                string.
-              </td>
-            </tr>
-            <tr>
-              <td>str.split()</td>
-              <td>
-                Splits the string into a list of substrings based on a
-                delimiter.
-              </td>
-            </tr>
-            <tr>
-              <td>str.join()</td>
-              <td>
-                Joins a list of strings into a single string using the
-                provided delimiter.
-              </td>
-            </tr>
-            <tr>
-              <td>str.replace()</td>
-              <td>
-                Replaces occurrences of a substring with another
-                substring.
-              </td>
-            </tr>
-            <tr>
-              <td>str.find()</td>
-              <td>
-                Returns the index of the first occurrence of a
-                substring (or -1 if not found).
-              </td>
-            </tr>
-            <tr>
-              <td>str.startswith()</td>
-              <td>
-                Checks if the string starts with a specified
-                substring.
-              </td>
-            </tr>
-            <tr>
-              <td>str.endswith()</td>
-              <td>
-                Checks if the string ends with a specified substring.
-              </td>
-            </tr>
-            <tr>
-              <td>str.isalpha()</td>
-              <td>
-                Checks if all characters in the string are alphabetic.
-              </td>
-            </tr>
-          </table>
+          <Table
+            columns={['Method', 'Description']}
+            data={[
+              [
+                'str.upper()',
+                'Converts all characters in the string to uppercase.',
+              ],
+              [
+                'str.lower()',
+                'Converts all characters in the string to lowercase.',
+              ],
+              [
+                'str.strip()',
+                'Removes leading and trailing whitespace from the string.',
+              ],
+              [
+                'str.split()',
+                'Splits the string into a list of substrings based on a delimiter.',
+              ],
+              [
+                'str.join()',
+                'Joins a list of strings into a single string using the provided delimiter.',
+              ],
+              [
+                'str.replace()',
+                'Replaces occurrences of a substring with another substring.',
+              ],
+              [
+                'str.find()',
+                'Returns the index of the first occurrence of a substring (or -1 if not found).',
+              ],
+              [
+                'str.startswith()',
+                'Checks if the string starts with a specified substring.',
+              ],
+              [
+                'str.endswith()',
+                'Checks if the string ends with a specified substring.',
+              ],
+              [
+                'str.isalpha()',
+                'Checks if all characters in the string are alphabetic.',
+              ],
+            ]}
+          />
         </p>
         <LazyIframe src="https://trinket.io/embed/python/c7fb7570ab" />
 
@@ -416,7 +452,7 @@ const IntroductionToPython = () => {
           <InlineCode>False</InlineCode> values and are often used in
           conditional statements and logic.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/5ad99d13cc" />
+        <LazyIframe src="https://trinket.io/embed/python/d6b3e1f582" />
 
         <h4>None</h4>
         <p>
@@ -462,8 +498,8 @@ const IntroductionToPython = () => {
           multi-line comments, you can use triple-quotes (
           <InlineCode>'''</InlineCode> or <InlineCode>"""</InlineCode>
           ) to create multi-line comment blocks, although they are
-          typically used for so-called docstrings (see section about
-          functions).
+          typically used for so-called docstrings, which we will
+          discuss in the section about functions.
         </p>
         <p>
           There are different opinions on how and when to comment code
@@ -517,31 +553,116 @@ const IntroductionToPython = () => {
           trigger this updating mechanism, which can lead to
           surprising results. If you genuinely want to make a copy of
           a list instead of merely storing a reference, you can use
-          Python's <InlineCode>copy</InlineCode>module. We will
+          Python's <InlineCode>copy</InlineCode> module. We will
           discuss this in more detail when talking about data
           structures.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/b38470ba30" />
         <p>
           In addition to the basic assignment operator (=), Python
           also provides several other assignment operators, as shown
           in the following table:
+          <Table
+            columns={['Operator', 'Description']}
+            data={[
+              [
+                '=',
+                'Assigns the value on the right to the variable on the left.',
+              ],
+              [
+                '+=',
+                'Adds the value on the right to the variable on the left and assigns the result to the variable.',
+              ],
+              [
+                '-=',
+                'Subtracts the value on the right from the variable on the left and assigns the result to the variable.',
+              ],
+              [
+                '*=',
+                'Multiplies the variable on the left by the value on the right and assigns the result to the variable.',
+              ],
+              [
+                '/=',
+                'Divides the variable on the left by the value on the right and assigns the result to the variable.',
+              ],
+              [
+                '%=',
+                'Calculates the modulus of the variable on the left and the value on the right, then assigns the result to the variable.',
+              ],
+              [
+                '//=',
+                'Performs floor division on the variable on the left and the value on the right, then assigns the result to the variable.',
+              ],
+              [
+                '**=',
+                'Raises the variable on the left to the power of the value on the right and assigns the result to the variable.',
+              ],
+              [
+                '&=',
+                'Performs a bitwise AND operation between the variable on the left and the value on the right, then assigns the result to the variable.',
+              ],
+              [
+                '|=',
+                'Performs a bitwise OR operation between the variable on the left and the value on the right, then assigns the result to the variable.',
+              ],
+              [
+                '^=',
+                'Performs a bitwise XOR operation between the variable on the left and the value on the right, then assigns the result to the variable.',
+              ],
+              [
+                '<<=',
+                'Shifts the bits of the variable on the left to the left by the number of positions specified by the value on the right and assigns the result to the variable.',
+              ],
+              [
+                '>>=',
+                'Shifts the bits of the variable on the left to the right by the number of positions specified by the value on the right and assigns the result to the variable.',
+              ],
+            ]}
+          />
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/b38470ba30" />
 
         <h4>Arithmetic Operators</h4>
         <p>
           Arithmetic operators are used to perform basic mathematical
           operations in Python, including addition, subtraction,
           multiplication, and division. Python supports all the binary
-          arithmetic operators shown in the following table. A binary
-          operator operates on exactly two elements, one on each side
-          of the operator's symbol. When performing operations on
-          integers, Python performs integer arithmetic unless one of
-          the operands is a floating-point number. Python also
-          provides unary operators for plus and minus. Any expression
-          returning a single numeric value can be preceded either by a
-          minus or plus sign.
+          arithmetic operators shown in the following table.
+          <Table
+            columns={['Operator', 'Description']}
+            data={[
+              ['+', 'Adds two operands.'],
+              [
+                '-',
+                'Subtracts the right operand from the left operand.',
+              ],
+              ['*', 'Multiplies two operands.'],
+              [
+                '/',
+                'Divides the left operand by the right operand (float division).',
+              ],
+              [
+                '//',
+                'Divides the left operand by the right operand and returns the floor value (integer division).',
+              ],
+              [
+                '%',
+                'Returns the remainder when the left operand is divided by the right operand.',
+              ],
+              [
+                '**',
+                'Raises the left operand to the power of the right operand.',
+              ],
+            ]}
+          />
+          A binary operator operates on exactly two elements, one on
+          each side of the operator's symbol. When performing
+          operations on integers, Python performs integer arithmetic
+          unless one of the operands is a floating-point number.
+          Python also provides unary operators for plus and minus. Any
+          expression returning a single numeric value can be preceded
+          either by a minus or plus sign.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/9ffb1493fb" />
         <p>
           The precedence of Arithmetic Operators in Python is as
           follows:
@@ -568,9 +689,36 @@ const IntroductionToPython = () => {
           either <InlineCode>True</InlineCode> or{' '}
           <InlineCode>False</InlineCode> based on the specified
           condition. The comparison operators in Python are shown in
-          the following table. In Python, comparison operators have
-          lower precedence than arithmetic operators. All comparison
-          operators have the same precedence order.
+          the following table.
+          <Table
+            columns={['Operator', 'Description']}
+            data={[
+              ['==', 'Equal to: Checks if the operands are equal.'],
+              [
+                '!=',
+                'Not equal to: Checks if the operands are not equal.',
+              ],
+              [
+                '<',
+                'Less than: Checks if the left operand is less than the right operand.',
+              ],
+              [
+                '>',
+                'Greater than: Checks if the left operand is greater than the right operand.',
+              ],
+              [
+                '<=',
+                'Less than or equal to: Checks if the left operand is less than or equal to the right operand.',
+              ],
+              [
+                '>=',
+                'Greater than or equal to: Checks if the left operand is greater than or equal to the right operand.',
+              ],
+            ]}
+          />
+          In Python, comparison operators have lower precedence than
+          arithmetic operators. All comparison operators have the same
+          precedence order.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/9b800fb6e4" />
 
@@ -596,9 +744,38 @@ const IntroductionToPython = () => {
           Bitwise operators are used to operate on binary numbers and
           perform bit-by-bit operations. An overview over the bitwise
           operators in Python is shown in the following table.
+          <Table
+            columns={['Operator', 'Description']}
+            data={[
+              [
+                '&',
+                'Bitwise AND: Performs a bitwise AND operation on the corresponding bits of the operands.',
+              ],
+              [
+                '|',
+                'Bitwise OR: Performs a bitwise OR operation on the corresponding bits of the operands.',
+              ],
+              [
+                '^',
+                'Bitwise XOR: Performs a bitwise XOR (exclusive OR) operation on the corresponding bits of the operands.',
+              ],
+              [
+                '~',
+                'Bitwise NOT: Inverts the bits of the operand, changing 1s to 0s and vice versa.',
+              ],
+              [
+                '<<',
+                'Left Shift: Shifts the bits of the left operand to the left by the number of positions specified by the right operand.',
+              ],
+              [
+                '>>',
+                'Right Shift: Shifts the bits of the left operand to the right by the number of positions specified by the right operand.',
+              ],
+            ]}
+          />
         </p>
         <p>
-          The precedence of Bitwise Operators in python is as follows:
+          The precedence of Bitwise Operators in Python is as follows:
           <ol>
             <li>Bitwise NOT</li>
             <li>Bitwise Shift</li>
@@ -616,12 +793,12 @@ const IntroductionToPython = () => {
           variables, and sequences. The <InlineCode>is</InlineCode>{' '}
           operator is used to check if two values or variables refer
           to the same object in memory. It returns{' '}
-          <InlineCode>True</InlineCode> if they do and
+          <InlineCode>True</InlineCode> if they do and{' '}
           <InlineCode>False</InlineCode> otherwise. It is not used to
           compare the values themselves, but rather their identity.
           The <InlineCode>is not</InlineCode> operator is the negation
           of is. It returns <InlineCode>True</InlineCode> if two
-          values or variables do not refer to the same object and
+          values or variables do not refer to the same object and{' '}
           <InlineCode>False</InlineCode> if they do.
         </p>
         <p>
@@ -629,7 +806,7 @@ const IntroductionToPython = () => {
           a value or variable is present in a sequence (e.g., a list,
           tuple, string, or set). It returns{' '}
           <InlineCode>True</InlineCode> if the value is found in the
-          sequence and <InlineCode>False</InlineCode> otherwise. The
+          sequence and <InlineCode>False</InlineCode> otherwise. The{' '}
           <InlineCode>not in</InlineCode> operator is the negation of{' '}
           <InlineCode>in</InlineCode>.
         </p>
@@ -655,12 +832,12 @@ const IntroductionToPython = () => {
           <InlineCode>elif</InlineCode> and{' '}
           <InlineCode>else</InlineCode> statements, are the foundation
           for executing conditional logic in your programs. The{' '}
-          <InlineCode>if</InlineCode>
-          statement evaluates the expression following it. If the
-          expression is true, Python executes the statement(s) that
-          follow. If the expression is false, Python continues with
-          the <InlineCode>elif</InlineCode> statement (if there is
-          one), and tests that expression. It proceeds to test the
+          <InlineCode>if</InlineCode> statement evaluates the
+          expression following it. If the expression is true, Python
+          executes the statement(s) that follow. If the expression is
+          false, Python continues with the{' '}
+          <InlineCode>elif</InlineCode> statement (if there is one),
+          and tests that expression. It proceeds to test the
           expressions associated with any{' '}
           <InlineCode>elif</InlineCode> statements in order, executing
           the first set of statements for which the expression is
@@ -678,6 +855,7 @@ const IntroductionToPython = () => {
           corresponding statement(s) and doesn't evaluate any other
           expressions that follow.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/b9cb6a2b5c" />
         <h4>Loops</h4>
         <p>
           Python provides two primary types of loops: the{' '}
@@ -698,6 +876,7 @@ const IntroductionToPython = () => {
           you need an index, you can use{' '}
           <InlineCode>enumerate</InlineCode>.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/a9f718e2e0" />
         <p>
           The <InlineCode>for</InlineCode> loop provides a great way
           to process the elements of a sequence. However, sometimes it
@@ -737,9 +916,20 @@ const IntroductionToPython = () => {
           <InlineCode>continue</InlineCode> statement, so the next
           iteration proceeds as usual.
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/63c61bb123" />
 
         <h3 id="data-structures">Data Structures</h3>
-        <p>...</p>
+        <p>
+          Data structures are a way of organizing data so that it can
+          be accessed more efficiently depending upon the situation.
+          They are the fundamentals of any programming language around
+          which a program is built. Python provides several built-in
+          data structures, each with its unique characteristics and
+          use cases. Understanding these data structures is essential
+          for effective programming, as they play a fundamental role
+          in organizing and processing data in Python. Let's dive into
+          these data structures and their capabilities.
+        </p>
 
         <h4>Lists</h4>
         <p>
@@ -763,8 +953,8 @@ const IntroductionToPython = () => {
           individual elements. To get the number of elements within a
           list, Python offers the built-in{' '}
           <InlineCode>len()</InlineCode> function.
-          <LazyIframe src="https://trinket.io/embed/python/179b14e949" />
         </p>
+        <LazyIframe src="https://trinket.io/embed/python/179b14e949" />
         <h5>List Indexing and Slicing</h5>
         <p>
           The slicing operations introduced in the section about
@@ -861,7 +1051,7 @@ const IntroductionToPython = () => {
           the <InlineCode>append()</InlineCode> method can be used. If
           you need to add several elements to the end of a list,
           either the concatenation operator or the{' '}
-          <InlineCode>extend()</InlineCode>method can be employed. If
+          <InlineCode>extend()</InlineCode> method can be employed. If
           your intent is to insert an element at a position other than
           the end of the list, the <InlineCode>insert()</InlineCode>{' '}
           method proves useful. This method demands two arguments: the
@@ -915,7 +1105,7 @@ const IntroductionToPython = () => {
           include a comma after the sole element to explicitly denote
           a tuple with only one element in an assignment statement.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/9e85dc5f9b" />
+        <LazyIframe src="https://trinket.io/embed/python/cb306ac40b" />
         <h5>Operators and Indexing for Tuples</h5>
         <p>
           The same operators as mentioned in the previous section for
@@ -928,7 +1118,7 @@ const IntroductionToPython = () => {
         <p>
           There are no methods for tuples. However, tuples and list
           can be easily converted to each other using the built-in
-          function <InlineCode>list</InlineCode> and{' '}
+          functions <InlineCode>list</InlineCode> and{' '}
           <InlineCode>tuple</InlineCode>.
         </p>
 
@@ -951,7 +1141,7 @@ const IntroductionToPython = () => {
           often referred to as a key. This significantly simplifies
           the process of retrieving the information we need:
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/2f654ae385" />
+        <LazyIframe src="https://trinket.io/embed/python/18505c9294" />
         <p>
           As the example above illustrates, a dictionary can be
           initialized using a comma-separated list of key/value pairs
@@ -960,14 +1150,29 @@ const IntroductionToPython = () => {
           that dictionary keys are not limited to strings, and they
           don't need to be of the same data type. However, it's
           crucial to remember that mutable objects, such as lists,
-          cannot be used as dictionary keys. You can add key/value
-          pairs to a dictionary using assignment statements, and if
-          you need to remove a specific key/value pair from a
-          dictionary, you can use the <InlineCode>del</InlineCode>{' '}
-          statement for this purpose.
+          cannot be used as dictionary keys.
+        </p>
+        <h5>Operators and Indexing for Dictionaries</h5>
+        <p>
+          You can add key/value pairs to a dictionary using assignment
+          statements, and if you need to remove a specific key/value
+          pair from a dictionary, you can use the{' '}
+          <InlineCode>del</InlineCode> statement for this purpose. You
+          can use the <InlineCode>in</InlineCode> operator to check if
+          a specific key exists in a dictionary. It returns{' '}
+          <InlineCode>True</InlineCode> if the key is present and
+          <InlineCode>False</InlineCode> otherwise.
         </p>
         <h5>Functions and Methods for Dictionaries</h5>
-        <p>TODO</p>
+        <p>
+          Dictionaries in Python offer several built-in methods
+          specifically designed for working with dictionaries. These
+          methods provide convenient ways to perform various
+          operations on dictionaries. Let's take a look at some
+          examples:
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/a0e8e517ba" />
+        <p></p>
 
         <h4>Sets</h4>
         <p>
@@ -996,14 +1201,14 @@ const IntroductionToPython = () => {
           test for membership. However, many of the operations that
           can be used for Python's other data types, don't make sense
           for sets. For example, sets can't be indexed or sliced.
-          Nevertheless, Python provides a bunch of operation on set
+          Nevertheless, Python provides a variety of operations on set
           objects which are similar to the operations defined for
           mathematical sets. Set union of two or more sets can be
           performed with the "|" operator or with the{' '}
           <InlineCode>union()</InlineCode> method. The resulting set
           contains all elements that are present in any of the
           specified sets. To compute the intersection of two or more
-          sets , i.e. return a set containing only elements that are
+          sets, i.e. return a set containing only elements that are
           present in all of the specified sets, the "&" operator or{' '}
           <InlineCode>intersection()</InlineCode> method can be used.
           The difference between two or more sets can be computed
