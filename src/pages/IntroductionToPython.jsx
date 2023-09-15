@@ -118,7 +118,6 @@ const IntroductionToPython = () => {
           recommendations on how to format your code for clarity and
           consistency.
         </p>
-
         <h3 id="how-to-invoke-python-code">
           How To Invoke Python Code
         </h3>
@@ -225,7 +224,6 @@ const IntroductionToPython = () => {
           the core concepts that form the foundation of Python's
           functionality.
         </p>
-
         <h3 id="variables">Variables</h3>
         <p>
           In Python, variables are used for storing and managing data.
@@ -263,7 +261,6 @@ const IntroductionToPython = () => {
           talking about functions.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/e1f2230491" />
-
         <h3 id="data-types">Data Types</h3>
         <p>
           In Python, understanding data types is fundamental to
@@ -271,7 +268,6 @@ const IntroductionToPython = () => {
           types and get familiar with them. They will be discussed in
           more detail in the following sections.
         </p>
-
         <h4>Numeric Data Types</h4>
         <p>
           Python supports four different types of numeric data, namely
@@ -297,7 +293,6 @@ const IntroductionToPython = () => {
           components are stored as floating point numbers.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/cd0dea3904" />
-
         <h4>Strings</h4>
         <p>
           Strings are collections of characters that represent
@@ -445,7 +440,6 @@ const IntroductionToPython = () => {
           />
         </p>
         <LazyIframe src="https://trinket.io/embed/python/c7fb7570ab" />
-
         <h4>Booleans</h4>
         <p>
           Booleans represent either <InlineCode>True</InlineCode> or{' '}
@@ -453,7 +447,6 @@ const IntroductionToPython = () => {
           conditional statements and logic.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/d6b3e1f582" />
-
         <h4>None</h4>
         <p>
           In Python, None is a special value used to indicate the
@@ -463,7 +456,6 @@ const IntroductionToPython = () => {
           expected but hasn't been determined yet.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/a1b65a8f51" />
-
         <h4>Data Structures</h4>
         <p>
           Python provides various data structures to efficiently
@@ -482,7 +474,6 @@ const IntroductionToPython = () => {
           specific requirements of your program. We will delve deeper
           into Python data structures later on.
         </p>
-
         <h3 id="comments">Comments</h3>
         <p>
           Comments are a crucial aspect of Python programming. They
@@ -511,7 +502,6 @@ const IntroductionToPython = () => {
           conventions and practices is recommended to ensure that
           others can understand and use your code effectively.
         </p>
-
         <h3 id="operators">Operators</h3>
         <p>
           In Python, operators are fundamental elements used to
@@ -620,7 +610,6 @@ const IntroductionToPython = () => {
             ]}
           />
         </p>
-
         <h4>Arithmetic Operators</h4>
         <p>
           Arithmetic operators are used to perform basic mathematical
@@ -681,7 +670,6 @@ const IntroductionToPython = () => {
             <li>S - Subtraction</li>
           </ol>
         </p>
-
         <h4>Comparison Operators</h4>
         <p>
           Comparison operators, also known as relational operators,
@@ -721,7 +709,6 @@ const IntroductionToPython = () => {
           precedence order.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/9b800fb6e4" />
-
         <h4>Logical Operators</h4>
         <p>
           Logical operators are used to perform logical operations
@@ -738,7 +725,6 @@ const IntroductionToPython = () => {
           operators in Python.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/129d457075" />
-
         <h4>Bitwise Operators</h4>
         <p>
           Bitwise operators are used to operate on binary numbers and
@@ -785,7 +771,6 @@ const IntroductionToPython = () => {
           </ol>
         </p>
         <LazyIframe src="https://trinket.io/embed/python/63e371be96" />
-
         <h4>Identity and Membership Operators</h4>
         <p>
           In Python, identity and membership operators are essential
@@ -823,7 +808,6 @@ const IntroductionToPython = () => {
           variable based on a condition in a single line.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/0ca3472fc8" />
-
         <h3 id="control-structures">Control Structures</h3>
         <h4>Conditions</h4>
         <p>
@@ -917,7 +901,6 @@ const IntroductionToPython = () => {
           iteration proceeds as usual.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/63c61bb123" />
-
         <h3 id="data-structures">Data Structures</h3>
         <p>
           Data structures are a way of organizing data so that it can
@@ -930,7 +913,6 @@ const IntroductionToPython = () => {
           in organizing and processing data in Python. Let's dive into
           these data structures and their capabilities.
         </p>
-
         <h4>Lists</h4>
         <p>
           Lists serve as a fundamental tool in Python for holding
@@ -1084,7 +1066,6 @@ const IntroductionToPython = () => {
           value.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/697878d467" />
-
         <h4>Tuples</h4>
         <p>
           Tuples, like lists, are a fundamental data structure in
@@ -1121,7 +1102,6 @@ const IntroductionToPython = () => {
           functions <InlineCode>list</InlineCode> and{' '}
           <InlineCode>tuple</InlineCode>.
         </p>
-
         <h4>Dictionaries</h4>
         <p>
           Dictionaries in Python share similarities with lists, as
@@ -1173,7 +1153,6 @@ const IntroductionToPython = () => {
         </p>
         <LazyIframe src="https://trinket.io/embed/python/a0e8e517ba" />
         <p></p>
-
         <h4>Sets</h4>
         <p>
           Python's built-in set type is similar to dictionaries. Sets
@@ -1231,9 +1210,7 @@ const IntroductionToPython = () => {
           as set, but is immutable.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/ab8ea2aa12" />
-
         <h3 id="functions-and-modules">Functions and Modules</h3>
-
         <h4>Functions</h4>
         <p>
           Functions are a fundamental component of any programming
@@ -1406,7 +1383,6 @@ const IntroductionToPython = () => {
           as a starting value, which defaults to 0.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/13e309e1cf" />
-
         <h4>Modules</h4>
         <p>
           Python's core design philosophy emphasizes simplicity and
@@ -1510,7 +1486,6 @@ const IntroductionToPython = () => {
           be both imported and executed independently.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/8f73e996b1" />
-
         <h3 id="object-oriented-programming">
           Object-Oriented Programming
         </h3>
@@ -1648,7 +1623,6 @@ const IntroductionToPython = () => {
           more items are available.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/d5e28c7b94" />
-
         <h4>Private Attributes</h4>
         <p>
           In many object-oriented languages, certain attributes can be
@@ -1688,7 +1662,6 @@ const IntroductionToPython = () => {
           separates the internal details of a class from the outside
           world, making it easier to understand and maintain the code.
         </p>
-
         <h4>Class and Instance Variables</h4>
         <p>
           Class variables are shared by all instances of a class and
@@ -1698,7 +1671,6 @@ const IntroductionToPython = () => {
           <InlineCode>__init__</InlineCode> method.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/cfe4be0a90" />
-
         <h4>Class Methods and Static Methods</h4>
         <p>
           Class methods are methods that are bound to the class and
@@ -1707,7 +1679,6 @@ const IntroductionToPython = () => {
           to instance-specific or class-specific attributes.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/8782124be5" />
-
         <h4>Inheritance</h4>
         <p>
           Inheritance is a fundamental concept in OOP that allows you
@@ -1718,7 +1689,6 @@ const IntroductionToPython = () => {
           the subclass.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/4bc092e290" />
-
         <h4>Encapsulation</h4>
         <p>
           Encapsulation is the practice of bundling data (attributes)
@@ -1728,7 +1698,6 @@ const IntroductionToPython = () => {
           with the object while protecting its integrity.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/f6c4270aab" />
-
         <h4>Polymorphism</h4>
         <p>
           Polymorphism is the ability of different objects to respond
@@ -1742,7 +1711,6 @@ const IntroductionToPython = () => {
           <InlineCode>speak</InlineCode> method of the{' '}
           <InlineCode>Animal</InlineCode> base class.
         </p>
-
         <h3 id="debugging-error-handling-and-unit-testing">
           Debugging, Error Handling and Unit Testing
         </h3>
@@ -1842,7 +1810,6 @@ const IntroductionToPython = () => {
           breakpoints, inspecting variables, and navigating through
           your code during debugging.
         </p>
-
         <h5>Common Debugging Practices</h5>
         <p>
           When debugging in Python, consider the following best
@@ -1882,7 +1849,6 @@ const IntroductionToPython = () => {
             </li>
           </ol>
         </p>
-
         <h5>Fixing Bugs</h5>
         <p>
           Once you identify a bug, you may follow these steps to fix
@@ -1910,7 +1876,6 @@ const IntroductionToPython = () => {
             </li>
           </ol>
         </p>
-
         <h4>Unit Testing</h4>
         <p>
           Testing your code is very important. It does not only allow
@@ -1998,7 +1963,6 @@ const IntroductionToPython = () => {
           By mastering these practices, you can create software that
           is more stable, maintainable, and resistant to bugs.
         </p>
-
         <h3 id="standard-library">Standard Library</h3>
         <p>
           Python's standard library is exceptionally comprehensive,
@@ -2032,7 +1996,6 @@ const IntroductionToPython = () => {
           library, equipping you with essential tools and knowledge
           for your further journey in Python programming.
         </p>
-
         <h4>Argparse</h4>
         <p>
           <InlineCode>argparse</InlineCode> is a Python module for
@@ -2053,7 +2016,6 @@ const IntroductionToPython = () => {
             theme={dracula}
           />
         </p>
-
         <h4>File I/O</h4>
         <p>
           Python's standard library includes modules for performing
@@ -2101,7 +2063,6 @@ const IntroductionToPython = () => {
           files, as various errors can occur (e.g., the file might not
           exist, you may not have permission to read or write it).
         </p>
-
         <h4>Logging</h4>
         <p>
           Logging is an essential part of software development that
@@ -2128,7 +2089,6 @@ const IntroductionToPython = () => {
           them differently.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/463b519c80" />
-
         <h4>Math</h4>
         <p>
           Python's <InlineCode>math</InlineCode> library is a built-in
@@ -2139,7 +2099,6 @@ const IntroductionToPython = () => {
           in your Python programs. Let's take a look at some examples.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/b8be33ca00" />
-
         <h4>OS</h4>
         <p>
           The <InlineCode>os</InlineCode> module in Python is a
@@ -2157,7 +2116,6 @@ const IntroductionToPython = () => {
           occur, such as files not existing, insufficient permissions,
           or incorrect paths.
         </p>
-
         <h4>Pathlib</h4>
         <p>
           The <InlineCode>pathlib</InlineCode> module in Python is a
@@ -2172,7 +2130,6 @@ const IntroductionToPython = () => {
           string to its constructor.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/2a1147eeae" />
-
         <h4>Regex</h4>
         <p>
           The <InlineCode>re</InlineCode> module in Python, also known
@@ -2276,7 +2233,6 @@ const IntroductionToPython = () => {
           which can help you.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/71bdfcacce" />
-
         <h4>Sys</h4>
         <p>
           The <InlineCode>sys</InlineCode> module in Python is a
@@ -2345,11 +2301,31 @@ const IntroductionToPython = () => {
           </InlineCode>
           .
         </p>
-
-        <h3>Misc</h3>
+        <h3 id="misc">Misc</h3>
         <p>
           Follows soon...stay tuned! Suggestions are always welcome.
         </p>
+        <div style={{ textAlign: 'center' }}>
+          <a
+            rel="license"
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+          >
+            <img
+              alt="Creative Commons License"
+              style={{ borderWidth: 0 }}
+              src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+            />
+          </a>
+        </div>
+        This work is licensed under a{' '}
+        <a
+          rel="license"
+          href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+        >
+          Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+          International License
+        </a>
+        .
       </Article>
     </main>
   );
