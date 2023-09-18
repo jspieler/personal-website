@@ -42,7 +42,13 @@ const IntroductionToPython = () => {
           cannot be utilized within the Trinket environment at this
           time.
         </p>
-        <p>The lecture slides are also available here.</p>
+        <p>
+          The exercises and lecture slides are also available on{' '}
+          <ExternalLink href="https://github.com/jspieler/IntroductionToPython">
+            Github
+          </ExternalLink>
+          .
+        </p>
         <h3 id="what-is-python-and-why-you-should-learn-it">
           What Is Python and Why You Should Learn It
         </h3>
@@ -712,7 +718,7 @@ const IntroductionToPython = () => {
         <h4>Logical Operators</h4>
         <p>
           Logical operators are used to perform logical operations
-          such as "AND," "OR," and "NOT" in Python. They are typically
+          such as "AND", "OR", and "NOT" in Python. They are typically
           used to combine conditional statements and create more
           complex conditions. The precedence of Logical Operators in
           Python is as follows:
@@ -1140,7 +1146,7 @@ const IntroductionToPython = () => {
           <InlineCode>del</InlineCode> statement for this purpose. You
           can use the <InlineCode>in</InlineCode> operator to check if
           a specific key exists in a dictionary. It returns{' '}
-          <InlineCode>True</InlineCode> if the key is present and
+          <InlineCode>True</InlineCode> if the key is present and{' '}
           <InlineCode>False</InlineCode> otherwise.
         </p>
         <h5>Functions and Methods for Dictionaries</h5>
@@ -1255,7 +1261,9 @@ const IntroductionToPython = () => {
           this should be only used for situations where no other
           reasonable solution is available. Consequently, we won't
           delve into global variables in detail here.
-          <LazyIframe src="https://trinket.io/embed/python/af84c02554" />
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/af84c02554" />
+        <p>
           When Python attempts to resolve the reference of a name in
           your program, names within a function's local namespace take
           precedence, followed by names of global objects or objects
@@ -1703,10 +1711,9 @@ const IntroductionToPython = () => {
           Polymorphism is the ability of different objects to respond
           to the same method or attribute in a way that is appropriate
           for their individual types. Python supports polymorphism
-          through method overriding and method overloading. The
-          example provided for inheritance also demonstrates
-          polymorphism since the subclasses{' '}
-          <InlineCode>Cat</InlineCode> and{' '}
+          through method overriding. The example provided for
+          inheritance also demonstrates polymorphism since the
+          subclasses <InlineCode>Cat</InlineCode> and{' '}
           <InlineCode>Dog</InlineCode> override the{' '}
           <InlineCode>speak</InlineCode> method of the{' '}
           <InlineCode>Animal</InlineCode> base class.
@@ -1804,17 +1811,30 @@ const IntroductionToPython = () => {
           your script with the <InlineCode>-m pdb</InlineCode> option.
           This launches an interactive debugging session where you can
           inspect variables, step through code, and evaluate
-          expressions. Many Python IDEs, such as PyCharm or Visual
-          Studio Code, provide built-in debugging features. These
-          tools offer a user-friendly interface for setting
-          breakpoints, inspecting variables, and navigating through
-          your code during debugging.
+          expressions. Many Python IDEs, such as{' '}
+          <ExternalLink href="https://www.jetbrains.com/pycharm/">
+            PyCharm
+          </ExternalLink>{' '}
+          or{' '}
+          <ExternalLink href="https://code.visualstudio.com/">
+            VS Code
+          </ExternalLink>
+          , provide built-in debugging features. These tools offer a
+          user-friendly interface for setting breakpoints, inspecting
+          variables, and navigating through your code during
+          debugging.
         </p>
         <h5>Common Debugging Practices</h5>
         <p>
           When debugging in Python, consider the following best
           practices:
           <ol>
+            <li>
+              Pay attention to error messages and traceback
+              information. Python's error messages often provide clues
+              about the cause of the problem and the location in your
+              code where it occurred.
+            </li>
             <li>
               Begin by isolating the portion of code where the error
               occurs. Comment out unrelated code to narrow down the
@@ -1840,12 +1860,6 @@ const IntroductionToPython = () => {
               Check the official Python documentation and the
               documentations of any libraries you are using to ensure
               you are using functions and methods correctly.
-            </li>
-            <li>
-              Pay attention to error messages and traceback
-              information. Python's error messages often provide clues
-              about the cause of the problem and the location in your
-              code where it occurred.
             </li>
           </ol>
         </p>
