@@ -885,7 +885,7 @@ const IntroductionToPython = () => {
           <InlineCode>while</InlineCode> statement. Once those
           statements are completed, the expression is tested again,
           and the process repeats. As long as the expression remains
-          true, Python continues executing the statements after the
+          true, Python continues executing the statements after the{' '}
           <InlineCode>while</InlineCode>. When the expression becomes
           false, the statements after the{' '}
           <InlineCode>else</InlineCode> (if present) are executed.
@@ -2319,6 +2319,7 @@ const IntroductionToPython = () => {
         <p>
           Follows soon...stay tuned! Suggestions are always welcome.
         </p>
+        <br />
         <div style={{ textAlign: 'center' }}>
           <a
             rel="license"

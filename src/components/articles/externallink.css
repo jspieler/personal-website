@@ -17,7 +17,3 @@
   transition: 0.3s;
   margin-bottom: var(--mb-0-5);
 }
-
-.external-icon:hover {
-  color: var(--external-link-color-hovered);
-}
