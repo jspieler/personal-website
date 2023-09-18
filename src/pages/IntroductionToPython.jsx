@@ -376,7 +376,7 @@ const IntroductionToPython = () => {
           slice starts at the beginning of a string or continues until
           the end, the first or second index can be omitted,
           respectively. It is also possible to use variables and
-          integer constants for indexing and slicing:
+          integer constants for indexing and slicing.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/81099f478b" />
         <h6>Functions and Methods</h6>
@@ -477,7 +477,7 @@ const IntroductionToPython = () => {
           to list and tuple, but a set is not an ordered collection of
           items and can only store unique items. These data structures
           serve various purposes, and their choice depends on the
-          specific requirements of your program. We will delve deeper
+          specific requirements of your program. We will dive deeper
           into Python data structures later on.
         </p>
         <h3 id="comments">Comments</h3>
@@ -496,12 +496,12 @@ const IntroductionToPython = () => {
           <InlineCode>'''</InlineCode> or <InlineCode>"""</InlineCode>
           ) to create multi-line comment blocks, although they are
           typically used for so-called docstrings, which we will
-          discuss in the section about functions.
+          discuss in the section about functions and modules.
         </p>
         <p>
           There are different opinions on how and when to comment code
           among programmers, but using meaningful variable and
-          function names is considered best practive. Clear, concise
+          function names is considered best practice. Clear, concise
           single-line comments can be used if needed, but are often a
           sign of code smell. However, when documenting functions or
           modules for wider use or sharing, adhering to the docstring
@@ -553,11 +553,16 @@ const IntroductionToPython = () => {
           discuss this in more detail when talking about data
           structures.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/b38470ba30" />
+        <LazyIframe src="https://trinket.io/embed/python/44fe5988fc" />
         <p>
           In addition to the basic assignment operator (=), Python
-          also provides several other assignment operators, as shown
-          in the following table:
+          also provides several other assignment operators. Let's take
+          a look at some examples:
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/b38470ba30" />
+        <p>
+          The following table shows the assignment operators available
+          in Python:
           <Table
             columns={['Operator', 'Description']}
             data={[
@@ -788,8 +793,9 @@ const IntroductionToPython = () => {
           <InlineCode>False</InlineCode> otherwise. It is not used to
           compare the values themselves, but rather their identity.
           The <InlineCode>is not</InlineCode> operator is the negation
-          of is. It returns <InlineCode>True</InlineCode> if two
-          values or variables do not refer to the same object and{' '}
+          of <InlineCode>is</InlineCode>. It returns{' '}
+          <InlineCode>True</InlineCode> if two values or variables do
+          not refer to the same object and{' '}
           <InlineCode>False</InlineCode> if they do.
         </p>
         <p>
@@ -965,9 +971,9 @@ const IntroductionToPython = () => {
           <InlineCode>del</InlineCode> statement, specify the element
           or slice of the list that requires deletion. Another
           important use of slices is to make a separate modifiable
-          copy of a list. We will discuss later why this is important.
-          In this case, a slice is created without a starting and
-          ending index.
+          copy of a list. In this case, a slice is created without a
+          starting and ending index. Recall what we learned earlier
+          when discussing variable assignment.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/1c6c2fe35d" />
         <h5>List Operators</h5>
@@ -1647,19 +1653,19 @@ const IntroductionToPython = () => {
           more control over the way users of your class will
           manipulate those attributes.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/9c5ba9d345" />
+        <LazyIframe src="https://trinket.io/embed/python/4f3b149e4a" />
         <p>
-          In Python, there is the concept of "protected" attributes,
-          which is not enforced by the language itself but is a strong
-          convention and best practice within the Python community.
-          While an attribute with a single leading underscore, like{' '}
-          <InlineCode>_protected_var</InlineCode>, doesn't have any
-          special meaning to the Python interpreter, it carries a
-          significant message to developers. It signals that this
-          attribute is intended for internal use within a class and
-          should not be accessed or modified directly from outside the
-          class. Think of "protected" attributes as a way to
-          communicate within the Python code itself. It indicates
+          In Python, there is also the concept of "protected"
+          attributes, which is not enforced by the language itself but
+          is a strong convention and best practice within the Python
+          community. While an attribute with a single leading
+          underscore, like <InlineCode>_protected_var</InlineCode>,
+          doesn't have any special meaning to the Python interpreter,
+          it carries a significant message to developers. It signals
+          that this attribute is intended for internal use within a
+          class and should not be accessed or modified directly from
+          outside the class. Think of "protected" attributes as a way
+          to communicate within the Python code itself. It indicates
           that, while technically accessible, this attribute is part
           of the class's internal workings and not meant to be part of
           the class's public interface. This convention helps improve
@@ -2023,12 +2029,10 @@ const IntroductionToPython = () => {
           specify the <InlineCode>input_file</InlineCode> and
           optionally the <InlineCode>--output</InlineCode> file as
           follows:
-          <CodeBlock
-            text={'python main.py input.txt --output output.txt'}
-            language="bash"
-            showLineNumbers={false}
-            theme={dracula}
-          />
+          <br />
+          <InlineCode>
+            python main.py input.txt --output output.txt
+          </InlineCode>
         </p>
         <h4>File I/O</h4>
         <p>
@@ -2154,7 +2158,7 @@ const IntroductionToPython = () => {
         </p>
         <p>
           Let's look at an example to understand why this is useful.
-          Assume, we might want to validate an email address.{' '}
+          Assume, we want to validate an email address.{' '}
         </p>
         <LazyIframe src="https://trinket.io/embed/python/82d8a6c4f9" />
         <p>
