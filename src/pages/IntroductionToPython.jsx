@@ -2034,6 +2034,44 @@ const IntroductionToPython = () => {
             python main.py input.txt --output output.txt
           </InlineCode>
         </p>
+        <h4>Copy</h4>
+        <p>
+          The <InlineCode>copy</InlineCode> module in Python's
+          standard library provides tools for creating copies of
+          objects, especially when dealing with mutable objects like
+          lists and dictionaries. Copying allows us to maintain the
+          integrity of data and prevent unintended side effects. It
+          creates independent copies of data or objects, ensuring that
+          changes made to one copy do not affect the original data or
+          other copies which plays a vital role for use cases such as
+          parallel processing, undo and redo operations or state
+          restoration. The <InlineCode>copy</InlineCode> module offers
+          two main methods for copying objects:{' '}
+          <InlineCode>copy()</InlineCode> and{' '}
+          <InlineCode>deepcopy()</InlineCode>.
+        </p>
+        <p>
+          The <InlineCode>copy()</InlineCode> method creates a shallow
+          copy of an object. Shallow copying means that it duplicates
+          the top-level structure of the object but does not create
+          copies of the nested objects within it. As a result, if the
+          original object contains other objects (e.g., lists within a
+          list), the copied object will still share references to
+          those nested objects. It is used when you want to duplicate
+          an object's structure without recursively copying all nested
+          objects.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/601863bbf4" />
+        <p>
+          The <InlineCode>deepcopy()</InlineCode> method creates a
+          deep copy of an object. Deep copying means that it
+          recursively duplicates the entire structure of the object,
+          including all nested objects. As a result, the copied object
+          is completely independent of the original object. It is used
+          when you want to create a new object that is a true,
+          independent copy of the original object.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/0f6f4cb38e" />
         <h4>File I/O</h4>
         <p>
           Python's standard library includes modules for performing
