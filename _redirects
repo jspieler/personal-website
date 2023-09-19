@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+/teaching                               /teaching
+/teaching/introduction-to-python        /teaching/introduction-to-python
+/teaching/safety-for-deep-learning      /teaching/safety-for-deep-learning
+/impressum                              /impressum
