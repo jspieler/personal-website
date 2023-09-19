@@ -12,6 +12,11 @@ The website provides, among other things, following features:
 - Self-hosted Google fonts
 
 
+Deployment status:
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6d5906a7-685d-419b-b9f5-11892e1a17de/deploy-status)](https://app.netlify.com/sites/jspieler/deploys)
+
+
 ## Usage
 If you want to make your own website:
 
