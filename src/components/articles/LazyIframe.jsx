@@ -26,9 +26,9 @@ const LazyIframe = ({ src, width = '100%', height = '356px' }) => {
     intersectionObserver.observe(iframeRef.current);
 
     return () => {
-      intersectionObserver.unobserve(iframeRef.current);
+      intersectionObserver.disconnect();
     };
-  }, []);
+  }, [src]);
 
   return (
     <iframe
