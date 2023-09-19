@@ -27,4 +27,4 @@ The website provides, among other things, following features:
 3. Run the application using `npm run dev` and modify the content.
 
 ## Deployment
-
+The website is deployed using Github Actions.

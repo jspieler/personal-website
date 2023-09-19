@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const Social = () => {
   return (
     <div className="home__social">
       <a
-        href="https://linkedin.com/"
+        href="https://linkedin.com/in/jspieler"
         className="home__social-icon"
         target="_blank"
         rel="noopener noreferrer"
@@ -13,21 +13,12 @@ const Social = () => {
       </a>
 
       <a
-        href="https://xing.com/"
+        href="https://github.com/jspieler"
         className="home__social-icon"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i className="bx bxl-xing"></i>
-      </a>
-
-      <a
-        href="https://github.com/"
-        className="home__social-icon"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="uil uil-github-alt"></i>
+        <i className="uil uil-github"></i>
       </a>
     </div>
   );

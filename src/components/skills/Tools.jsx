@@ -1,16 +1,24 @@
 import React from 'react';
 
-const Backend = () => {
+const Tools = () => {
   return (
     <div className="skills__content">
-      <h3 className="skills__title">Backend</h3>
+      <h3 className="skills__title">Tools</h3>
 
       <div className="skills__box">
         <div className="skills__group">
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">Python</h3>
+              <h3 className="skills__name">Docker</h3>
+              <span className="skills__level">Intermediate</span>
+            </div>
+          </div>
+
+          <div className="skills__data">
+            <i className="bx bx-badge-check"></i>
+            <div>
+              <h3 className="skills__name">Git</h3>
               <span className="skills__level">Advanced</span>
             </div>
           </div>
@@ -18,7 +26,7 @@ const Backend = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">Keycloak</h3>
+              <h3 className="skills__name">Linux</h3>
               <span className="skills__level">Intermediate</span>
             </div>
           </div>
@@ -28,7 +36,7 @@ const Backend = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">C++</h3>
+              <h3 className="skills__name">ROS</h3>
               <span className="skills__level">Intermediate</span>
             </div>
           </div>
@@ -36,8 +44,8 @@ const Backend = () => {
           <div className="skills__data">
             <i className="bx bx-badge-check"></i>
             <div>
-              <h3 className="skills__name">MySQL</h3>
-              <span className="skills__level">Basics</span>
+              <h3 className="skills__name">OpenShift</h3>
+              <span className="skills__level">Intermediate</span>
             </div>
           </div>
         </div>
@@ -46,4 +54,4 @@ const Backend = () => {
   );
 };
 
-export { Backend };
+export { Tools };

@@ -28,6 +28,7 @@
   display: grid;
   align-items: flex-start;
   row-gap: 1rem;
+  grid-auto-rows: min-content;
 }
 
 .skills__data {

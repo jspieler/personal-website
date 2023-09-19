@@ -1,43 +1,44 @@
-import React from "react";
-import "./footer.css";
+import React from 'react';
+import './footer.css';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container container">
-        <h1 className="footer__title">Smith</h1>
+        <div className="footer__quote">
+          <blockquote className="footer__blockquote">
+            <p className="footer__blockquote-text">
+              "The whole thinking process is still rather mysterious
+              to us, but I believe that the attempt to make a thinking
+              machine will help us greatly in finding out how we think
+              ourselves."
+            </p>
+          </blockquote>
+          <p className="footer__quote-author">Alan Turing</p>
+        </div>
 
         <div className="footer__social">
           <a
-            href="https://www.facebook.com/"
+            href="https://linkedin.com/in/jspieler"
             className="footer__social-link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="bx bxl-facebook"></i>
+            <i className="uil uil-linkedin"></i>
           </a>
 
           <a
-            href="https://www.instagram.com/"
+            href="https://github.com/jspieler"
             className="footer__social-link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="bx bxl-instagram"></i>
-          </a>
-
-          <a
-            href="https://www.twitter.com/"
-            className="footer__social-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="bx bxl-twitter"></i>
+            <i className="uil uil-github"></i>
           </a>
         </div>
 
         <span className="footer__copy">
-          &#169; Crypticalcoder. All rights reserved.
+          &#169; 2023 jspieler. All rights reserved.
         </span>
       </div>
     </footer>

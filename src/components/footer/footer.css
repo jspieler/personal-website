@@ -14,7 +14,28 @@
 
 .footer__title {
   text-align: center;
-  margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-1);
+}
+
+.footer__quote {
+  justify-content: center;
+}
+
+.footer__blockquote {
+  margin: 10px 5px;
+  padding: 15px;
+}
+
+.footer__blockquote-text {
+  font-style: italic;
+  font-size: 1.15em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer__quote-author {
+  font-weight: bold;
+  text-align: right;
 }
 
 .footer__link:hover {
@@ -25,13 +46,14 @@
   display: flex;
   justify-content: center;
   column-gap: 1.5rem;
-  margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-1);
 }
 
 .footer__social {
   display: flex;
   justify-content: center;
   column-gap: 1.25rem;
+  margin-top: 2.5rem;
 }
 
 .footer__social-link {
@@ -49,7 +71,7 @@
 
 .footer__copy {
   display: block;
-  margin-top: 4.5rem;
+  margin-top: 2.5rem;
   color: var(--title-color);
   text-align: center;
   font-size: var(--smaller-font-size);
@@ -61,5 +83,25 @@
     padding: 0.25rem;
     border-radius: 0.25rem;
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer__blockquote-text {
+    font-size: var(--small-font-size);
+  }
+
+  .footer__quote-author {
+    font-size: var(--small-font-size);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer__blockquote-text {
+    font-size: var(--tiny-font-size);
+  }
+
+  .footer__quote-author {
+    font-size: var(--tiny-font-size);
   }
 }

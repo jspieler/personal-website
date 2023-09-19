@@ -1,8 +1,8 @@
-import React from "react";
-import "./about.css";
-import AboutImg from "../../assets/about.jpg";
-import CV from "../../assets/John-Cv.pdf";
-import { Info } from "./Info";
+import React from 'react';
+import './about.css';
+import AboutImg from '../../assets/about.jpg';
+import CV from '../../assets/John-Cv.pdf';
+import { Info } from './Info';
 
 const About = () => {
   return (
@@ -15,10 +15,10 @@ const About = () => {
         <div className="about__data">
           <Info />
           <p className="about__description">
-            Software Engineer working on Autonomous Driving, I develop a
-            plattform for the validation of algorithms.
+            Software Engineer working on Autonomous Driving, I develop
+            a plattform for the validation of algorithms.
           </p>
-          <a download="" href={CV} className="button button--flex">
+          {/* <a download="" href={CV} className="button button--flex">
             Download CV
             <svg
               className="button__icon"
@@ -45,7 +45,7 @@ const About = () => {
                 fill="var(--container-color)"
               ></path>
             </svg>
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

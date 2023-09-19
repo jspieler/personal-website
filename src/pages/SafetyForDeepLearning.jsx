@@ -1,64 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import { Article } from "../components/articles/Article";
+import { Article } from '../components/articles/Article';
 
 const SafetyForDeepLearning = () => {
   return (
     <main className="main">
       <Article
-        title={"Safety for Deep Learning"}
-        subtitle={"Validation and Testing in Automotive Perception"}
+        title={'Safety for Deep Learning'}
+        subtitle={'Validation and Testing for Automotive Perception'}
       >
-        <h3 id="section-0">How safe is safe enough?</h3>
+        <h3 id="introduction">Curious?</h3>
         <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-          amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-          esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
-          at vero eros et accumsan et iusto odio dignissim qui blandit praesent
-          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-        </p>
-
-        <h3 id="section-1">Validation of Deep Learning Systems</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-          At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-          kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-          amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
-          esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
-          at vero eros et accumsan et iusto odio dignissim qui blandit praesent
-          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          Great to see that you're curious. Unfortunately, there's
+          nothing here yet. But the lecture material might be moved
+          here, too.
         </p>
       </Article>
     </main>
