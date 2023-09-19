@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './header.css';
 import { ThemeSwitch } from '../../theme/ThemeSwitch';
 
@@ -26,8 +28,8 @@ const Header = () => {
         <div className={toggle ? 'nav__menu show-menu' : 'nav__menu'}>
           <ul className="nav__list grid">
             <li className="nav__item">
-              <a
-                href="/"
+              <Link
+                to="/"
                 onClick={() => setActiveNav('/')}
                 className={
                   activeNav === '/'
@@ -36,12 +38,12 @@ const Header = () => {
                 }
               >
                 <i className="uil uil-estate nav__icon"></i> About
-              </a>
+              </Link>
             </li>
 
             <li className="nav__item">
-              <a
-                href="/teaching"
+              <Link
+                to="teaching"
                 onClick={() => setActiveNav('/teaching')}
                 className={
                   activeNav === '/teaching'
@@ -50,12 +52,12 @@ const Header = () => {
                 }
               >
                 <i className="uil uil-user nav__icon"></i> Teaching
-              </a>
+              </Link>
             </li>
 
             <li className="nav__item">
-              <a
-                href="/impressum"
+              <Link
+                to="impressum"
                 onClick={() => setActiveNav('/impressum')}
                 className={
                   activeNav === '/impressum'
@@ -64,7 +66,7 @@ const Header = () => {
                 }
               >
                 <i className="uil uil-user nav__icon"></i> Impressum
-              </a>
+              </Link>
             </li>
           </ul>
 

@@ -24,19 +24,19 @@ const router = createBrowserRouter([
         element: <Index />,
       },
       {
-        path: '/impressum',
+        path: 'impressum',
         element: <ImpressumPage />,
       },
       {
-        path: '/teaching',
+        path: 'teaching',
         element: <TeachingOverview />,
       },
       {
-        path: '/teaching/introduction-to-python',
+        path: 'teaching/introduction-to-python',
         element: <IntroductionToPython />,
       },
       {
-        path: '/teaching/safety-for-deep-learning',
+        path: 'teaching/safety-for-deep-learning',
         element: <SafetyForDeepLearning />,
       },
     ],
