@@ -26,9 +26,5 @@ If you want to make your own website:
 3. Run the application using `npm run dev` and modify the content.
 
 
-## Deployment
-The website is deployed using Github Actions. Since Vite is used, the explanations were taken from their [Guide](https://vitejs.dev/guide/static-deploy.html).
-
-
 # Credits
 The design is inspired by [Cryptical Coder](https://www.youtube.com/watch?v=3aCoZudPEKE&list=RDCMUCzDPCRJHfPusmXd6zl8bE7w&index=2).
