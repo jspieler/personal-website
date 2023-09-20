@@ -2373,7 +2373,7 @@ const IntroductionToPython = () => {
           across various programming languages, enriching your overall
           programming knowledge.
         </p>
-        <h4>Dataclasses</h4>
+        <h4>Type Annotations</h4>
         <p></p>
         <h4>Decorators</h4>
         <p>
@@ -2402,6 +2402,25 @@ const IntroductionToPython = () => {
           straightforward example to grasp how decorators work.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/36637a553f" />
+        <h4>Dataclasses</h4>
+        <p>
+          Dataclasses are a decorator-based feature introduced in
+          Python 3.7 to simplify the creation of classes that
+          primarily exist to store and manage data. They provide a
+          concise way to define classes with attributes, automatically
+          generate special methods like
+          <InlineCode>__init__</InlineCode>,{' '}
+          <InlineCode>__repr__</InlineCode>, and{' '}
+          <InlineCode>__eq__</InlineCode>, and improve code
+          readability. This is particularly useful for classes where
+          the primary purpose is to hold attributes, such as
+          configurations, data objects, or simple structs. To create a
+          dataclass, you need to import the{' '}
+          <InlineCode>dataclass</InlineCode> decorator from the{' '}
+          <InlineCode>dataclasses</InlineCode> module and apply it to
+          your class. Let's take a look at some basic examples.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/ff4cd9c201" />
         <h4>Enums</h4>
         <p>
           Enums, short for "enumerations," are a valuable feature in
@@ -2415,8 +2434,6 @@ const IntroductionToPython = () => {
           understand how enums work.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/f730b385bb" />
-        <h4>Type Annotations</h4>
-        <p></p>
         <h4>How To Name Things In Code</h4>
         <p></p>
         <h4>Python Code Best Practices</h4>
