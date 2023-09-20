@@ -2374,7 +2374,40 @@ const IntroductionToPython = () => {
           programming knowledge.
         </p>
         <h4>Type Annotations</h4>
-        <p></p>
+        <p>
+          Type annotations are a feature introduced in Python 3.5 that
+          allows you to specify the data types of variables, function
+          parameters, and return values. These annotations provide
+          clarity about the expected types of values in your code and
+          help catch type-related errors early. Recall that Python is
+          a dynamically typed language, which means that variables'
+          types are determined at runtime. In Python, unlike
+          statically typed lanuages, type annotations are not enforced
+          at runtime by the Python interpreter. However, you can use
+          static type checkers like{' '}
+          <ExternalLink href="https://mypy-lang.org/">
+            mypy
+          </ExternalLink>{' '}
+          to analyze your code and identify type-related errors before
+          your code is executed. This practice not only helps catch
+          potential issues early but also enhances code readability
+          and documentation by making it explicit and
+          self-documenting. Let's take a look at some examples.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/144868b9f7" />
+        <p>
+          Python's <InlineCode>typing</InlineCode> module provides a
+          rich set of type annotations for common data types and
+          allows you to define your own custom types. It serves as a
+          powerful tool for enhancing code clarity and robustness. For
+          more details, examples, and in-depth information on Python's
+          typing system, including relevant PEPs, you can refer to the{' '}
+          <InlineCode>typing</InlineCode> module's official{' '}
+          <ExternalLink href="https://docs.python.org/3/library/typing.html">
+            documenatation
+          </ExternalLink>
+          .
+        </p>
         <h4>Decorators</h4>
         <p>
           Decorators are a powerful and advanced feature in Python
