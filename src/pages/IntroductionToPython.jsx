@@ -2357,10 +2357,45 @@ const IntroductionToPython = () => {
           </InlineCode>
           .
         </p>
-        <h3 id="misc">Misc</h3>
+        <h3 id="beyond-the-basics">Beyond The Basics</h3>
         <p>
-          Follows soon...stay tuned! Suggestions are always welcome.
+          Congratulations! You've journeyed through the Python basics,
+          and now it's time to take your skills to the next level. In
+          this section, we'll dive deeper into Python's best practices
+          and explore advanced topics that will empower you to write
+          cleaner, more efficient code. While we've already touched on
+          best practices throughout this course, it's valuable to
+          address some common pitfalls often encountered by Python
+          beginners. These practices not only make your code cleaner
+          but also set the stage for becoming a proficient Python
+          programmer. Additionally, we'll take a look at some
+          fundamental programming concepts, which are applicable
+          across various programming languages, enriching your overall
+          programming knowledge.
         </p>
+        <h4>Dataclasses</h4>
+        <p></p>
+        <h4>Decorators</h4>
+        <p></p>
+        <h4>Enums</h4>
+        <p>
+          Enums, short for "enumerations," are a valuable feature in
+          Python that allow you to define a set of named, constant
+          values representing discrete choices or options. Enums make
+          your code more readable and maintainable by providing
+          meaningful names to these values. Since they are type-safe,
+          they help to prevent errors caused by incorrect or invalid
+          values. The <InlineCode>enum</InlineCode> module was
+          introduced in Python 3.4. Let's take a look at an example to
+          understand how enums work.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/f730b385bb" />
+        <h4>Type Annotations</h4>
+        <p></p>
+        <h4>How To Name Things In Code</h4>
+        <p></p>
+        <h4>Python Code Best Practices</h4>
+        <p></p>
         <br />
         <div style={{ textAlign: 'center' }}>
           <a
