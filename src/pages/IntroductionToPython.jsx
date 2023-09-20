@@ -2376,7 +2376,32 @@ const IntroductionToPython = () => {
         <h4>Dataclasses</h4>
         <p></p>
         <h4>Decorators</h4>
-        <p></p>
+        <p>
+          Decorators are a powerful and advanced feature in Python
+          that allow you to modify or enhance the behavior of
+          functions or methods without changing their source code.
+          They are applied to functions or methods using the "@"
+          symbol followed by the decorator function's name. Decorators
+          are a form of metaprogramming and are widely used in Python
+          for various tasks like logging, authentication, timing,
+          validation, and caching. We've already seen some of Pythons
+          built-in decorators before , such as{' '}
+          <InlineCode>@staticmethod</InlineCode>,{' '}
+          <InlineCode>@classmethod</InlineCode>, and{' '}
+          <InlineCode>@property</InlineCode>, which are commonly used
+          when defining classes and methods. Decorators are
+          implemented as regular Python functions. They take a
+          function as an argument and return a new function that
+          usually extends or modifies the behavior of the original
+          function. When you apply a decorator to a function or
+          method, it effectively wraps the original function inside
+          the decorator function. This means that when you call the
+          decorated function, the decorator's code is executed before
+          and/or after the original function's code. Feeling
+          overwhelmed? Don't worry! Let's simplify the concept with a
+          straightforward example to grasp how decorators work.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/36637a553f" />
         <h4>Enums</h4>
         <p>
           Enums, short for "enumerations," are a valuable feature in
