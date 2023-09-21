@@ -83,7 +83,7 @@ const Header = () => {
           <i className="uil uil-apps"></i>
         </div>
 
-        <ThemeSwitch />
+        {!toggle && <ThemeSwitch />}
       </nav>
     </header>
   );
