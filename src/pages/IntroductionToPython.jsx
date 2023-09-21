@@ -2598,7 +2598,91 @@ const IntroductionToPython = () => {
           make it easier for new team members to onboard quickly.
         </p>
         <h4>Python Code Best Practices</h4>
-        <p></p>
+        <p>
+          Exploring Pythonic code and best practices is crucial for
+          writing clean, readable, maintainable, and efficient Python
+          programs. Pythonic code is code that adheres to the style,
+          idioms, and principles of the Python programming language.
+          Let's take a look at some best practices:
+        </p>
+        <ul>
+          <li>Follow PEP 8</li>
+        </ul>
+        <h4>Working Code Is Not Enough</h4>
+        <p>
+          To conclude this introduction, let's explore some high-level
+          concepts of software design. While our primary focus in this
+          lecture is on Python programming, it's essential to
+          understand that writing code in Python, or any language for
+          that matter, is just one part of software development.
+          Understanding the fundamentals of software design will help
+          you for your further learning process. The following ideas
+          are inspired by John Ousterhout's book, "A Philisophy of
+          Software Desing", which I really recommend to read for those
+          who want to dive deeper. ou can also gain a preliminary
+          insight into these ideas by watching the related{' '}
+          <ExternalLink href="https://www.youtube.com/watch?v=bmSAYlu0NcY">
+            talk at Google
+          </ExternalLink>{' '}
+          .
+        </p>
+        <p>
+          In the field of software development, we have the unique
+          ability to create virtual worlds, automate complex tasks,
+          and bring digital ideas to life. However, this creative
+          freedom comes with its own set of challenges. As we craft
+          software, it evolves and grows in complexity over time. New
+          features are added, requirements change, and the codebase
+          accumulates intricacies. Software starts simple but tends to
+          grow in complexity over time. As new features are added and
+          requirements evolve, the complexity of the codebase
+          inevitably accumulates. This natural progression presents a
+          significant challenge — how do we continue to work on,
+          modify, and extend a system as it becomes increasingly
+          intricate? This is where software design comes to our
+          rescue. By embracing the principles of good software design,
+          we can fight complexity and build larger and more powerful
+          systems before complexity becomes overwhelming.
+        </p>
+        <p>
+          One of the key elements of good software design is our
+          mindset when approaching programming tasks. Many programmers
+          adopt a mindset called tactical programming, where the
+          primary goal is to get a specific feature working or fix a
+          particular bug. This approach is entirely reasonable,
+          especially when dealing with immediate needs. However, the
+          problem is that this approach will not lead to good software
+          design and is thus short-sighted. Since complexity is
+          incremental, these small things that make a system
+          complicated, will accumulate. These complexities will start
+          causing problems, so you will either need to refactor
+          existing code or work around the problems which will create
+          even more complexity. At some point refactoring will become
+          practically almost infeasible, so the code will become worse
+          and worse.
+        </p>
+        <p>
+          Thus, it is important to understand that working code isn't
+          enough. Strategic programming offers an alternative
+          perspective. Instead of merely focusing on functionality, it
+          encourages us to craft a design that facilitates long-term
+          code maintenance, extension, and modification. This
+          strategic approach demands an investment mindset. Yes, these
+          investments may temporarily slow down development in the
+          short term, but they pave the way for greater efficiency and
+          effectiveness in the long term.
+        </p>
+        <p>
+          Now, the question arises: How much should you invest in
+          software design? Attempting to design an entire system
+          upfront, following the traditional waterfall method, often
+          proves impractical and inflexible. Instead, the best
+          approach is to make continual, incremental improvements. As
+          a rule of thumb, dedicating 10-20% of your total development
+          time to these strategic investments strikes a good balance
+          between immediate functionality and long-term
+          maintainability.
+        </p>
         <br />
         <div style={{ textAlign: 'center' }}>
           <a
