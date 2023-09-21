@@ -1712,6 +1712,30 @@ const IntroductionToPython = () => {
           with the object while protecting its integrity.
         </p>
         <LazyIframe src="https://trinket.io/embed/python/f6c4270aab" />
+        <p>
+          In Python, we have an elegant and convenient mechanism for
+          accessing object attributes known as properties. Properties
+          serve as a means to control how we access these attributes,
+          offering a more refined alternative to traditional getter
+          methods. They allow us to define getter methods that look
+          and feel like regular attribute access. When using
+          properties, you can enforce rules, execute calculations, or
+          add custom logic when getting attribute values. We can
+          create properties using the{' '}
+          <InlineCode>@property</InlineCode> decorator. The "@" symbol
+          indicates that a method has been decorated. For now, let's
+          not concern ourselves too much with what exactly a decorator
+          is. We will learn more about decorators in the last part.
+          However, if you're curious, feel free to read ahead in the
+          section on decorators. By decorating a method with{' '}
+          <InlineCode>@property</InlineCode>, we mark it as a getter
+          method for a specific attribute. This means that when we
+          access the attribute, the decorated method is automatically
+          invoked behind the scenes. Properties provide a powerful way
+          for controlling attribute access in Python. They enhance
+          code clarity, encapsulation, and maintainability.
+        </p>
+        <LazyIframe src="https://trinket.io/embed/python/dd07149582" />
         <h4>Polymorphism</h4>
         <p>
           Polymorphism is the ability of different objects to respond
