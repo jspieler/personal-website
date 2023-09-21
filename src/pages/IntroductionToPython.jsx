@@ -2605,9 +2605,82 @@ const IntroductionToPython = () => {
           idioms, and principles of the Python programming language.
           Let's take a look at some best practices:
         </p>
-        <ul>
-          <li>Follow PEP 8</li>
-        </ul>
+        <ol>
+          <li>
+            Follow conventions, such as PEP 8: consistent formatting,
+            naming conventions, and code structure make your code more
+            readable and maintainable. Tools like linters can help you
+            enforce PEP 8 standards.
+          </li>
+          <li>
+            Avoid magic numbers: define them as named constants to
+            improve code readability and make changes easier. For
+            example, use <InlineCode>MAX_SIZE = 100</InlineCode>{' '}
+            instead of <InlineCode>if len(data) &gt; 100</InlineCode>.
+          </li>
+          <li>
+            Comment and document effectively: write meaningful
+            docstrings for modules, classes and functions to explain
+            their purpose. Use comments sparingly.
+          </li>
+          <li>
+            Use f-strings instead of string concatentation to increase
+            readability.
+          </li>
+          <li>
+            Avoid global variables: they can lead to unintended side
+            effects, make code harder to reason about and are most of
+            the time not needed at all.
+          </li>
+          <li>
+            Use comprehensions and lambda functions to a reasonable
+            extent: they can make your code more concise. However,
+            there's a trade-off between conciseness and readability.
+            Complex comprehensions can become less readable.
+          </li>
+          <li>
+            Use context managers (<InlineCode>with</InlineCode>{' '}
+            statement) instead of <InlineCode>try</InlineCode> and{' '}
+            <InlineCode>finally</InlineCode>. They ensure proper
+            resource cleanup.
+          </li>
+          <li>
+            Avoid bare except clauses and use specific exceptions
+            instead.
+          </li>
+          <li>
+            Use <InlineCode>isinstance</InlineCode> to check for a
+            type: this allows more flexibility and robustness in
+            handling object types.
+          </li>
+          <li>
+            Use <InlineCode>if</InlineCode> instead of{' '}
+            <InlineCode>if [Boolean]</InlineCode> or{' '}
+            <InlineCode>if len()</InlineCode>.
+          </li>
+          <li>
+            Instead of iterating using the range length idiom, use{' '}
+            <InlineCode>for in</InlineCode> or, if you need the index,
+            use <InlineCode>enumerate</InlineCode> (you may also want
+            to take a loop at <InlineCode>zip</InlineCode>).
+          </li>
+          <li>
+            Use packing and unpacking to work with multiple values,
+            such as tuples and lists.
+          </li>
+          <li>
+            Avoid using wildcard imports (
+            <InlineCode>import *</InlineCode>): they can clutter your
+            namespace and make it unclear in which module a variable
+            or function is defined. Use explicit imports instead.
+          </li>
+          <li>
+            Use logging instead of <InlineCode>print</InlineCode>:
+            logging provides more flexibility, making it more suitable
+            for debugging and production environments.
+          </li>
+        </ol>
+        <LazyIframe src="https://trinket.io/embed/python/83a0acd9f5" />
         <h4>Working Code Is Not Enough</h4>
         <p>
           To conclude this introduction, let's explore some high-level
@@ -2616,8 +2689,8 @@ const IntroductionToPython = () => {
           understand that writing code in Python, or any language for
           that matter, is just one part of software development.
           Understanding the fundamentals of software design will help
-          you for your further learning process. The following ideas
-          are inspired by John Ousterhout's book, "A Philisophy of
+          you as you continue to learn. The following ideas are
+          inspired by John Ousterhout's book, "A Philisophy of
           Software Desing", which I really recommend to read for those
           who want to dive deeper. ou can also gain a preliminary
           insight into these ideas by watching the related{' '}
