@@ -15,7 +15,7 @@ const Index = () => {
     <main className="main">
       <Home />
       {/* <About /> */}
-      <Skills />
+      {/* <Skills /> */}
       {/* <Qualification /> */}
       {/* <Work /> */}
       <Publications />
