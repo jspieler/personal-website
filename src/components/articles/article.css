@@ -20,7 +20,12 @@
 }
 
 .article__content p {
-  margin-bottom: 1rem; 
+  margin-bottom: 0.5rem; 
+}
+
+.article__content p + ol,
+.article__content p + ul {
+  margin-top: -0.5rem;
 }
 
 .article__outline {

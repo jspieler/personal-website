@@ -189,12 +189,14 @@ const IntroductionToPython = () => {
           dependency management and project isolation. They provide a
           simple solution for a lot of potential problems by helping
           you to:
-          <ul>
-            <li>Resolve dependency issues</li>
-            <li>Create self-contained and reproducible projects</li>
-            <li>Avoid system pollution</li>
-            <li>Install packages without admin rights</li>
-          </ul>
+        </p>
+        <ul>
+          <li>Resolve dependency issues</li>
+          <li>Create self-contained and reproducible projects</li>
+          <li>Avoid system pollution</li>
+          <li>Install packages without admin rights</li>
+        </ul>
+        <p>
           There are various approaches to creating a virtual
           environment. One option is to use{' '}
           <ExternalLink href="https://docs.python.org/3/library/venv.html">
@@ -399,52 +401,52 @@ const IntroductionToPython = () => {
           whitespace characters are used as the default separator
           character. The following table shows an overview over some
           useful string methods:
-          <Table
-            columns={['Method', 'Description']}
-            data={[
-              [
-                'str.upper()',
-                'Converts all characters in the string to uppercase.',
-              ],
-              [
-                'str.lower()',
-                'Converts all characters in the string to lowercase.',
-              ],
-              [
-                'str.strip()',
-                'Removes leading and trailing whitespace from the string.',
-              ],
-              [
-                'str.split()',
-                'Splits the string into a list of substrings based on a delimiter.',
-              ],
-              [
-                'str.join()',
-                'Joins a list of strings into a single string using the provided delimiter.',
-              ],
-              [
-                'str.replace()',
-                'Replaces occurrences of a substring with another substring.',
-              ],
-              [
-                'str.find()',
-                'Returns the index of the first occurrence of a substring (or -1 if not found).',
-              ],
-              [
-                'str.startswith()',
-                'Checks if the string starts with a specified substring.',
-              ],
-              [
-                'str.endswith()',
-                'Checks if the string ends with a specified substring.',
-              ],
-              [
-                'str.isalpha()',
-                'Checks if all characters in the string are alphabetic.',
-              ],
-            ]}
-          />
         </p>
+        <Table
+          columns={['Method', 'Description']}
+          data={[
+            [
+              'str.upper()',
+              'Converts all characters in the string to uppercase.',
+            ],
+            [
+              'str.lower()',
+              'Converts all characters in the string to lowercase.',
+            ],
+            [
+              'str.strip()',
+              'Removes leading and trailing whitespace from the string.',
+            ],
+            [
+              'str.split()',
+              'Splits the string into a list of substrings based on a delimiter.',
+            ],
+            [
+              'str.join()',
+              'Joins a list of strings into a single string using the provided delimiter.',
+            ],
+            [
+              'str.replace()',
+              'Replaces occurrences of a substring with another substring.',
+            ],
+            [
+              'str.find()',
+              'Returns the index of the first occurrence of a substring (or -1 if not found).',
+            ],
+            [
+              'str.startswith()',
+              'Checks if the string starts with a specified substring.',
+            ],
+            [
+              'str.endswith()',
+              'Checks if the string ends with a specified substring.',
+            ],
+            [
+              'str.isalpha()',
+              'Checks if all characters in the string are alphabetic.',
+            ],
+          ]}
+        />
         <LazyIframe src="https://trinket.io/embed/python/c7fb7570ab" />
         <h4>Booleans</h4>
         <p>
@@ -563,97 +565,99 @@ const IntroductionToPython = () => {
         <p>
           The following table shows the assignment operators available
           in Python:
-          <Table
-            columns={['Operator', 'Description']}
-            data={[
-              [
-                '=',
-                'Assigns the value on the right to the variable on the left.',
-              ],
-              [
-                '+=',
-                'Adds the value on the right to the variable on the left and assigns the result to the variable.',
-              ],
-              [
-                '-=',
-                'Subtracts the value on the right from the variable on the left and assigns the result to the variable.',
-              ],
-              [
-                '*=',
-                'Multiplies the variable on the left by the value on the right and assigns the result to the variable.',
-              ],
-              [
-                '/=',
-                'Divides the variable on the left by the value on the right and assigns the result to the variable.',
-              ],
-              [
-                '%=',
-                'Calculates the modulus of the variable on the left and the value on the right, then assigns the result to the variable.',
-              ],
-              [
-                '//=',
-                'Performs floor division on the variable on the left and the value on the right, then assigns the result to the variable.',
-              ],
-              [
-                '**=',
-                'Raises the variable on the left to the power of the value on the right and assigns the result to the variable.',
-              ],
-              [
-                '&=',
-                'Performs a bitwise AND operation between the variable on the left and the value on the right, then assigns the result to the variable.',
-              ],
-              [
-                '|=',
-                'Performs a bitwise OR operation between the variable on the left and the value on the right, then assigns the result to the variable.',
-              ],
-              [
-                '^=',
-                'Performs a bitwise XOR operation between the variable on the left and the value on the right, then assigns the result to the variable.',
-              ],
-              [
-                '<<=',
-                'Shifts the bits of the variable on the left to the left by the number of positions specified by the value on the right and assigns the result to the variable.',
-              ],
-              [
-                '>>=',
-                'Shifts the bits of the variable on the left to the right by the number of positions specified by the value on the right and assigns the result to the variable.',
-              ],
-            ]}
-          />
         </p>
+        <Table
+          columns={['Operator', 'Description']}
+          data={[
+            [
+              '=',
+              'Assigns the value on the right to the variable on the left.',
+            ],
+            [
+              '+=',
+              'Adds the value on the right to the variable on the left and assigns the result to the variable.',
+            ],
+            [
+              '-=',
+              'Subtracts the value on the right from the variable on the left and assigns the result to the variable.',
+            ],
+            [
+              '*=',
+              'Multiplies the variable on the left by the value on the right and assigns the result to the variable.',
+            ],
+            [
+              '/=',
+              'Divides the variable on the left by the value on the right and assigns the result to the variable.',
+            ],
+            [
+              '%=',
+              'Calculates the modulus of the variable on the left and the value on the right, then assigns the result to the variable.',
+            ],
+            [
+              '//=',
+              'Performs floor division on the variable on the left and the value on the right, then assigns the result to the variable.',
+            ],
+            [
+              '**=',
+              'Raises the variable on the left to the power of the value on the right and assigns the result to the variable.',
+            ],
+            [
+              '&=',
+              'Performs a bitwise AND operation between the variable on the left and the value on the right, then assigns the result to the variable.',
+            ],
+            [
+              '|=',
+              'Performs a bitwise OR operation between the variable on the left and the value on the right, then assigns the result to the variable.',
+            ],
+            [
+              '^=',
+              'Performs a bitwise XOR operation between the variable on the left and the value on the right, then assigns the result to the variable.',
+            ],
+            [
+              '<<=',
+              'Shifts the bits of the variable on the left to the left by the number of positions specified by the value on the right and assigns the result to the variable.',
+            ],
+            [
+              '>>=',
+              'Shifts the bits of the variable on the left to the right by the number of positions specified by the value on the right and assigns the result to the variable.',
+            ],
+          ]}
+        />
         <h4>Arithmetic Operators</h4>
         <p>
           Arithmetic operators are used to perform basic mathematical
           operations in Python, including addition, subtraction,
           multiplication, and division. Python supports all the binary
           arithmetic operators shown in the following table.
-          <Table
-            columns={['Operator', 'Description']}
-            data={[
-              ['+', 'Adds two operands.'],
-              [
-                '-',
-                'Subtracts the right operand from the left operand.',
-              ],
-              ['*', 'Multiplies two operands.'],
-              [
-                '/',
-                'Divides the left operand by the right operand (float division).',
-              ],
-              [
-                '//',
-                'Divides the left operand by the right operand and returns the floor value (integer division).',
-              ],
-              [
-                '%',
-                'Returns the remainder when the left operand is divided by the right operand.',
-              ],
-              [
-                '**',
-                'Raises the left operand to the power of the right operand.',
-              ],
-            ]}
-          />
+        </p>
+        <Table
+          columns={['Operator', 'Description']}
+          data={[
+            ['+', 'Adds two operands.'],
+            [
+              '-',
+              'Subtracts the right operand from the left operand.',
+            ],
+            ['*', 'Multiplies two operands.'],
+            [
+              '/',
+              'Divides the left operand by the right operand (float division).',
+            ],
+            [
+              '//',
+              'Divides the left operand by the right operand and returns the floor value (integer division).',
+            ],
+            [
+              '%',
+              'Returns the remainder when the left operand is divided by the right operand.',
+            ],
+            [
+              '**',
+              'Raises the left operand to the power of the right operand.',
+            ],
+          ]}
+        />
+        <p>
           A binary operator operates on exactly two elements, one on
           each side of the operator's symbol. When performing
           operations on integers, Python performs integer arithmetic
@@ -666,21 +670,21 @@ const IntroductionToPython = () => {
         <p>
           The precedence of Arithmetic Operators in Python is as
           follows:
-          <ol>
-            <li>P - Parentheses</li>
-            <li>E - Exponentiation</li>
-            <li>
-              M - Multiplication (Multiplication and division have the
-              same precedence)
-            </li>
-            <li>D - Division</li>
-            <li>
-              A - Addition (Addition and subtraction have the same
-              precedence)
-            </li>
-            <li>S - Subtraction</li>
-          </ol>
         </p>
+        <ol>
+          <li>P - Parentheses</li>
+          <li>E - Exponentiation</li>
+          <li>
+            M - Multiplication (Multiplication and division have the
+            same precedence)
+          </li>
+          <li>D - Division</li>
+          <li>
+            A - Addition (Addition and subtraction have the same
+            precedence)
+          </li>
+          <li>S - Subtraction</li>
+        </ol>
         <h4>Comparison Operators</h4>
         <p>
           Comparison operators, also known as relational operators,
@@ -689,32 +693,34 @@ const IntroductionToPython = () => {
           <InlineCode>False</InlineCode> based on the specified
           condition. The comparison operators in Python are shown in
           the following table.
-          <Table
-            columns={['Operator', 'Description']}
-            data={[
-              ['==', 'Equal to: Checks if the operands are equal.'],
-              [
-                '!=',
-                'Not equal to: Checks if the operands are not equal.',
-              ],
-              [
-                '<',
-                'Less than: Checks if the left operand is less than the right operand.',
-              ],
-              [
-                '>',
-                'Greater than: Checks if the left operand is greater than the right operand.',
-              ],
-              [
-                '<=',
-                'Less than or equal to: Checks if the left operand is less than or equal to the right operand.',
-              ],
-              [
-                '>=',
-                'Greater than or equal to: Checks if the left operand is greater than or equal to the right operand.',
-              ],
-            ]}
-          />
+        </p>
+        <Table
+          columns={['Operator', 'Description']}
+          data={[
+            ['==', 'Equal to: Checks if the operands are equal.'],
+            [
+              '!=',
+              'Not equal to: Checks if the operands are not equal.',
+            ],
+            [
+              '<',
+              'Less than: Checks if the left operand is less than the right operand.',
+            ],
+            [
+              '>',
+              'Greater than: Checks if the left operand is greater than the right operand.',
+            ],
+            [
+              '<=',
+              'Less than or equal to: Checks if the left operand is less than or equal to the right operand.',
+            ],
+            [
+              '>=',
+              'Greater than or equal to: Checks if the left operand is greater than or equal to the right operand.',
+            ],
+          ]}
+        />
+        <p>
           In Python, comparison operators have lower precedence than
           arithmetic operators. All comparison operators have the same
           precedence order.
@@ -727,11 +733,13 @@ const IntroductionToPython = () => {
           used to combine conditional statements and create more
           complex conditions. The precedence of Logical Operators in
           Python is as follows:
-          <ol>
-            <li>Logical NOT</li>
-            <li>Logical AND</li>
-            <li>Logical OR</li>
-          </ol>
+        </p>
+        <ol>
+          <li>Logical NOT</li>
+          <li>Logical AND</li>
+          <li>Logical OR</li>
+        </ol>
+        <p>
           The following example illustrates how to use logical
           operators in Python.
         </p>
@@ -741,46 +749,46 @@ const IntroductionToPython = () => {
           Bitwise operators are used to operate on binary numbers and
           perform bit-by-bit operations. An overview over the bitwise
           operators in Python is shown in the following table.
-          <Table
-            columns={['Operator', 'Description']}
-            data={[
-              [
-                '&',
-                'Bitwise AND: Performs a bitwise AND operation on the corresponding bits of the operands.',
-              ],
-              [
-                '|',
-                'Bitwise OR: Performs a bitwise OR operation on the corresponding bits of the operands.',
-              ],
-              [
-                '^',
-                'Bitwise XOR: Performs a bitwise XOR (exclusive OR) operation on the corresponding bits of the operands.',
-              ],
-              [
-                '~',
-                'Bitwise NOT: Inverts the bits of the operand, changing 1s to 0s and vice versa.',
-              ],
-              [
-                '<<',
-                'Left Shift: Shifts the bits of the left operand to the left by the number of positions specified by the right operand.',
-              ],
-              [
-                '>>',
-                'Right Shift: Shifts the bits of the left operand to the right by the number of positions specified by the right operand.',
-              ],
-            ]}
-          />
         </p>
+        <Table
+          columns={['Operator', 'Description']}
+          data={[
+            [
+              '&',
+              'Bitwise AND: Performs a bitwise AND operation on the corresponding bits of the operands.',
+            ],
+            [
+              '|',
+              'Bitwise OR: Performs a bitwise OR operation on the corresponding bits of the operands.',
+            ],
+            [
+              '^',
+              'Bitwise XOR: Performs a bitwise XOR (exclusive OR) operation on the corresponding bits of the operands.',
+            ],
+            [
+              '~',
+              'Bitwise NOT: Inverts the bits of the operand, changing 1s to 0s and vice versa.',
+            ],
+            [
+              '<<',
+              'Left Shift: Shifts the bits of the left operand to the left by the number of positions specified by the right operand.',
+            ],
+            [
+              '>>',
+              'Right Shift: Shifts the bits of the left operand to the right by the number of positions specified by the right operand.',
+            ],
+          ]}
+        />
         <p>
           The precedence of Bitwise Operators in Python is as follows:
-          <ol>
-            <li>Bitwise NOT</li>
-            <li>Bitwise Shift</li>
-            <li>Bitwise AND</li>
-            <li>Bitwise XOR</li>
-            <li>Bitwise OR</li>
-          </ol>
         </p>
+        <ol>
+          <li>Bitwise NOT</li>
+          <li>Bitwise Shift</li>
+          <li>Bitwise AND</li>
+          <li>Bitwise XOR</li>
+          <li>Bitwise OR</li>
+        </ol>
         <LazyIframe src="https://trinket.io/embed/python/63e371be96" />
         <h4>Identity and Membership Operators</h4>
         <p>
@@ -1562,69 +1570,69 @@ const IntroductionToPython = () => {
           object's name is typed in the interpreter. The following
           table lists some of the more commonly used methods for
           overloading.
-          <Table
-            columns={['Method', 'Description']}
-            data={[
-              [
-                '__str__',
-                'Converts an object to a string for printing.',
-              ],
-              [
-                '__repr__',
-                'Returns a string representation of the object for debugging.',
-              ],
-              ['__len__', 'Returns the length of an object.'],
-              [
-                '__add__',
-                'Defines behavior for the addition operation.',
-              ],
-              [
-                '__sub__',
-                'Defines behavior for the subtraction operation.',
-              ],
-              [
-                '__mul__',
-                'Defines behavior for the multiplication operation.',
-              ],
-              [
-                '__truediv__',
-                'Defines behavior for the true division operation.',
-              ],
-              [
-                '__floordiv__',
-                'Defines behavior for the floor division operation.',
-              ],
-              [
-                '__mod__',
-                'Defines behavior for the modulus operation.',
-              ],
-              [
-                '__eq__',
-                'Defines behavior for the equality comparison.',
-              ],
-              [
-                '__ne__',
-                'Defines behavior for the inequality comparison.',
-              ],
-              [
-                '__lt__',
-                'Defines behavior for the less-than comparison.',
-              ],
-              [
-                '__le__',
-                'Defines behavior for the less-than-or-equal comparison.',
-              ],
-              [
-                '__gt__',
-                'Defines behavior for the greater-than comparison.',
-              ],
-              [
-                '__ge__',
-                'Defines behavior for the greater-than-or-equal comparison.',
-              ],
-            ]}
-          />
         </p>
+        <Table
+          columns={['Method', 'Description']}
+          data={[
+            [
+              '__str__',
+              'Converts an object to a string for printing.',
+            ],
+            [
+              '__repr__',
+              'Returns a string representation of the object for debugging.',
+            ],
+            ['__len__', 'Returns the length of an object.'],
+            [
+              '__add__',
+              'Defines behavior for the addition operation.',
+            ],
+            [
+              '__sub__',
+              'Defines behavior for the subtraction operation.',
+            ],
+            [
+              '__mul__',
+              'Defines behavior for the multiplication operation.',
+            ],
+            [
+              '__truediv__',
+              'Defines behavior for the true division operation.',
+            ],
+            [
+              '__floordiv__',
+              'Defines behavior for the floor division operation.',
+            ],
+            [
+              '__mod__',
+              'Defines behavior for the modulus operation.',
+            ],
+            [
+              '__eq__',
+              'Defines behavior for the equality comparison.',
+            ],
+            [
+              '__ne__',
+              'Defines behavior for the inequality comparison.',
+            ],
+            [
+              '__lt__',
+              'Defines behavior for the less-than comparison.',
+            ],
+            [
+              '__le__',
+              'Defines behavior for the less-than-or-equal comparison.',
+            ],
+            [
+              '__gt__',
+              'Defines behavior for the greater-than comparison.',
+            ],
+            [
+              '__ge__',
+              'Defines behavior for the greater-than-or-equal comparison.',
+            ],
+          ]}
+        />
         <p>
           In addition, you can define what happens when your object is
           iterated over by means of the for statement by defining an
@@ -1858,68 +1866,68 @@ const IntroductionToPython = () => {
         <p>
           When debugging in Python, consider the following best
           practices:
-          <ol>
-            <li>
-              Pay attention to error messages and traceback
-              information. Python's error messages often provide clues
-              about the cause of the problem and the location in your
-              code where it occurred.
-            </li>
-            <li>
-              Begin by isolating the portion of code where the error
-              occurs. Comment out unrelated code to narrow down the
-              issue.
-            </li>
-            <li>
-              Ensure you can reproduce the error consistently.
-              Understanding the conditions that trigger the error is
-              crucial for debugging.
-            </li>
-            <li>
-              Insert <InlineCode>print</InlineCode> or logging
-              statements strategically to print the values of
-              variables and intermediate results. This helps you track
-              the flow of execution and identify unexpected values.
-            </li>
-            <li>
-              Verify that the data types of variables match your
-              expectations. Python is dynamically typed, so data type
-              errors can occur if you assume the wrong type.
-            </li>
-            <li>
-              Check the official Python documentation and the
-              documentations of any libraries you are using to ensure
-              you are using functions and methods correctly.
-            </li>
-          </ol>
         </p>
+        <ol>
+          <li>
+            Pay attention to error messages and traceback information.
+            Python's error messages often provide clues about the
+            cause of the problem and the location in your code where
+            it occurred.
+          </li>
+          <li>
+            Begin by isolating the portion of code where the error
+            occurs. Comment out unrelated code to narrow down the
+            issue.
+          </li>
+          <li>
+            Ensure you can reproduce the error consistently.
+            Understanding the conditions that trigger the error is
+            crucial for debugging.
+          </li>
+          <li>
+            Insert <InlineCode>print</InlineCode> or logging
+            statements strategically to print the values of variables
+            and intermediate results. This helps you track the flow of
+            execution and identify unexpected values.
+          </li>
+          <li>
+            Verify that the data types of variables match your
+            expectations. Python is dynamically typed, so data type
+            errors can occur if you assume the wrong type.
+          </li>
+          <li>
+            Check the official Python documentation and the
+            documentations of any libraries you are using to ensure
+            you are using functions and methods correctly.
+          </li>
+        </ol>
         <h5>Fixing Bugs</h5>
         <p>
           Once you identify a bug, you may follow these steps to fix
           it:
-          <ol>
-            <li>
-              Understand the root cause of the problem by reviewing
-              the code and considering the inputs and logic.
-            </li>
-            <li>
-              Modify the code to correct the issue. Be cautious not to
-              introduce new errors while fixing the current one.
-            </li>
-            <li>
-              Test your code to ensure that the bug is resolved and
-              that the fix does not cause side effects in other parts
-              of the program. It is considered a best practice when
-              you are debugging your code to first write a new test
-              pinpointing the bug.
-            </li>
-            <li>
-              If you're working in a team or on a larger project,
-              document your changes to help others understand the
-              modifications and the reasons behind them.
-            </li>
-          </ol>
         </p>
+        <ol>
+          <li>
+            Understand the root cause of the problem by reviewing the
+            code and considering the inputs and logic.
+          </li>
+          <li>
+            Modify the code to correct the issue. Be cautious not to
+            introduce new errors while fixing the current one.
+          </li>
+          <li>
+            Test your code to ensure that the bug is resolved and that
+            the fix does not cause side effects in other parts of the
+            program. It is considered a best practice when you are
+            debugging your code to first write a new test pinpointing
+            the bug.
+          </li>
+          <li>
+            If you're working in a team or on a larger project,
+            document your changes to help others understand the
+            modifications and the reasons behind them.
+          </li>
+        </ol>
         <h4>Unit Testing</h4>
         <p>
           Testing your code is very important. It does not only allow
@@ -2227,48 +2235,48 @@ const IntroductionToPython = () => {
           Regular expressions consist of patterns that describe
           specific sequences of characters. Some common elements used
           in regular expressions are:
-          <ul>
-            <li>
-              Literal Characters: Characters like letters and digits
-              match themselves. For example, the pattern "abc" matches
-              the string "abc" exactly.
-            </li>
-            <li>
-              Dot: The dot "." matches any single character except a
-              newline. For example, the pattern "a.c" matches "abc",
-              "adc", and so on.
-            </li>
-            <li>
-              Character Classes: Square brackets{' '}
-              <InlineCode>[...]</InlineCode> define a character class,
-              and the pattern matches any single character that is in
-              the class. For example, <InlineCode>[aeiou]</InlineCode>{' '}
-              matches any vowel, and <InlineCode>[0-9]</InlineCode>{' '}
-              matches any digit.
-            </li>
-            <li>
-              Caret and Dollar: The caret <InlineCode>^</InlineCode>{' '}
-              matches the start of a line or string, and the dollar{' '}
-              <InlineCode>$</InlineCode> matches the end of a line or
-              string. For example, <InlineCode>^abc</InlineCode>{' '}
-              matches if "abc" is at the start of a line.
-            </li>
-            <li>
-              Quantifiers: Quantifiers modify the number of times a
-              pattern is matched.
-              <ul>
-                <li>*: Matches zero or more occurrences.</li>
-                <li>+: Matches one or more occurrences.</li>
-                <li>?: Matches zero or one occurrence.</li>
-                <li>&#123;n&#125;: Matches exactly n occurrences.</li>
-                <li>
-                  &#123;n, m&#125;: Matches between "n" and "m"
-                  occurrences.
-                </li>
-              </ul>
-            </li>
-          </ul>
         </p>
+        <ul>
+          <li>
+            Literal Characters: Characters like letters and digits
+            match themselves. For example, the pattern "abc" matches
+            the string "abc" exactly.
+          </li>
+          <li>
+            Dot: The dot "." matches any single character except a
+            newline. For example, the pattern "a.c" matches "abc",
+            "adc", and so on.
+          </li>
+          <li>
+            Character Classes: Square brackets{' '}
+            <InlineCode>[...]</InlineCode> define a character class,
+            and the pattern matches any single character that is in
+            the class. For example, <InlineCode>[aeiou]</InlineCode>{' '}
+            matches any vowel, and <InlineCode>[0-9]</InlineCode>{' '}
+            matches any digit.
+          </li>
+          <li>
+            Caret and Dollar: The caret <InlineCode>^</InlineCode>{' '}
+            matches the start of a line or string, and the dollar{' '}
+            <InlineCode>$</InlineCode> matches the end of a line or
+            string. For example, <InlineCode>^abc</InlineCode> matches
+            if "abc" is at the start of a line.
+          </li>
+          <li>
+            Quantifiers: Quantifiers modify the number of times a
+            pattern is matched.
+            <ul>
+              <li>*: Matches zero or more occurrences.</li>
+              <li>+: Matches one or more occurrences.</li>
+              <li>?: Matches zero or one occurrence.</li>
+              <li>&#123;n&#125;: Matches exactly n occurrences.</li>
+              <li>
+                &#123;n, m&#125;: Matches between "n" and "m"
+                occurrences.
+              </li>
+            </ul>
+          </li>
+        </ul>
         <p>
           The <InlineCode>re.search(pattern, string)</InlineCode>{' '}
           function is used to search for the first occurrence of a
@@ -2332,45 +2340,45 @@ const IntroductionToPython = () => {
           The <InlineCode>sys</InlineCode> module also provides access
           to the standard input, standard output, and standard error
           streams:
-          <ul>
-            <li>
-              <InlineCode>sys.stdin</InlineCode>: Represents the
-              standard input stream. You can use it to read input from
-              the user or a file.
-            </li>
-            <li>
-              <InlineCode>sys.stdout</InlineCode>: Represents the
-              standard output stream. You can use it to print output
-              to the console or redirect it to a file.
-            </li>
-            <li>
-              <InlineCode>sys.stderr</InlineCode>: Represents the
-              standard error stream. You can use it to print error
-              messages to the console or redirect them to a file.
-            </li>
-          </ul>
         </p>
+        <ul>
+          <li>
+            <InlineCode>sys.stdin</InlineCode>: Represents the
+            standard input stream. You can use it to read input from
+            the user or a file.
+          </li>
+          <li>
+            <InlineCode>sys.stdout</InlineCode>: Represents the
+            standard output stream. You can use it to print output to
+            the console or redirect it to a file.
+          </li>
+          <li>
+            <InlineCode>sys.stderr</InlineCode>: Represents the
+            standard error stream. You can use it to print error
+            messages to the console or redirect them to a file.
+          </li>
+        </ul>
         <p>
           The <InlineCode>sys</InlineCode> module provides information
           about the Python runtime environment and the underlying
           operating system through various attributes:
-          <ul>
-            <li>
-              <InlineCode>sys.version</InlineCode>: Returns the Python
-              version string.
-            </li>
-            <li>
-              <InlineCode>sys.version_info</InlineCode>: Returns a
-              tuple containing the major, minor, micro, release level,
-              and serial version components.
-            </li>
-            <li>
-              <InlineCode>sys.platform</InlineCode>: Returns a string
-              indicating the platform where Python is running (e.g.,
-              "win32" for Windows, "linux" for Linux).
-            </li>
-          </ul>
         </p>
+        <ul>
+          <li>
+            <InlineCode>sys.version</InlineCode>: Returns the Python
+            version string.
+          </li>
+          <li>
+            <InlineCode>sys.version_info</InlineCode>: Returns a tuple
+            containing the major, minor, micro, release level, and
+            serial version components.
+          </li>
+          <li>
+            <InlineCode>sys.platform</InlineCode>: Returns a string
+            indicating the platform where Python is running (e.g.,
+            "win32" for Windows, "linux" for Linux).
+          </li>
+        </ul>
         <p>
           The <InlineCode>sys.path</InlineCode> contains a list of
           directories that Python searches when importing modules. You
