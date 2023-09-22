@@ -2480,7 +2480,7 @@ const IntroductionToPython = () => {
         <LazyIframe src="https://trinket.io/embed/python/ff4cd9c201" />
         <h4>Enums</h4>
         <p>
-          Enums, short for "enumerations," are a valuable feature in
+          Enums, short for "enumerations", are a valuable feature in
           Python that allow you to define a set of named, constant
           values representing discrete choices or options. Enums make
           your code more readable and maintainable by providing
@@ -2542,8 +2542,8 @@ const IntroductionToPython = () => {
           the units your variables represent. Consider for example a
           function which takes something called{' '}
           <InlineCode>delay</InlineCode> as an argument. Is this
-          supposed to be a value in milliseconds, seconds or whatever?
-          Using a proper variable name like{' '}
+          supposed to be a value in milliseconds, seconds or even
+          hours? Using a proper variable name like{' '}
           <InlineCode>delay_seconds</InlineCode> can prevent confusion
           and potential errors. But even better than that is to use a
           type that removes the ambiguity completely. The type
@@ -2690,9 +2690,9 @@ const IntroductionToPython = () => {
           that matter, is just one part of software development.
           Understanding the fundamentals of software design will help
           you as you continue to learn. The following ideas are
-          inspired by John Ousterhout's book, "A Philisophy of
-          Software Desing", which I really recommend to read for those
-          who want to dive deeper. ou can also gain a preliminary
+          inspired by John Ousterhout's book, "A Philosophy of
+          Software Design", which I really recommend to read for those
+          who want to dive deeper. You can also gain a preliminary
           insight into these ideas by watching the related{' '}
           <ExternalLink href="https://www.youtube.com/watch?v=bmSAYlu0NcY">
             talk at Google
@@ -2750,7 +2750,7 @@ const IntroductionToPython = () => {
           software design? Attempting to design an entire system
           upfront, following the traditional waterfall method, often
           proves impractical and inflexible. Instead, the best
-          approach is to make continual, incremental improvements. As
+          approach is to make continuous, incremental improvements. As
           a rule of thumb, dedicating 10-20% of your total development
           time to these strategic investments strikes a good balance
           between immediate functionality and long-term
