@@ -159,12 +159,12 @@ const IntroductionToPython = () => {
           press "Enter", Python will execute your command. If you type
           a command like Python's <InlineCode>print()</InlineCode>,
           the result will show up on the screen, like this:
-          <CodeBlock
-            text={`>>> print("Hello World")\nHello World`}
-            language={'bash'}
-            showLineNumbers={false}
-            theme={dracula}
-          />
+        </p>
+        <LazyIframe
+          height="150px"
+          src="https://trinket.io/embed/console/57acc66bbf"
+        />
+        <p>
           For longer programs, you can use your preferred text editor
           or Integrated Development Environment (IDE) to write your
           Python code. The common file extension for Python files is
