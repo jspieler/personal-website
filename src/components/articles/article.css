@@ -78,8 +78,7 @@
 /* For large devices */
 @media screen and (max-width: 992px) {
   .article__container {
-    grid-template-columns: 1fr;
-    row-gap: 2.5rem;
+    display: block;
   }
 
   .article__content {
