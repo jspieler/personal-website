@@ -1552,7 +1552,10 @@ const IntroductionToPython = () => {
           operators as <InlineCode>print</InlineCode>,{' '}
           <InlineCode>+</InlineCode>, and <InlineCode>*</InlineCode>,
           or functions like <InlineCode>len</InlineCode>, will do when
-          they're applied to the objects you create. One of the most
+          they're applied to the objects you create. These methods,
+          denoted by double underscores as both a prefix and suffix,
+          are commonly referred to as dunder (short for “Double
+          Underscore”) or magic methods in Python. One of the most
           important operator overloading methods is the{' '}
           <InlineCode>__init__</InlineCode> method.
         </p>
