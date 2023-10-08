@@ -108,7 +108,7 @@ const IntroductionToPython = () => {
         </p>
         <p>
           Now, you might be wondering, what are PEPs?{' '}
-          <ExternalLink href="https://peps.python.org/)">
+          <ExternalLink href="https://peps.python.org/">
             PEP
           </ExternalLink>{' '}
           stands for Python Enhancement Proposal. These are documents
