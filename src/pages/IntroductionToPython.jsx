@@ -342,13 +342,20 @@ const IntroductionToPython = () => {
           formatting allows you to combine variables, constants, and
           text in a way that makes your code more readable and
           user-friendly. There are various string formatting
-          techniques, including concatenation, "%" formatting, and the
-          modern approach using f-strings (for Python version 3.6 and
-          above). You can also use the{' '}
-          <InlineCode>str.format()</InlineCode> method, which provides
-          another flexible way to format strings.
+          techniques, including concatenation, the "%" formatting
+          method which is considered outdated and less versatile, and
+          the modern approach using f-strings (for Python version 3.6
+          and above). You can also use the `str.format()` method,
+          which provides another flexible way to format strings. In
+          all these formatting methods, you can use{' '}
+          <ExternalLink href="https://docs.python.org/3/library/string.html#formatspec">
+            format specifiers
+          </ExternalLink>{' '}
+          to control how individual values are presented. For example,
+          you can format floating-point numbers to a certain number of
+          decimal places.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/60cf41bfe5" />
+        <LazyIframe src="https://trinket.io/embed/python/5e82cf1278" />
         <h6>Repetition</h6>
         <p>
           When using an asterisk (*) between a string and an integer a
