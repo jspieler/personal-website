@@ -22,7 +22,7 @@ If you want to make your own website:
 
 1. Clone the repository
     ```
-    git@github.com:jspieler/jspieler.github.io.git
+    git@github.com:jspieler/personal-website.git
     ```
 2. Install the dependencies
     ```
