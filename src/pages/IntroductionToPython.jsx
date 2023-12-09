@@ -1389,29 +1389,33 @@ const IntroductionToPython = () => {
           <InlineCode>filter</InlineCode> function. Like{' '}
           <InlineCode>map</InlineCode>, it takes a function as its
           first argument and a list as its second argument. However,{' '}
-          <InlineCode>filter</InlineCode> returns a new list
-          containing only those elements for which the function
-          returns <InlineCode>True</InlineCode>. You might also recall
-          list comprehensions as an alternative way to apply an
-          expression to all elements of a list. In fact, a list
-          comprehension with a single <InlineCode>for</InlineCode>{' '}
-          clause is similar to a call to <InlineCode>map</InlineCode>.
-          By adding an <InlineCode>if</InlineCode> clause to the
-          comprehension, it becomes similar to embedding a call to{' '}
+          <InlineCode>filter</InlineCode> returns only those elements
+          for which the function returns <InlineCode>True</InlineCode>
+          . You might also recall list comprehensions as an
+          alternative way to apply an expression to all elements of a
+          list. In fact, a list comprehension with a single{' '}
+          <InlineCode>for</InlineCode> clause is similar to a call to{' '}
+          <InlineCode>map</InlineCode>. By adding an{' '}
+          <InlineCode>if</InlineCode> clause to the comprehension, it
+          becomes similar to embedding a call to{' '}
           <InlineCode>filter</InlineCode> within a{' '}
           <InlineCode>map</InlineCode>.
         </p>
         <p>
-          Finally, the <InlineCode>reduce</InlineCode> function takes
-          a function with exactly two arguments as its first argument
-          and a list as its second argument. It successively applies
-          the function to the list's elements, using the current
-          result as the first argument and an element from the list as
-          the second argument. <InlineCode>reduce</InlineCode> returns
-          a scalar value. Optionally, you can provide a third argument
-          as a starting value, which defaults to 0.
+          <InlineCode>map</InlineCode> and{' '}
+          <InlineCode>filter</InlineCode> both return so-called
+          Iterators. An iterator is an object that can be iterated
+          upon, allowing you to traverse through all its values. In
+          Python, an iterator is an object that implements the
+          iterator protocol, which consists of the methods{' '}
+          <InlineCode>__iter__</InlineCode>
+          and <InlineCode>__next__</InlineCode>. We will discuss these
+          so-called magic methods in more detail in the next section.
+          The key takeaway here is that <InlineCode>map</InlineCode>{' '}
+          and <InlineCode>filter</InlineCode> return Iterators, so the
+          results need to be casted to lists for practical use.
         </p>
-        <LazyIframe src="https://trinket.io/embed/python/13e309e1cf" />
+        <LazyIframe src="https://trinket.io/embed/python/ccb88df879" />
         <h4>Modules</h4>
         <p>
           Python's core design philosophy emphasizes simplicity and
